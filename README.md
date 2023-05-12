@@ -7,7 +7,7 @@ Study of a new kinematic weighting algorithm for the measurement of CP asymmetri
 
 
 ## Requirements
-- [ROOT](https://github.com/root-project/root){:target="_blank"}: The ROOT framework is required for this project.
-- [Python](https://www.python.org){:target="_blank"}: Python programming language is required for this project.
+- [ROOT](https://github.com/root-project/root): The ROOT framework is required for this project.
+- [Python](https://www.python.org): Python programming language is required for this project.
 
 Please make sure you have both ROOT and Python installed before proceeding with the project.
