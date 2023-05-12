@@ -1,8 +1,10 @@
 # CERN_Summer_Student_Programme_2023
+
+<img src=".images/cern-logo.png" alt="CERN Logo" width="150"> <img src=".images/Lhcb-logo-new.svg.png" alt="LHCb Logo" width="250">
+
+
 Study of a new kinematic weighting algorithm for the measurement of CP asymmetries in charm decays
 
-![CERN Logo](.images/cern.png)
-![LHCb Logo](.images/lhcb.png)
 
 ## Requirements
 - [ROOT](https://github.com/root-project/root): The ROOT framework is required for this project. You can download and install it from the official GitHub repository.
