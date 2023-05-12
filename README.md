@@ -1,4 +1,4 @@
-# CERN_Summer_Student_Programme_2023
+# CERN Summer Student Programme 2023
 
 <img src=".images/cern-logo.png" alt="CERN Logo" width="150"> <img src=".images/Lhcb-logo-new.svg.png" alt="LHCb Logo" width="250">
 
