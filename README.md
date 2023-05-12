@@ -1,7 +1,10 @@
 # CERN Summer Student Programme 2023
 
-<img src=".images/cern-logo.png" alt="CERN Logo" width="150"> <img src=".images/Lhcb-logo-new.svg.png" alt="LHCb Logo" width="250">
+## LHCb Collaboration
 
+<img src=".images/cern-logo.png" alt="CERN Logo" width="150"> <img src=".images/Lhcb-logo-new.svg.png" alt="LHCb Logo" width="245">
+
+### Supervisors: Federico Betti & Angelo Carbone
 
 Study of a new kinematic weighting algorithm for the measurement of CP asymmetries in charm decays.
 
