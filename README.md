@@ -2,9 +2,16 @@
 
 ## LHCb Collaboration
 
-<img src=".images/cern-logo.png" alt="CERN Logo" width="150"> <img src=".images/Lhcb-logo-new.svg.png" alt="LHCb Logo" width="245">
+<a href="https://www.home.cern/" target="_blank">
+  <img src=".images/cern-logo.png" alt="CERN Logo" width="150">
+</a>
 
-### Supervisors: Federico Betti & Angelo Carbone
+<a href="https://lhcb.web.cern.ch/" target="_blank">
+  <img src=".images/Lhcb-logo-new.svg.png" alt="LHCb Logo" width="245">
+</a>
+
+
+### Supervisors: Dr. Federico Betti & Prof. Angelo Carbone
 
 Study of a new kinematic weighting algorithm for the measurement of CP asymmetries in charm decays.
 
