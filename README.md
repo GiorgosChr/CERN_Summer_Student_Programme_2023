@@ -5,7 +5,6 @@
 <a href="https://www.home.cern/" target="_blank">
   <img src=".images/cern-logo.png" alt="CERN Logo" width="150">
 </a>
-
 <a href="https://lhcb.web.cern.ch/" target="_blank">
   <img src=".images/Lhcb-logo-new.svg.png" alt="LHCb Logo" width="245">
 </a>
