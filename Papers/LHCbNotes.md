@@ -49,4 +49,4 @@
 # Questions
 
 - Q: Don't we lose half the data if the $b$- and $\bar{b}$-hadrons are produced at 0 and $\pi\text{rad}$?
-- - A:
+- - A: Yes.
