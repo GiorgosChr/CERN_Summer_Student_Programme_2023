@@ -133,12 +133,12 @@ int main() {
         canvas->SaveAs("Plots/" + branchNameSPiPt + ".pdf");
 
         histP1Pt->GetYaxis()->SetTitle("Events/(20MeV/c^{2})");
-        histP1Pt->GetXaxis()->SetTitle( "P_{T}(#pi_{1}) [GeV/c]");
+        histP1Pt->GetXaxis()->SetTitle( "P_{T}(K^{+}) [GeV/c]");
         histP1Pt->Draw();
         canvas->SaveAs("Plots/" + branchNameP1Pt + ".pdf");
 
         histP2Pt->GetYaxis()->SetTitle("Events/(20MeV/c^{2})");
-        histP2Pt->GetXaxis()->SetTitle( "P_{T}(#pi_{2}) [GeV/c]");
+        histP2Pt->GetXaxis()->SetTitle( "P_{T}(K^{-}) [GeV/c]");
         histP2Pt->Draw();
         canvas->SaveAs("Plots/" + branchNameP2Pt + ".pdf");
 
@@ -147,6 +147,7 @@ int main() {
         histPxPz->GetXaxis()->SetTitle( "P_{z}(D^{0}) [GeV/c]");
         histPxPz->Draw("colz");
         canvas->SaveAs("Plots/" + branchNamePx + "PZ" + ".pdf");
+
         file->Close();
         return 0;
 }
