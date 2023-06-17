@@ -8,6 +8,6 @@
 - [ ] Histograms with errorbars (sqrt)
 - [x] 2D Histogram for $p_x - p_z$
 
-## $2^{st}$ Week 19/06 - 23/06, ChargedPi
+## $2^{nd}$ Week 19/06 - 23/06, ChargedPi
 - [ ] Copy TTree to a new file
 - [ ] Add random charges to soft $\pi$ with uniform distribution
