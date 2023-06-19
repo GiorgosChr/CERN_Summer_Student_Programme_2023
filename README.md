@@ -16,7 +16,7 @@ Study of a new kinematic weighting algorithm for the measurement of CP asymmetri
 
 
 ## Requirements
-- [ROOT](https://github.com/root-project/root) framework and [Python](https://www.python.org) programing language are both required for this project
+- [ROOT](https://github.com/root-project/root) framework and [C++](https://cplusplus.com/) programing language are both required for this project.
 
 All MC data are generated using [RapidSim](https://github.com/gcowan/RapidSim)
 
