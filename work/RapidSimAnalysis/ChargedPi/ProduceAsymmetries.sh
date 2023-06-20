@@ -1,2 +1,0 @@
-g++ -O3 -o TTreeCopyWithAsymmetry.out TTreeCopyWithAsymmetry.cpp $(root-config --cflags --libs) && ./TTreeCopyWithAsymmetry.out
-g++ -O3 -o PlotCPAsymmetry.out PlotCPAsymmetry.cpp $(root-config --cflags --libs) && ./PlotCPAsymmetry.out

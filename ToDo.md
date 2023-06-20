@@ -14,5 +14,6 @@
 - [x] Copy TTree to a new file
 - [x] Add random charges to soft $\pi$ with uniform distribution\
 - [x] Generate data with RapidSim for $D^{\star}\rightarrow \{D^0 \rightarrow \pi^-\pi^+\}\pi$
-- [x] Use $25\%$ asymmetry to assign charges to the soft pions. This corresponds to an emulated production asymmetry
-- [ ] Remove either positively or negatively charged pions according to a different distribution-asymmetry of $50\%$ that corresponds to the $CP$ asymmetry
+- [ ] Use $0.25$ as production asymmetry, i.e., production of $D^0$ and $\bar{D}^0$, the probability then should be $N_\pm = \frac{1 \pm A}{2}$.
+- [ ] Save this to a new intermediate TTree in a ROOT file
+- [ ] Use $0.50$ as $CP$ asymmetry, i.e., asymmetry between $D^0 \to K^- K^+$ and $\bar{D}^0 \to K^- K^+$. This should remove either positively charged or negatively charged $\pi$ events

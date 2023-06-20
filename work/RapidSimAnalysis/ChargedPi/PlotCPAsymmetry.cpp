@@ -37,7 +37,6 @@ int main(){
         for (size_t i = 0; i < tree->GetEntries(); i++){
                 tree->GetEntry(i);
                 hist->Fill(entry);
-                std::cout << entry << std::endl;
         }
 
         hist->GetYaxis()->SetTitle("Counts");
