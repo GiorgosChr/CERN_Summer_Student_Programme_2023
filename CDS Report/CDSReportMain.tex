@@ -1,4 +1,4 @@
-\documentclass{report}
+\documentclass{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[english,greek]{babel}
@@ -12,26 +12,20 @@
 \setcounter{tocdepth}{3}
 \title{
         \textbf{Study of a new kinematic weighting algorithm for the measurement of CP asymmetries in charm decays}
-
+        \\
+        LHCb Collaboration
 }
 \author{Georgios Christou}
 \date{August 2023}
-\newcommand\frontmatter{
-        \cleardoublepage
-        \pagenumbering{Roman}
-}
-\newcommand\mainmatter{
-        \cleardoublepage
-        \pagenumbering{arabic}
-}
-
-
 
 \begin{document}
-        \maketitle
-
-        \begin{figure*}[h!]
-                \centering
-                \includegraphics[width = 0.3\textwidth]{../.images/Lhcb-logo-new.svg.png}
-        \end{figure*}
+    \begin{figure}[t]
+        \centering
+        \subfloat{\includegraphics[height = 3.5cm]{../.images/CERN_logo.png}}
+        \hspace{1cm}
+        \subfloat{\includegraphics[height = 3.5cm]{../.images/Lhcb-logo-new.svg.png}}
+    \end{figure}
+    
+    \maketitle
+    
 \end{document}
