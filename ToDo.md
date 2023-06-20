@@ -12,5 +12,7 @@
 ## $2^{nd}$ Week 19/06 - 23/06
 ### ChargedPi
 - [x] Copy TTree to a new file
-- [x] Add random charges to soft $\pi$ with uniform distribution
-
+- [x] Add random charges to soft $\pi$ with uniform distribution\
+- [x] Generate data with RapidSim for $D^{\star}\rightarrow \{D^0 \rightarrow \pi^-\pi^+\}\pi$
+- [x] Use $25\%$ asymmetry to assign charges to the soft pions. This corresponds to an emulated production asymmetry
+- [ ] Remove either positively or negatively charged pions according to a different distribution-asymmetry of $50\%$ that corresponds to the $CP$ asymmetry
