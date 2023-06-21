@@ -16,6 +16,22 @@
 #include <sstream>
 #include <chrono>
 
+TTree* getTree(TString fileName, TString treeName){
+        // Start timer
+        std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
+
+        TFile *file = TFile::Open(fileName);
+        TTree *tree = dynamic_cast<TTree*>(file->Get(treeName));
+
+        // Stop timer
+        std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+        std::chrono::duration<double> duration = std::chrono::duration_cast<std::chrono::duration<double>>(end - start);
+        std::cout << "getTree() Elapsed time: " << duration.count() << " sec" << std::endl;
+
+        return tree;
+}
+
+
 int main(){
         // Start timer
         std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
@@ -28,42 +44,44 @@ int main(){
         treeName = "DecayTree";
         branchName = "sPi_C";
 
-        TFile *fileOld = TFile::Open(fileNameOld);
-        TTree *treeOld = dynamic_cast<TTree*>(fileOld->Get(treeName));
+        auto treeOld = getTree(fileNameOld, treeName);
 
-        TFile *fileInterm = new TFile(fileNameInterm, "RECREATE");
-        TTree *treeInterm = treeOld->CloneTree();
-        // Create new Int_t TBranch to attach to the intermediate TTree
-        Int_t sPi_Charge;
-        TBranch *branchCharge = treeInterm->Branch(branchName, &sPi_Charge, branchName + "/I");
+        // TFile *fileOld = TFile::Open(fileNameOld);
+        // TTree *treeOld = dynamic_cast<TTree*>(fileOld->Get(treeName));
 
-        // Generate random numbers with TRandom3 to assign charge to the soft pion
-        TRandom3 *random = new TRandom3();
-        random->SetSeed();
+        // TFile *fileInterm = new TFile(fileNameInterm, "RECREATE");
+        // TTree *treeInterm = treeOld->CloneTree();
+        // // Create new Int_t TBranch to attach to the intermediate TTree
+        // Int_t sPi_Charge;
+        // TBranch *branchCharge = treeInterm->Branch(branchName, &sPi_Charge, branchName + "/I");
 
-        Double_t asymmetry, probability, randomNum;
-        asymmetry = 0.25;
-        probability = (1.0 + asymmetry) / 2.0;
+        // // Generate random numbers with TRandom3 to assign charge to the soft pion
+        // TRandom3 *random = new TRandom3();
+        // random->SetSeed();
 
-        for (size_t i = 0; i < treeOld->GetEntries(); i++){
-                randomNum = random->Uniform();
+        // Double_t asymmetry, probability, randomNum;
+        // asymmetry = 0.25;
+        // probability = (1.0 + asymmetry) / 2.0;
 
-                if (randomNum < probability){
-                        sPi_Charge = +1;
-                }
-                else{
-                        sPi_Charge = -1;
-                }
-                branchCharge->Fill();
-        }
+        // for (size_t i = 0; i < treeOld->GetEntries(); i++){
+        //         randomNum = random->Uniform();
+
+        //         if (randomNum < probability){
+        //                 sPi_Charge = +1;
+        //         }
+        //         else{
+        //                 sPi_Charge = -1;
+        //         }
+        //         branchCharge->Fill();
+        // }
 
 
-        fileOld->Close();
+        // fileOld->Close();
 
         // Stop timer and calculate elapsed time
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
         std::chrono::duration<double> duration = std::chrono::duration_cast<std::chrono::duration<double>>(end - start);
-        std::cout << "Elapsed time: " << duration.count() << " sec" << std::endl;
+        std::cout << "Total Elapsed time: " << duration.count() << " sec" << std::endl;
 
         return 0;
 }
