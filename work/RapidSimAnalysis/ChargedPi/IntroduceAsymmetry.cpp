@@ -3,6 +3,8 @@
 #include <TString.h>
 #include <TBranch.h>
 #include <TH1F.h>
+#include <TH1D.h>
+#include <TH1.h>
 #include <TH2F.h>
 #include <TCanvas.h>
 #include <TStyle.h>
@@ -12,11 +14,18 @@
 #include <TRandom3.h>
 
 #include <ROOT/RDataFrame.hxx>
+#include <ROOT/RVec.hxx>
 
 #include <iomanip>
 #include <iostream>
 #include <sstream>
 #include <chrono>
+
+std::string convertTStringToString(const TString& tstring) {
+    const char* cstr = tstring.Data();
+    std::string str(cstr);
+    return str;
+}
 
 TTree *getTree(TString fileName, TString treeName){
         // Start timer
@@ -76,18 +85,67 @@ void addAsymmetryBranch(TTree *tree, TString branchName, Double_t asymmetry){
         std::cout << "addAsymmetryBranch() Elapsed time: " << duration.count() << " sec" << std::endl;
 }
 
-// void skipBranches(TString fileName, TString treeName, TString branchName, Double_t asymmetry){
-//         // Start timer
-//         std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
+void skipBranches(std::string fileName, std::string fileNameNew, std::string treeName, std::string branchName, Double_t asymmetry){
+        // Start timer
+        std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
 
-//         TFile *file = new TFile(fileName, "READ");
-//         ROOT::RDataFrame df(treeName, file);
+        // ROOT::EnableImplicitMT(); // Enable parallelization
+        ROOT::RDataFrame dataFrame(treeName, fileName);
+        auto branch = dataFrame.Take<Int_t>(branchName);
 
-//         // Stop timer
-//         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-//         std::chrono::duration<double> duration = std::chrono::duration_cast<std::chrono::duration<double>>(end - start);
-//         std::cout << "addAsymmetryBranch() Elapsed time: " << duration.count() << " sec" << std::endl;
-// }
+        ROOT::RVec<ULong64_t> entriesToRemove;
+        TRandom3 *random = new TRandom3();
+        random->SetSeed();
+
+        Double_t probability, randomNum;
+        probability = (1.0 + asymmetry)/2.0;
+
+        Int_t index = 0;
+
+        for (auto& entry : branch){
+                randomNum = random->Uniform();
+                if (entry == -1 && randomNum < probability){
+                        entriesToRemove.push_back(static_cast<ULong64_t>(index));
+                }
+                index ++;
+        }
+
+        // auto dataFrameFiltered = dataFrame.Filter([&entriesToRemove](Int_t entryNumber){
+        //         return std::find(entriesToRemove.begin(), entriesToRemove.end(), entryNumber) == entriesToRemove.end();;
+        // }, {branchName});
+        auto dataFrameNew = dataFrame.Define("RemoveEntry", [&entriesToRemove](ULong64_t entryIndex) {
+                return std::find(entriesToRemove.begin(), entriesToRemove.end(), entryIndex) != entriesToRemove.end();
+        }, {"rdfentry_"});
+
+        // ROOT::RVec<Double_t> binedges;
+        // Double_t edge = -2.0;
+        // for (size_t i = 0; i < 11; i++){
+        //         binedges.push_back(edge);
+        //         edge += 0.4;
+        // }
+
+        TCanvas *canvas = new TCanvas("canvasNew", "");
+        // TH1D *hist = new TH1D("hist", "", 10, -2, 2);
+        auto dataFrameFiltered = dataFrameNew.Filter("RemoveEntry == false");
+        auto hist = dataFrameFiltered.Histo1D({"hist", "", 10, -2, 2}, branchName);
+
+        hist->GetYaxis()->SetTitle("Counts");
+        hist->GetXaxis()->SetTitle("soft #pi charge");
+        hist->SetStats(0);
+        hist->Draw();
+        // hist->DrawClone();
+
+        std::ostringstream oss;
+        oss << std::fixed << std::setprecision(2) << asymmetry;
+        std::string asymmetryString = oss.str();
+        canvas->SaveAs(("Plots/sPi_CPAsymmetryCharge" + asymmetryString + ".pdf").c_str());
+
+        dataFrameFiltered.Snapshot(treeName, fileNameNew);
+
+        std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+        std::chrono::duration<double> duration = std::chrono::duration_cast<std::chrono::duration<double>>(end - start);
+        std::cout << "skipBranches() Elapsed time: " << duration.count() << " sec" << std::endl;
+}
 
 
 int main(){
@@ -110,11 +168,13 @@ int main(){
         Double_t asymmetry = 0.25;
         addAsymmetryBranch(treeInterm, branchName, asymmetry);
 
-        std::cout << "Saving/Closing files..." << std::endl;
+        // std::cout << "Saving intermediate file..." << std::endl;
         fileInterm->cd();
         treeInterm->Write();
+        // std::cout << "Closing intermediate files..." << std::endl;
         fileInterm->Close();
-
+        asymmetry = 0.50;
+        skipBranches(convertTStringToString(fileNameInterm), convertTStringToString(fileNameNew), convertTStringToString(treeName), convertTStringToString(branchName), asymmetry);
 
         //  Stop timer
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
