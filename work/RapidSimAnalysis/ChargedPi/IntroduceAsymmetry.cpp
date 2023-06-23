@@ -98,7 +98,7 @@ void skipBranches(std::string fileName, std::string fileNameNew, std::string tre
         random->SetSeed();
 
         Double_t probability, randomNum;
-        probability = (1.0 + asymmetry)/2.0;
+        probability = 1.0 - (1.0 - asymmetry)/(1.0 + asymmetry);
 
         Int_t index = 0;
 
