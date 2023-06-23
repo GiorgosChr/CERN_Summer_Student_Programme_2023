@@ -89,7 +89,7 @@ void skipBranches(std::string fileName, std::string fileNameNew, std::string tre
         // Start timer
         std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
 
-        // ROOT::EnableImplicitMT(); // Enable parallelization
+        ROOT::EnableImplicitMT(); // Enable parallelization
         ROOT::RDataFrame dataFrame(treeName, fileName);
         auto branch = dataFrame.Take<Int_t>(branchName);
 
@@ -110,6 +110,8 @@ void skipBranches(std::string fileName, std::string fileNameNew, std::string tre
                 index ++;
         }
 
+        
+
         // auto dataFrameFiltered = dataFrame.Filter([&entriesToRemove](Int_t entryNumber){
         //         return std::find(entriesToRemove.begin(), entriesToRemove.end(), entryNumber) == entriesToRemove.end();;
         // }, {branchName});
@@ -128,6 +130,31 @@ void skipBranches(std::string fileName, std::string fileNameNew, std::string tre
         // TH1D *hist = new TH1D("hist", "", 10, -2, 2);
         auto dataFrameFiltered = dataFrameNew.Filter("RemoveEntry == false");
         auto hist = dataFrameFiltered.Histo1D({"hist", "", 10, -2, 2}, branchName);
+
+        // auto countNeg = dataFrameFiltered.Filter([](Int_t value) {return  value = -1;}, branchName).Count().GetValue();
+        // auto countPos = *dataFrameFiltered.Filter([](Int_t value) {return  value = 1;}, branchName).Count()
+
+        auto countPos = dataFrameFiltered.Filter("sPi_C==1").Count().GetValue();
+        auto countNeg = dataFrameFiltered.Filter("sPi_C==-1").Count().GetValue();
+
+        Double_t errorPos, errorNeg;
+
+        errorPos = TMath::Power(countPos, 0.5);
+        errorNeg = TMath::Power(countNeg, 0.5);
+
+        std::cout << "Number of positive pions: " << countPos << std::endl;
+        std::cout << "Number of negative pions: " << countNeg << std::endl;
+        // std::cout << "Error of positive pions: " << errorPos << std::endl;
+        // std::cout << "Error of negative pions: " << errorNeg << std::endl;
+        
+        Double_t finalAsymmetry = static_cast<Double_t>(countPos - countNeg)/static_cast<Double_t>(countPos + countNeg);
+        Double_t finalAsymmetryError, derivPos, derivNeg;
+        derivPos = 1.0/(static_cast<Double_t>(countPos + countNeg)) - (static_cast<Double_t>(countPos - countNeg))/TMath::Power((static_cast<Double_t>(countPos + countNeg)), 2);
+        derivPos =  - 1.0/(static_cast<Double_t>(countPos + countNeg)) - (static_cast<Double_t>(countPos - countNeg))/TMath::Power((static_cast<Double_t>(countPos + countNeg)), 2);
+        finalAsymmetryError = TMath::Power(TMath::Power(derivPos * errorPos, 2.0) + TMath::Power(derivNeg * errorNeg, 2.0), 0.5);
+
+        std::cout << "Final asymmetry: " << finalAsymmetry << " +/- "<< finalAsymmetryError << std::endl;
+
 
         hist->GetYaxis()->SetTitle("Counts");
         hist->GetXaxis()->SetTitle("soft #pi charge");
@@ -165,7 +192,7 @@ int main(){
         TFile* fileInterm = new TFile(fileNameInterm, "RECREATE");
         TTree* treeInterm = treeOld->CloneTree();
 
-        Double_t asymmetry = 0.25;
+        Double_t asymmetry = 0.1;
         addAsymmetryBranch(treeInterm, branchName, asymmetry);
 
         // std::cout << "Saving intermediate file..." << std::endl;
@@ -173,7 +200,7 @@ int main(){
         treeInterm->Write();
         // std::cout << "Closing intermediate files..." << std::endl;
         fileInterm->Close();
-        asymmetry = 0.50;
+        asymmetry = 0.2;
         skipBranches(convertTStringToString(fileNameInterm), convertTStringToString(fileNameNew), convertTStringToString(treeName), convertTStringToString(branchName), asymmetry);
 
         //  Stop timer
