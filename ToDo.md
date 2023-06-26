@@ -24,4 +24,5 @@
 - [x] Same asymmetries with different $A_{CP}$ but for the $D^0\rightarrow \pi^-\pi^+$ TTree.
 
 ### Comparison Plots
+- [x] Generate data with RapidSim for $\eta$ and $\phi$ for all particles.
 - [ ] Compare $p, p_T, \eta, \phi$ of the $D^\star$ and soft $\pi$ for the two decays $D^0\to K^-K^+$ and $D^0\to \pi^-\pi^+$
