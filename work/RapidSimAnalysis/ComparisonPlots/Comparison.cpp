@@ -44,13 +44,18 @@ void compareHistograms(std::string fileNameK, std::string fileNameP, std::string
         histoK->SetStats(0);
         histoP->SetStats(0);
 
+        // double normK = 1.0 / histoK->Integral();
+        // double normP = 1.0 / histoP->Integral();
+        // histoK->Scale(normK);
+        // histoP->Scale(normP);
+
         legend->AddEntry(histoK.GetPtr(), "D^{0}#rightarrow K^{-}K^{+}", "l");
         legend->AddEntry(histoP.GetPtr(), "D^{0}#rightarrow #pi^{-}#pi^{+}", "l");
         legend->SetFillColor(0);
         legend->SetBorderSize(0);
 
-        histoK->Draw();
-        histoP->Draw("SAME");
+        histoK->DrawNormalized("HIST");  // Draw histoK as a normalized histogram with lines
+        histoP->DrawNormalized("HIST SAME");
         legend->Draw();
         canvas->SaveAs(("Plots/Comparison" + branchName + ".pdf").c_str());
 
@@ -62,12 +67,12 @@ void compareHistograms(std::string fileNameK, std::string fileNameP, std::string
 int main(){
         // Start timer
         std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
-        gROOT->ProcessLine(".L lhcbStyle.C");
+        gROOT->ProcessLine(".L ../ChargedPi/lhcbStyle.C");
 
-        std::vector<std::vector<double>> range = {{0, 150}, {0, 10}, {0, 10}, {0, 1}};
+        std::vector<std::vector<double>> range = {{0, 150}, {0, 10}, {-4, 5}, {0, 10}, {0, 10}, {0, 1}, {-4, 5}, {0, 10}};
         std::string fileNameK, fileNameP, treeName;
-        std::vector<std::string> branchNames = {"Dst_P", "Dst_PT", "sPi_P", "sPi_PT"};
-        std::vector<std::string> axisLabel = {"p(D^{*}) GeV/c", "p_{T}(D^{*}) GeV/c", "p(#pi) GeV/c", "p_{T}(#pi) GeV/c"};
+        std::vector<std::string> branchNames = {"Dst_P", "Dst_PT", "Dst_phi", "Dst_eta", "sPi_P", "sPi_PT", "sPi_phi", "sPi_eta"};
+        std::vector<std::string> axisLabel = {"p(D^{*}) GeV/c", "p_{T}(D^{*}) GeV/c", "#phi(D^{*}) Rad", "#eta(D^{*})", "p(#pi) GeV/c", "p_{T}(#pi) GeV/c", "#phi(#pi) Rad", "#eta(#pi)"};
         fileNameK = "../FirstPlots/Dstp_D0__KmKp_pip_tree.root";
         fileNameP = "../ChargedPi/Dstp_D0__pimpip_pip_tree.root";
         treeName = "DecayTree";
