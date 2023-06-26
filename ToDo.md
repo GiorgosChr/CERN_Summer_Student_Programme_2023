@@ -20,4 +20,8 @@
 
 ## $2^{rd}$ Week 26/06 - 30/06
 ### ChargedPi
-- [ ] Assign detection asymmetry to the charged pion. Same function as the $CP$ asymmetry.
+- [x] Assign detection asymmetry to the charged pion. Same function as the $CP$ asymmetry.
+- [x] Same asymmetries with different $A_{CP}$ but for the $D^0\rightarrow \pi^-\pi^+$ TTree.
+
+### Comparison Plots
+- [ ] Compare $p, p_T, \eta, \phi$ of the $D^\star$ and soft $\pi$ for the two decays $D^0\to K^-K^+$ and $D^0\to \pi^-\pi^+$
