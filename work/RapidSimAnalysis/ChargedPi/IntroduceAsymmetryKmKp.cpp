@@ -77,7 +77,7 @@ void addAsymmetryBranch(TTree *tree, TString branchName, Double_t asymmetry){
         std::ostringstream oss;
         oss << std::fixed << std::setprecision(2) << asymmetry;
         std::string asymmetryString = oss.str();
-        canvas->SaveAs(("Plots/sPi_ProductionAsymmetryCharge" + asymmetryString + ".pdf").c_str());
+        canvas->SaveAs(("Plots/KmKp/sPi_ProductionAsymmetryCharge" + asymmetryString + ".pdf").c_str());
 
         // Stop timer
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
@@ -85,11 +85,11 @@ void addAsymmetryBranch(TTree *tree, TString branchName, Double_t asymmetry){
         std::cout << "addAsymmetryBranch() Elapsed time: " << duration.count() << " sec" << std::endl;
 }
 
-void skipBranches(std::string fileName, std::string fileNameNew, std::string treeName, std::string branchName, Double_t asymmetry){
+void skipEvents(std::string fileName, std::string fileNameNew, std::string treeName, std::string branchName, Double_t asymmetry, std::string asymmetryType){
         // Start timer
         std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
 
-        ROOT::EnableImplicitMT(); // Enable parallelization
+        // ROOT::EnableImplicitMT(); // Enable parallelization
         ROOT::RDataFrame dataFrame(treeName, fileName);
         auto branch = dataFrame.Take<Int_t>(branchName);
 
@@ -165,13 +165,17 @@ void skipBranches(std::string fileName, std::string fileNameNew, std::string tre
         std::ostringstream oss;
         oss << std::fixed << std::setprecision(2) << asymmetry;
         std::string asymmetryString = oss.str();
-        canvas->SaveAs(("Plots/sPi_CPAsymmetryCharge" + asymmetryString + ".pdf").c_str());
+        canvas->SaveAs(("Plots/KmKp/sPi_" + asymmetryType + "AsymmetryCharge" + asymmetryString + ".pdf").c_str());
 
-        dataFrameFiltered.Snapshot(treeName, fileNameNew);
+        std::vector<std::string> branchesToSave = dataFrameFiltered.GetColumnNames();
+        branchesToSave.erase(std::remove(branchesToSave.begin(), branchesToSave.end(), "RemoveEntry"), branchesToSave.end());
+
+
+        dataFrameFiltered.Snapshot(treeName, fileNameNew, branchesToSave);
 
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
         std::chrono::duration<double> duration = std::chrono::duration_cast<std::chrono::duration<double>>(end - start);
-        std::cout << "skipBranches() Elapsed time: " << duration.count() << " sec" << std::endl;
+        std::cout << "skipEvents() Elapsed time: " << duration.count() << " sec" << std::endl;
 }
 
 
@@ -193,6 +197,7 @@ int main(){
         TTree* treeInterm = treeOld->CloneTree();
 
         Double_t asymmetry = 0.1;
+        std::string asymmetryType;
         addAsymmetryBranch(treeInterm, branchName, asymmetry);
 
         // std::cout << "Saving intermediate file..." << std::endl;
@@ -201,7 +206,14 @@ int main(){
         // std::cout << "Closing intermediate files..." << std::endl;
         fileInterm->Close();
         asymmetry = 0.2;
-        skipBranches(convertTStringToString(fileNameInterm), convertTStringToString(fileNameNew), convertTStringToString(treeName), convertTStringToString(branchName), asymmetry);
+        asymmetryType = "CP";
+        skipEvents(convertTStringToString(fileNameInterm), convertTStringToString(fileNameNew), convertTStringToString(treeName), convertTStringToString(branchName), asymmetry, asymmetryType);
+
+        fileNameInterm = fileNameNew;
+        fileNameNew = "Dstp_D0__KmKp_pip_DetectionAsymmetry_tree.root";
+        asymmetry = 0.1;
+        asymmetryType = "Detection";
+        skipEvents(convertTStringToString(fileNameInterm), convertTStringToString(fileNameNew), convertTStringToString(treeName), convertTStringToString(branchName), asymmetry, asymmetryType);
 
         //  Stop timer
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();

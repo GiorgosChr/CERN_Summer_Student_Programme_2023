@@ -17,4 +17,7 @@
 - [x] Use $0.25$ as production asymmetry, i.e., production of $D^0$ and $\bar{D}^0$, the probability then should be $N_\pm = \frac{1 \pm A}{2}$.
 - [x] Save this to a new intermediate TTree in a ROOT file
 - [x] Use $0.50$ as $CP$ asymmetry, i.e., asymmetry between $D^0 \to K^- K^+$ and $\bar{D}^0 \to K^- K^+$. This should remove either positively charged or negatively charged $\pi$ events. The probability for the $D^0$ is $\frac{1-A_{CP}}{1 + A_{CP}}$
-- [ ] Assign asymmetry to the soft pion
+
+## $2^{rd}$ Week 26/06 - 30/06
+### ChargedPi
+- [ ] Assign detection asymmetry to the charged pion. Same function as the $CP$ asymmetry.
