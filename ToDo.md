@@ -18,7 +18,7 @@
 - [x] Save this to a new intermediate TTree in a ROOT file
 - [x] Use $0.50$ as $CP$ asymmetry, i.e., asymmetry between $D^0 \to K^- K^+$ and $\bar{D}^0 \to K^- K^+$. This should remove either positively charged or negatively charged $\pi$ events. The probability for the $D^0$ is $\frac{1-A_{CP}}{1 + A_{CP}}$
 
-## $2^{rd}$ Week 26/06 - 30/06
+## $3^{rd}$ Week 26/06 - 30/06
 ### ChargedPi
 - [x] Assign detection asymmetry to the charged pion. Same function as the $CP$ asymmetry.
 - [x] Same asymmetries with different $A_{CP}$ but for the $D^0\rightarrow \pi^-\pi^+$ TTree.
@@ -26,3 +26,14 @@
 ### Comparison Plots
 - [x] Generate data with RapidSim for $\eta$ and $\phi$ for all particles.
 - [x] Compare $p, p_T, \eta, \phi$ of the $D^\star$ and soft $\pi$ for the two decays $D^0\to K^-K^+$ and $D^0\to \pi^-\pi^+$
+- [ ] Add error bars to the comparison plots.
+
+### FirstPlots
+- [ ] $p_x-p_z$ histogram for soft $\pi$
+
+### KinematicDependence1
+- [ ] Add 0 production asymmetry, and the same detection asymmetry for both $D^0\to K^-K^+$ and $D^0\to \pi^-\pi^+$ with momentum dependence
+- [ ] Add different $CP$ asymmetry to the two sets with a large value
+- [ ] Calculate total asymmetry and uncertainty
+- [ ] Try to add negative $CP$ asymmetry
+- [ ] Solve multithreading problem
