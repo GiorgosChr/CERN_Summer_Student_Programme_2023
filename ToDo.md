@@ -29,7 +29,7 @@
 - [ ] Add error bars to the comparison plots.
 
 ### FirstPlots
-- [ ] $p_x-p_z$ histogram for soft $\pi$
+- [x] $p_x-p_z$ histogram for soft $\pi$
 
 ### KinematicDependence1
 - [ ] Add 0 production asymmetry, and the same detection asymmetry for both $D^0\to K^-K^+$ and $D^0\to \pi^-\pi^+$ with momentum dependence

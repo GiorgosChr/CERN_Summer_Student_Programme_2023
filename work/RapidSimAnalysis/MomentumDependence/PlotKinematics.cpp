@@ -43,8 +43,8 @@ int main(){
         ROOT::RDataFrame dataFrameK(treeName, fileNameK);
         ROOT::RDataFrame dataFrameP(treeName, fileNameP);
 
-        auto histK = dataFrameK.Histo2D({"histK", "Histogram 1", 150, 0.5, 6, 150, -0.4, 0.4},branchNameZ, branchNameX);
-        auto histP = dataFrameP.Histo2D({"histP", "Histogram 2", 150, 0.5, 6, 150, -0.4, 0.4},branchNameZ, branchNameX);
+        auto histK = dataFrameK.Histo2D({"histK", "Histogram 1", 150, 0, 6, 150, -0.4, 0.4},branchNameZ, branchNameX);
+        auto histP = dataFrameP.Histo2D({"histP", "Histogram 2", 150, 0, 6, 150, -0.4, 0.4},branchNameZ, branchNameX);
         histK->SetStats(0);
         histP->SetStats(0);
 
@@ -52,16 +52,16 @@ int main(){
         canvas->Divide(2, 1);
         gStyle->SetPalette(55);
         
-        histK->GetXaxis()->SetTitle("p_{z} [GeV/c]");
-        histK->GetYaxis()->SetTitle("p_{x} [GeV/c]");
+        histK->GetXaxis()->SetTitle("D^{0}#rightarrow K^{-}K^{+} p_{z}(#pi) [GeV/c]");
+        histK->GetYaxis()->SetTitle("p_{x}(#pi) [GeV/c]");
         // histK->GetYaxis()->SetTitleOffset(0.5);
         // histK->GetYaxis()->SetLabelOffset(0.02);
         canvas->cd(1);
         // histK->SetTitle("Title1");
         histK->DrawNormalized("COLZ");
 
-        histP->GetXaxis()->SetTitle("p_{z} [GeV/c]");
-        histP->GetYaxis()->SetTitle("p_{x} [GeV/c]");
+        histP->GetXaxis()->SetTitle("D^{0}#rightarrow #pi^{-}#pi^{+} p_{z}(#pi) [GeV/c]");
+        histP->GetYaxis()->SetTitle("p_{x}(#pi) [GeV/c]");
         canvas->cd(2);
         histP->DrawNormalized("COLZ");
         canvas->SaveAs("Plots/ComparisonNormalizedPXPZ.pdf");
