@@ -59,7 +59,7 @@ void detectionAsymmetry(const std::string fileName, const std::string fileNameNe
         hist->DrawNormalized("COLZ");
         canvas->SaveAs(decay.c_str());
 
-        // dataFrame.Snapshot(treeName, fileNameNew);
+        dataFrameFiltered.Snapshot(treeName, fileNameNew);
 
         //  Stop timer
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
@@ -79,7 +79,7 @@ int main(){
         std::vector<std::string> filenamesNew;
         std::vector<std::string> decays;
         // std::vector<std::string> filters {"sPi_C == -1 && abs(sPi_PX) < 0.15 * sPi_PZ", "sPi_C == -1 && abs(sPi_PX) < 0.15 * sPi_PZ"};
-        std::vector<std::string> filters {"abs(sPi_PX) < 0.15 * sPi_PZ && sPi_C == -1", "abs(sPi_PX) < 0.15 * sPi_PZ && sPi_C == -1"};
+        std::vector<std::string> filters {"!(abs(sPi_PX) < 0.15 * sPi_PZ && sPi_C == -1)", "!(abs(sPi_PX) < 0.15 * sPi_PZ && sPi_C == -1)"};
 
         treeName = "DecayTree";
         fileNameK = "../FirstPlots/Dstp_D0__KmKp_pip_tree.root";
