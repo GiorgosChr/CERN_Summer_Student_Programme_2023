@@ -21,7 +21,7 @@
 #include <sstream>
 #include <chrono>
 
-void detectionAsymmetry(const std::string fileName, const std::string fileNameNew, const std::string treeName, const std::string branchNameX, const std::string branchNameZ, const std::string decay){
+void detectionAsymmetry(const std::string fileName, const std::string fileNameNew, const std::string treeName, const std::string branchNameX, const std::string branchNameZ, const std::string decay, std::string filter){
         // Start timer
         std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
 
@@ -45,10 +45,21 @@ void detectionAsymmetry(const std::string fileName, const std::string fileNameNe
         // );
 
         auto dataFrameFiltered = dataFrameNew.Filter(
-                "sPi_C == -1 && sPi_PX > sPi_PZ * 0.1/4.0 && sPi_PX < -sPi_PZ * 0.1/4.0"
+                filter
         );
-        std::cout << dataFrame.Count().GetValue() << " " << dataFrameFiltered.Count.GetValue();
         
+        auto hist = dataFrameFiltered.Histo2D({"hist", "", 100, 0, 6, 100, -0.4, 0.4}, "sPi_PZ", "sPi_PX");
+        
+        TCanvas* canvas = new TCanvas("canvas", "");
+        
+        gStyle->SetPalette(55);
+        hist->SetStats(0);
+        hist->GetYaxis()->SetTitle("p_{x}(#pi) [GeV/c]");
+        hist->GetXaxis()->SetTitle("p_{z}(#pi) [GeV/c]");
+        hist->DrawNormalized("COLZ");
+        canvas->SaveAs(decay.c_str());
+
+        // dataFrame.Snapshot(treeName, fileNameNew);
 
         //  Stop timer
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
@@ -67,6 +78,8 @@ int main(){
         std::vector<std::string> fileNames;
         std::vector<std::string> filenamesNew;
         std::vector<std::string> decays;
+        // std::vector<std::string> filters {"sPi_C == -1 && abs(sPi_PX) < 0.15 * sPi_PZ", "sPi_C == -1 && abs(sPi_PX) < 0.15 * sPi_PZ"};
+        std::vector<std::string> filters {"abs(sPi_PX) < 0.15 * sPi_PZ && sPi_C == -1", "abs(sPi_PX) < 0.15 * sPi_PZ && sPi_C == -1"};
 
         treeName = "DecayTree";
         fileNameK = "../FirstPlots/Dstp_D0__KmKp_pip_tree.root";
@@ -80,11 +93,11 @@ int main(){
         fileNames.push_back(fileNameP);
         filenamesNew.push_back(fileNameNewK);
         filenamesNew.push_back(fileNameNewP);
-        decays.push_back("Plots/sPi_PXPZ_KmKp.pdf");
-        decays.push_back("Plots/sPi_PXPZ_pimpip.pdf");
+        decays.push_back("Plots/sPi_PXPZ_KmKp_Detection.pdf");
+        decays.push_back("Plots/sPi_PXPZ_pimpip_Detection.pdf");
 
         for (size_t i = 0; i < fileNames.size(); i++){
-                detectionAsymmetry(fileNames[i], filenamesNew[i], treeName, branchNameX, branchNameZ, decays[i]);
+                detectionAsymmetry(fileNames[i], filenamesNew[i], treeName, branchNameX, branchNameZ, decays[i], filters[i]);
         }
 
 
