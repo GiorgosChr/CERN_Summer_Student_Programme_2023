@@ -23,7 +23,7 @@
 - [x] Assign detection asymmetry to the charged pion. Same function as the $CP$ asymmetry.
 - [x] Same asymmetries with different $A_{CP}$ but for the $D^0\rightarrow \pi^-\pi^+$ TTree.
 
-### Comparison Plots
+### ComparisonPlots
 - [x] Generate data with RapidSim for $\eta$ and $\phi$ for all particles.
 - [x] Compare $p, p_T, \eta, \phi$ of the $D^\star$ and soft $\pi$ for the two decays $D^0\to K^-K^+$ and $D^0\to \pi^-\pi^+$
 - [ ] Add error bars to the comparison plots.
@@ -31,9 +31,15 @@
 ### FirstPlots
 - [x] $p_x-p_z$ histogram for soft $\pi$
 
-### KinematicDependence1
-- [ ] Add 0 production asymmetry, and the same detection asymmetry for both $D^0\to K^-K^+$ and $D^0\to \pi^-\pi^+$ with momentum dependence
-- [ ] Add different $CP$ asymmetry to the two sets with a large value
-- [ ] Calculate total asymmetry and uncertainty
+
+## $4^{th}$ Week 03/07 - 07/07
+### MomentumDependence
+- [x] Add 0 production asymmetry, and the same detection asymmetry for both $D^0\to K^-K^+$ and $D^0\to \pi^-\pi^+$ with momentum dependence
+- [x] Add different $CP$ asymmetry to the two sets with a large value
+- [x] Calculate total asymmetry and uncertainty
 - [ ] Try to add negative $CP$ asymmetry
 - [ ] Solve multithreading problem
+- [ ] Calculate integrated detection asymmetry
+- [ ] Calculate total asymmetry with the correct formula and uncertainty due to the integrated detection asymmetry
+
+
