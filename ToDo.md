@@ -37,8 +37,8 @@
 - [x] Add 0 production asymmetry, and the same detection asymmetry for both $D^0\to K^-K^+$ and $D^0\to \pi^-\pi^+$ with momentum dependence
 - [x] Add different $CP$ asymmetry to the two sets with a large value
 - [x] Calculate total asymmetry and uncertainty
-- [ ] Try to add negative $CP$ asymmetry
-- [ ] Solve multithreading problem
+- [ ] Try to add negative $CP$ asymmetry (Not necessary)
+- [ ] Solve multithreading problem (Not necessary)
 - [ ] Calculate integrated detection asymmetry
 - [ ] Calculate total asymmetry with the correct formula and uncertainty due to the integrated detection asymmetry
 
