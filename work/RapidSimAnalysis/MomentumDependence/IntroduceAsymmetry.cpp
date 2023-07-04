@@ -22,6 +22,41 @@
 #include <chrono>
 #include <cmath>
 
+double detection(const double& slope, const double& sPi_PZ, const double& sPi_PX){
+        double line = slope * sPi_PZ;
+
+        if (std::abs(sPi_PX) > line){
+                return 1.0;
+        }
+
+        return 0.0;
+}
+
+std::vector<double> integratedAsymmetry(ROOT::RDF::RResultPtr<TH2D> hist, double slope, int binNumber, std::vector<double> ranges){
+        std::vector<double> asymmetry = {0.0, 0.0}; // integrated asymmetry and asymmetry error
+        double dPX, dPZ;
+        double PX, PZ;
+        dPX = (ranges[3] - ranges[2])/(static_cast<double>(binNumber));
+        dPZ = (ranges[1] - ranges[0])/(static_cast<double>(binNumber));
+
+        PX = -0.4 + dPX/2.0;
+        PZ = 0.0 + dPZ/2.0;
+
+        for (size_t i = 0; i < binNumber; i++){ // runs over sPi_PX
+                PX += dPX;
+                for (size_t j = 0; j < binNumber; j++){ // runs over sPi_PZ
+                        PZ += dPZ;
+                        asymmetry[0] += (hist->GetBinContent(j, i) * detection(slope, PZ, PX));
+                        asymmetry[1] += hist->GetBinContent(j, i);
+
+                }
+                PZ = 0.0 + dPZ/2.0;
+        }
+
+        std::cout << asymmetry[1] << std::endl;
+
+        return asymmetry;
+}
 
 void detectionAsymmetry(const std::string fileName, const std::string fileNameNew, const std::string fileNameCP, const std::string treeName, const std::string branchNameX, const std::string branchNameZ, const std::string decay, std::string pion, double asymmetry){
         // Start timer
@@ -35,23 +70,24 @@ void detectionAsymmetry(const std::string fileName, const std::string fileNameNe
                 "sPi_C", [random](){return (random->Uniform() < 0.5) ? -1 : 1;}
         );
 
-
-        auto dataFrameFiltered = dataFrameNew.Filter([](int& sPi_C, double& sPi_PX, double& sPi_PZ){
-                double slope = 0.08;
-                if (sPi_C == -1 && (std::abs(sPi_PX) > slope*sPi_PZ)){
+        double slope = 0.15;
+        auto dataFrameFiltered = dataFrameNew.Filter([slope](int& sPi_C, double& sPi_PX, double& sPi_PZ){
+                if (sPi_C == -1 && (std::abs(sPi_PX) > slope*sPi_PZ) && (std::abs(sPi_PX) < 0.4) && (sPi_PZ < 6.0 && sPi_PZ > 0.0)){
                         return false;
                 }
                 return true;
-        }, {"sPi_C", "sPi_PX", "sPi_PZ"}
+                }, {"sPi_C", "sPi_PX", "sPi_PZ"}
         );
+
+        int binNumber = 100;
         
-        auto hist = dataFrameFiltered.Histo2D({"hist", "", 100, 0, 6, 100, -0.4, 0.4}, "sPi_PZ", "sPi_PX");
+        auto hist = dataFrameFiltered.Histo2D({"hist", "", binNumber, 0, 6, binNumber, -0.4, 0.4}, "sPi_PZ", "sPi_PX");
         auto histPi = dataFrameFiltered.Histo1D({"histPi", "", 10, -2, 2}, "sPi_C");
-        auto histBefore = dataFrameNew.Histo2D({"histBefore", "", 100, 0, 6, 100, -0.4, 0.4}, "sPi_PZ", "sPi_PX");
+        auto histBefore = dataFrameNew.Histo2D({"histBefore", "", binNumber, 0, 6, binNumber, -0.4, 0.4}, "sPi_PZ", "sPi_PX");
         auto histPiBefore = dataFrameNew.Histo1D({"histPiBefore", "", 10, -2, 2}, "sPi_C");
 
-        auto histPositive = dataFrameFiltered.Filter("sPi_C==1").Histo2D({"histPositive", "", 100, 0, 6, 100, -0.4, 0.4}, "sPi_PZ", "sPi_PX");
-        auto histNegative = dataFrameFiltered.Filter("sPi_C==-1").Histo2D({"histNegative", "", 100, 0, 6, 100, -0.4, 0.4}, "sPi_PZ", "sPi_PX");
+        auto histPositive = dataFrameFiltered.Filter("sPi_C==1").Histo2D({"histPositive", "", binNumber, 0, 6, binNumber, -0.4, 0.4}, "sPi_PZ", "sPi_PX");
+        auto histNegative = dataFrameFiltered.Filter("sPi_C==-1").Histo2D({"histNegative", "", binNumber, 0, 6, binNumber, -0.4, 0.4}, "sPi_PZ", "sPi_PX");
 
         TCanvas* canvas = new TCanvas("canvas", "", 1500, 600);
         canvas->Divide(2, 1);
@@ -112,6 +148,9 @@ void detectionAsymmetry(const std::string fileName, const std::string fileNameNe
         histPiCP->Draw("hist");
         canvasPi->SaveAs((pion + "CP.pdf").c_str());
 
+
+
+        // Calculate the total asymmetry (detection and CP)
         auto countPos = dataFrameCP.Filter("sPi_C==1").Count().GetValue();
         auto countNeg = dataFrameCP.Filter("sPi_C==-1").Count().GetValue();
 
@@ -129,8 +168,17 @@ void detectionAsymmetry(const std::string fileName, const std::string fileNameNe
 
         std::cout << "Final asymmetry: " << finalAsymmetry << " +/- "<< finalAsymmetryError << std::endl;
 
-        dataFrameFiltered.Snapshot(treeName, fileNameNew);
-        // dataFrameNew.Snapshot(treeName, fileNameNew);
+        std::vector<double> ranges = {0.0, 6.0, -0.4, 0.4};
+        auto intDetectionAsymmetry = integratedAsymmetry(hist, slope, binNumber, ranges);
+
+        double predictedAsymmetry, predictedAsymmetryError;
+
+        predictedAsymmetry = (asymmetry * intDetectionAsymmetry[0]/intDetectionAsymmetry[1])/(1.0 + asymmetry * intDetectionAsymmetry[0]/intDetectionAsymmetry[1]);
+        std::cout << "Predicted asymmetry: " << predictedAsymmetry << std::endl;
+
+        // Save the filtered dataframe to a root file
+        // dataFrameFiltered.Snapshot(treeName, fileNameNew);
+        std::cout << dataFrameFiltered.Count().GetValue() << std::endl;
 
         //  Stop timer
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
