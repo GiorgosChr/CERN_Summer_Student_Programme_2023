@@ -39,28 +39,30 @@ std::vector<double> integratedAsymmetry(ROOT::RDF::RResultPtr<TH2D> hist, double
         dPX = (ranges[3] - ranges[2])/(static_cast<double>(binNumber));
         dPZ = (ranges[1] - ranges[0])/(static_cast<double>(binNumber));
 
-        PX = -0.4 + dPX/2.0;
-        PZ = 0.0 + dPZ/2.0;
+        PX = -0.4;
+        PZ = 0.0;
 
         for (size_t i = 0; i < binNumber; i++){ // runs over sPi_PX
                 PX += dPX;
                 for (size_t j = 0; j < binNumber; j++){ // runs over sPi_PZ
                         PZ += dPZ;
-                        asymmetry[0] += (hist->GetBinContent(j, i) * detection(slope, PZ, PX));
+                        if (detection(slope, PZ, PX) == 1.0){
+                                asymmetry[0] += hist->GetBinContent(j, i);
+                        }
                         asymmetry[1] += hist->GetBinContent(j, i);
 
                 }
-                PZ = 0.0 + dPZ/2.0;
+                PZ = 0.0;
         }
 
-        std::cout << asymmetry[1] << std::endl;
+        std::cout << "Integrated detection asymmetry: " << asymmetry[0]/asymmetry[1] << std::endl;
 
         return asymmetry;
 }
 
 void detectionAsymmetry(const std::string fileName, const std::string fileNameNew, const std::string fileNameCP, const std::string treeName, const std::string branchNameX, const std::string branchNameZ, const std::string decay, std::string pion, double asymmetry){
-        // Start timer
-        std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
+        // // Start timer
+        // std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
 
         ROOT::RDataFrame dataFrame(treeName, fileName);
         TRandom3* random = new TRandom3();
@@ -70,9 +72,9 @@ void detectionAsymmetry(const std::string fileName, const std::string fileNameNe
                 "sPi_C", [random](){return (random->Uniform() < 0.5) ? -1 : 1;}
         );
 
-        double slope = 0.15;
+        double slope = 0.1;
         auto dataFrameFiltered = dataFrameNew.Filter([slope](int& sPi_C, double& sPi_PX, double& sPi_PZ){
-                if (sPi_C == -1 && (std::abs(sPi_PX) > slope*sPi_PZ) && (std::abs(sPi_PX) < 0.4) && (sPi_PZ < 6.0 && sPi_PZ > 0.0)){
+                if (sPi_C == -1 && (std::abs(sPi_PX) > slope*sPi_PZ)){
                         return false;
                 }
                 return true;
@@ -157,8 +159,8 @@ void detectionAsymmetry(const std::string fileName, const std::string fileNameNe
         auto errorPos = std::pow(countPos, 0.5);
         auto errorNeg = std::pow(countNeg, 0.5);
 
-        std::cout << "Number of positive pions: " << countPos << std::endl;
-        std::cout << "Number of negative pions: " << countNeg << std::endl;
+        // std::cout << "Number of positive pions: " << countPos << std::endl;
+        // std::cout << "Number of negative pions: " << countNeg << std::endl;
 
         double finalAsymmetry = static_cast<double>(countPos - countNeg)/static_cast<double>(countPos + countNeg);
         double finalAsymmetryError, derivPos, derivNeg;
@@ -171,19 +173,18 @@ void detectionAsymmetry(const std::string fileName, const std::string fileNameNe
         std::vector<double> ranges = {0.0, 6.0, -0.4, 0.4};
         auto intDetectionAsymmetry = integratedAsymmetry(hist, slope, binNumber, ranges);
 
-        double predictedAsymmetry, predictedAsymmetryError;
+        double expectedAsymmetry = asymmetry*intDetectionAsymmetry[0]/intDetectionAsymmetry[1] / (1.0 + asymmetry*intDetectionAsymmetry[0]/intDetectionAsymmetry[1]);
+        std::cout << "Expected final asymmetry: " << expectedAsymmetry << std::endl;
 
-        predictedAsymmetry = (asymmetry * intDetectionAsymmetry[0]/intDetectionAsymmetry[1])/(1.0 + asymmetry * intDetectionAsymmetry[0]/intDetectionAsymmetry[1]);
-        std::cout << "Predicted asymmetry: " << predictedAsymmetry << std::endl;
 
         // Save the filtered dataframe to a root file
         // dataFrameFiltered.Snapshot(treeName, fileNameNew);
-        std::cout << dataFrameFiltered.Count().GetValue() << std::endl;
+        // std::cout << dataFrameFiltered.Count().GetValue() << std::endl;
 
-        //  Stop timer
-        std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
-        std::chrono::duration<double> duration = std::chrono::duration_cast<std::chrono::duration<double>>(end - start);
-        std::cout << "detectionAsymmetry() Elapsed time: " << duration.count() << " sec" << std::endl;
+        // //  Stop timer
+        // std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
+        // std::chrono::duration<double> duration = std::chrono::duration_cast<std::chrono::duration<double>>(end - start);
+        // std::cout << "detectionAsymmetry() Elapsed time: " << duration.count() << " sec" << std::endl;
 }
 
 
