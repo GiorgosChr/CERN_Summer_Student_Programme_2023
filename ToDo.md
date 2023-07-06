@@ -41,6 +41,6 @@
 - [ ] Solve multithreading problem (Not necessary)
 - [x] Calculate integrated detection asymmetry
 - [x] Calculate total asymmetry with the correct formula and uncertainty due to the integrated detection asymmetry
-- [ ] Create LaTeX report for this week
+- [x] Create LaTeX report for this week
 
 
