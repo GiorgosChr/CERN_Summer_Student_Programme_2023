@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  6 JUL 2023 18:09
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  6 JUL 2023 21:03
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/home/george/CERN_Summer_Student_Programme_2023/LaTeX/4thWeek/Main.tex
@@ -1120,25 +1120,36 @@ Package luatex.def Info: ../../work/RapidSimAnalysis/MomentumDependence/Plots/sP
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[3<../../work/RapidSimAnalysis/MomentumDependence/Plots/sPi_C_KmKpCP.pdf><../../work/RapidSimAnalysis/MomentumDependence/Plots/sPi_C_pimpipCP.pdf>] [4<../../work/RapidSimAnalysis/MomentumDependence/Plots/sPi_C_KmKpBeforeAfter.pdf><../../work/RapidSimAnalysis/MomentumDependence/Plots/sPi_C_pimpipBeforeAfter.pdf>] [5<../../work/RapidSimAnalysis/MomentumDependence/Plots/sPi_C_KmKpPositiveNegative.pdf><../../work/RapidSimAnalysis/MomentumDependence/Plots/sPi_C_pimpipPositiveNegative.pdf>] (./Main.aux)
+[3<../../work/RapidSimAnalysis/MomentumDependence/Plots/sPi_C_KmKpCP.pdf><../../work/RapidSimAnalysis/MomentumDependence/Plots/sPi_C_pimpipCP.pdf>]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 160.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 171.
+See the caption package documentation for explanation.
+
+[4<../../work/RapidSimAnalysis/MomentumDependence/Plots/sPi_C_KmKpBeforeAfter.pdf><../../work/RapidSimAnalysis/MomentumDependence/Plots/sPi_C_pimpipBeforeAfter.pdf>] [5<../../work/RapidSimAnalysis/MomentumDependence/Plots/sPi_C_KmKpPositiveNegative.pdf><../../work/RapidSimAnalysis/MomentumDependence/Plots/sPi_C_pimpipPositiveNegative.pdf>] (./Main.aux)
 Package rerunfilecheck Info: File `Main.out' has not changed.
 (rerunfilecheck)             Checksum: 9814C2D956916ADB9290ECA4E25C967A;103.
 )
 
 Here is how much of LuaTeX's memory you used:
- 40821 strings out of 477805
+ 40825 strings out of 477805
  125016,1648299 words of node,token memory allocated
  601 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 17 attribute, 66 glue_spec, 17 attribute_list, 2 write nodes
    avail lists: 1:9,2:2028,3:237,4:179,5:3219,6:62,7:4449,8:68,9:6414,10:11,11:396
- 59798 multiletter control sequences out of 65536+600000
+ 59800 multiletter control sequences out of 65536+600000
  63 fonts using 3946135 bytes
- 84i,7n,106p,526b,764s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,11n,106p,526b,925s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb>
-Output written on Main.pdf (5 pages, 5338866 bytes).
+Output written on Main.pdf (5 pages, 5343195 bytes).
 
-PDF statistics: 522 PDF objects out of 1000 (max. 8388607)
- 283 compressed objects within 3 object streams
- 55 named destinations out of 1000 (max. 131072)
+PDF statistics: 524 PDF objects out of 1000 (max. 8388607)
+ 285 compressed objects within 3 object streams
+ 57 named destinations out of 1000 (max. 131072)
  24 words of extra memory for PDF output out of 10000 (max. 100000000)
 
