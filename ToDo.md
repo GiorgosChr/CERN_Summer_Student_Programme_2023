@@ -39,7 +39,8 @@
 - [x] Calculate total asymmetry and uncertainty
 - [ ] Try to add negative $CP$ asymmetry (Not necessary)
 - [ ] Solve multithreading problem (Not necessary)
-- [ ] Calculate integrated detection asymmetry
-- [ ] Calculate total asymmetry with the correct formula and uncertainty due to the integrated detection asymmetry
+- [x] Calculate integrated detection asymmetry
+- [x] Calculate total asymmetry with the correct formula and uncertainty due to the integrated detection asymmetry
+- [ ] Create LaTeX report for this week
 
 

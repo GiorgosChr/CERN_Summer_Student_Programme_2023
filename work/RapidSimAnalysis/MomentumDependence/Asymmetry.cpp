@@ -23,6 +23,9 @@
 #include <cmath>
 
 double detection(const double& slope, const double& sPi_PZ, const double& sPi_PX){
+        // // Returns either 1.0 or 0.0 according to the user defined line
+        // // If 1 then in that region we have 100% detection asymmetry
+        // // If 0 then we have no asymmetry
         double line = slope * sPi_PZ;
 
         if (std::abs(sPi_PX) > line){
@@ -32,30 +35,45 @@ double detection(const double& slope, const double& sPi_PZ, const double& sPi_PX
         return 0.0;
 }
 
-std::vector<double> integratedAsymmetry(ROOT::RDF::RResultPtr<TH2D> hist, double slope, int binNumber, std::vector<double> ranges){
-        std::vector<double> asymmetry = {0.0, 0.0}; // integrated asymmetry and asymmetry error
+std::vector<double> integratedAsymmetry(ROOT::RDF::RResultPtr<TH2D> hist, double slope, int binNumber, double xMin,double xMax, double zMin, double zMax){
+        // // Returns the integrated detection asymmetry and the corresponding error
+        // // according to a user defined line with a slope
+
+        std::vector<double> asymmetry = {0.0, 0.0}; // asymmetry, error
         double dPX, dPZ;
         double PX, PZ;
-        dPX = (ranges[3] - ranges[2])/(static_cast<double>(binNumber));
-        dPZ = (ranges[1] - ranges[0])/(static_cast<double>(binNumber));
+        dPX = (xMax - xMin)/(static_cast<double>(binNumber));
+        dPZ = (zMax - zMin)/(static_cast<double>(binNumber));
 
-        PX = -0.4;
-        PZ = 0.0;
+        // calculate the momentum at the bin center
+        PX = -0.4 + dPX/2.0;
+        PZ = 0.0 + dPX/2.0;
+
+        // define the two integrals
+        double integralN, integralA;
+        double integralNError, integralAError;
+        integralN = 0.0;
+        integralA = 0.0;
+        integralNError == 0.0;
+        integralAError == 0.0;
 
         for (size_t i = 0; i < binNumber; i++){ // runs over sPi_PX
-                PX += dPX;
                 for (size_t j = 0; j < binNumber; j++){ // runs over sPi_PZ
-                        PZ += dPZ;
                         if (detection(slope, PZ, PX) == 1.0){
-                                asymmetry[0] += hist->GetBinContent(j, i);
+                                // if we have an asymmetry then we have to take into account
+                                // that contribution to the integralA
+                                integralA += hist->GetBinContent(j, i);
                         }
-                        asymmetry[1] += hist->GetBinContent(j, i);
-
+                        integralN += hist->GetBinContent(j, i);
+                        PZ += dPZ;
                 }
-                PZ = 0.0;
+                PX += dPX;
+                PZ = 0.0 + dPX/2.0;
         }
-
-        std::cout << "Integrated detection asymmetry: " << asymmetry[0]/asymmetry[1] << std::endl;
+        integralAError = std::pow(integralA, 0.5);
+        integralAError = std::pow(integralN, 0.5);
+        asymmetry[0] = integralA/integralN;
+        asymmetry[1] = std::pow(std::pow((integralAError/integralN), 2.0) + std::pow(integralA*integralNError/std::pow(integralN, 2.0), 2.0), 0.5);
 
         return asymmetry;
 }
@@ -68,24 +86,21 @@ void detectionAsymmetry(const std::string fileName, const std::string fileNameNe
 
         int binNumber;
         double xMin, xMax, zMin, zMax;
-        binNumber = 100;
+        binNumber = 600;
         xMin = -0.4;
         xMax = -xMin;
         zMin = 0.0;
-        zMax = 6.0;
+        zMax = 15.0;
+
+        int countPos, countNeg;
+        double errorPos, errorNeg;
 
 
         // // Generate soft pion charges with uniform distribution
         auto dataFramesPi = dataFrame.Define(
                 "sPi_C", [random](){return (random->Uniform() < 0.5) ? -1 : 1;}
         );
-        // // Plot the soft pion charge distribution
-        TCanvas* canvasCharges = new TCanvas("canvasCharges", "");
-        auto histCharges = dataFramesPi.Histo1D({"histCharges", "", 10, -2, 2}, "sPi_C");
-        histCharges->SetStats(0);
-        histCharges->GetXaxis()->SetTitle("soft #pi charge");
-        histCharges->Draw("hist");
-        canvasCharges->SaveAs((pion + "Initial.pdf").c_str());
+
 
         // // Filter out events according to a CP asymmetry
         auto dataFrameCP = dataFramesPi.Filter(
@@ -99,14 +114,7 @@ void detectionAsymmetry(const std::string fileName, const std::string fileNameNe
                         return true;
                 }, {"sPi_C"}
         );
-        // // Plot the soft pion charge distribution
-        auto histCP = dataFrameCP.Histo1D({"histCharges", "", 10, -2, 2}, "sPi_C");
-        histCP->SetStats(0);
-        histCP->GetXaxis()->SetTitle("soft #pi charge");
-        histCP->Draw("hist");
-        canvasCharges->SaveAs((pion + "CP.pdf").c_str());
-
-
+        
 
         // // Filter out events according to a detection asymmetry
         // // with momentum dependence
@@ -118,6 +126,113 @@ void detectionAsymmetry(const std::string fileName, const std::string fileNameNe
                 return true;
                 }, {"sPi_C", "sPi_PX", "sPi_PZ"}
         );
+
+
+        // // Plot the initial pion charge distribution 
+        TCanvas* canvasCharges = new TCanvas("canvasCharges", "");
+        auto histCharges = dataFramesPi.Histo1D({"histCharges", "", 10, -2, 2}, "sPi_C");
+        histCharges->SetStats(0);
+        histCharges->GetXaxis()->SetTitle("soft #pi charge");
+        histCharges->Draw("hist");
+        canvasCharges->SaveAs((pion + "Initial.pdf").c_str());
+
+        // // Plot the CP pion charge distribution
+        auto histCP = dataFrameCP.Histo1D({"histCharges", "", 10, -2, 2}, "sPi_C");
+        histCP->SetStats(0);
+        histCP->GetXaxis()->SetTitle("soft #pi charge");
+        histCP->Draw("hist");
+        canvasCharges->SaveAs((pion + "CP.pdf").c_str());
+
+        // // Plot the pion charge distribution after
+        // // the detection asymmetry
+        auto histDet = dataFrameDetection.Histo1D({"histDet", "", 10, -2, 2}, "sPi_C");
+        histDet->SetStats(0);
+        histDet->GetXaxis()->SetTitle("soft #pi charge");
+        histDet->Draw("hist");
+        canvasCharges->SaveAs((pion + "Detection.pdf").c_str());
+
+        // // Plot before/after comparison of PXPZ
+        TCanvas* canvasDual = new TCanvas("canvasDual", "", 1500, 600);
+        canvasDual->Divide(2, 1);
+        gStyle->SetPalette(55);
+        auto histAfter = dataFrameDetection.Histo2D({"histAfter", "", binNumber, zMin, zMax, binNumber, xMin, xMax}, "sPi_PZ", "sPi_PX");
+        auto histBefore = dataFramesPi.Histo2D({"histbefore", "", binNumber, zMin, zMax, binNumber, xMin, xMax}, "sPi_PZ", "sPi_PX");
+        canvasDual->cd(1);
+        histAfter->SetStats(0);
+        histAfter->GetYaxis()->SetTitle("p_{x}(#pi) [GeV/c]");
+        histAfter->GetXaxis()->SetTitle("After p_{z}(#pi) [GeV/c]");
+        histAfter->DrawNormalized("colz");
+        canvasDual->cd(2);
+        histBefore->SetStats(0);
+        histBefore->GetYaxis()->SetTitle("p_{x}(#pi) [GeV/c]");
+        histBefore->GetXaxis()->SetTitle("Before p_{z}(#pi) [GeV/c]");
+        histBefore->DrawNormalized("colz");
+        canvasDual->SaveAs((pion + "BeforeAfter.pdf").c_str());
+
+        // // Plot positive/negative comparison PXPZ
+        auto histPositive = dataFrameDetection.Filter("sPi_C==1").Histo2D({"histAfter", "", binNumber, zMin, zMax, binNumber, xMin, xMax}, "sPi_PZ", "sPi_PX");
+        auto histNegative = dataFrameDetection.Filter("sPi_C==-1").Histo2D({"histbefore", "", binNumber, zMin, zMax, binNumber, xMin, xMax}, "sPi_PZ", "sPi_PX");
+        canvasDual->cd(1);
+        histPositive->SetStats(0);
+        histPositive->GetYaxis()->SetTitle("p_{x}(#pi^{+}) [GeV/c]");
+        histPositive->GetXaxis()->SetTitle("p_{z}(#pi^{+}) [GeV/c]");
+        histPositive->DrawNormalized("colz");
+        canvasDual->cd(2);
+        histNegative->SetStats(0);
+        histNegative->GetYaxis()->SetTitle("p_{x}(#pi^{-}) [GeV/c]");
+        histNegative->GetXaxis()->SetTitle("p_{z}(#pi^{-}) [GeV/c]");
+        histNegative->DrawNormalized("colz");
+        canvasDual->SaveAs((pion + "PositiveNegative.pdf").c_str());
+
+        // CP Asymmetry calculation
+        countPos = dataFrameCP.Filter("sPi_C==1").Count().GetValue();
+        countNeg = dataFrameCP.Filter("sPi_C==-1").Count().GetValue();
+        
+        errorPos = std::pow(static_cast<double>(countPos), 0.5);
+        errorNeg = std::pow(static_cast<double>(countNeg), 0.5);
+
+        double calcAsymmetry, calcAsymmetryError, derivPos, derivNeg;
+
+        calcAsymmetry = (static_cast<double>(countPos) - static_cast<double>(countNeg)) / (static_cast<double>(countPos) + static_cast<double>(countNeg));
+        derivPos = 1.0/(static_cast<double>(countPos + countNeg)) - (static_cast<double>(countPos - countNeg))/std::pow((static_cast<double>(countPos + countNeg)), 2);
+        derivPos =  - 1.0/(static_cast<double>(countPos + countNeg)) - (static_cast<double>(countPos - countNeg))/std::pow((static_cast<double>(countPos + countNeg)), 2);
+        calcAsymmetryError = std::pow(std::pow(derivPos * errorPos, 2.0) + std::pow(derivNeg * errorNeg, 2.0), 0.5);
+        std::cout << "Calculated CP Asymmetry: " << calcAsymmetry << " +/- " << calcAsymmetryError << std::endl;
+        std::cout << "Expected CP Asymmetry: " << asymmetry << std::endl;
+        std::cout << "|Calc - Exp|/σ: " << std::abs(calcAsymmetry - asymmetry)/calcAsymmetryError << " σ" << std::endl << std::endl;
+
+        // Detection asymmetry calculation
+        std::vector<double> intDetAsymmetry = integratedAsymmetry(histAfter, slope, binNumber, xMin, xMax, zMin, zMax);
+        std::cout << "Calculated Detection Asymmetry: " << intDetAsymmetry[0] << " +/- " << intDetAsymmetry[1] << std::endl;
+
+        double calcTotalAsymmetry, calcTotalAsymmetryError;
+        countPos = dataFrameDetection.Filter("sPi_C==1").Count().GetValue();
+        countNeg = dataFrameDetection.Filter("sPi_C==-1").Count().GetValue();
+        
+        errorPos = std::pow(static_cast<double>(countPos), 0.5);
+        errorNeg = std::pow(static_cast<double>(countNeg), 0.5);
+
+
+        calcTotalAsymmetry = (static_cast<double>(countPos) - static_cast<double>(countNeg)) / (static_cast<double>(countPos) + static_cast<double>(countNeg));
+        derivPos = 1.0/(static_cast<double>(countPos + countNeg)) - (static_cast<double>(countPos - countNeg))/std::pow((static_cast<double>(countPos + countNeg)), 2);
+        derivPos =  - 1.0/(static_cast<double>(countPos + countNeg)) - (static_cast<double>(countPos - countNeg))/std::pow((static_cast<double>(countPos + countNeg)), 2);
+        calcTotalAsymmetryError = std::pow(std::pow(derivPos * errorPos, 2.0) + std::pow(derivNeg * errorNeg, 2.0), 0.5);
+
+        double expDetAsymmetry, expDetAsymmetryError;
+        expDetAsymmetry = (calcTotalAsymmetry - calcAsymmetry)/(1.0 - calcTotalAsymmetry*calcAsymmetry);
+        derivPos = -1.0/(1.0 - calcTotalAsymmetry*calcAsymmetry) + calcTotalAsymmetry*(calcTotalAsymmetry - calcAsymmetry)/std::pow(1.0 - calcTotalAsymmetry*calcAsymmetry, 2.0);
+        derivNeg = 1.0/(1.0 - calcTotalAsymmetry*calcAsymmetry) + calcAsymmetry*(calcTotalAsymmetry - calcAsymmetry)/std::pow(1.0 - calcTotalAsymmetry*calcAsymmetry, 2.0);
+        expDetAsymmetryError = std::pow(std::pow(derivPos*calcAsymmetryError, 2.0) + std::pow(derivNeg*calcTotalAsymmetryError, 2.0), 0.5);
+
+
+        std::cout << "Expected Detection Asymmetry: " << expDetAsymmetry << " +/- " << expDetAsymmetryError << std::endl;
+
+        // Total asymmetry calculation
+        
+        
+
+
+        std::cout << std::endl << std::endl;
 }
 
 
@@ -155,9 +270,15 @@ int main(){
         pions.push_back("Plots/sPi_C_pimpip");
         fileNamesCP.push_back("Dstp_D0__KmKp_pip_sPiCP.root");
         fileNamesCP.push_back("Dstp_D0__pimpip_pip_sPiCP.root");
+        asymmetries.push_back(0.1);
         asymmetries.push_back(0.2);
-        asymmetries.push_back(0.3);
 
+
+        // // add pion charges
+        // // add CP asymmetry
+        // // add Detection asymmetry
+        // // Calculate CP, integrated Detection and total asymmetries
+        // // Compare with expected results
         for (size_t i = 0; i < fileNames.size(); i++){
                 detectionAsymmetry(fileNames[i], filenamesNew[i], fileNamesCP[i], treeName, branchNameX, branchNameZ, decays[i], pions[i], asymmetries[i]);
         }
