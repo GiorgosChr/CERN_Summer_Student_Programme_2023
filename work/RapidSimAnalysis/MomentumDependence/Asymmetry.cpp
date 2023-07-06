@@ -224,10 +224,18 @@ void detectionAsymmetry(const std::string fileName, const std::string fileNameNe
         derivNeg = 1.0/(1.0 - calcTotalAsymmetry*calcAsymmetry) + calcAsymmetry*(calcTotalAsymmetry - calcAsymmetry)/std::pow(1.0 - calcTotalAsymmetry*calcAsymmetry, 2.0);
         expDetAsymmetryError = std::pow(std::pow(derivPos*calcAsymmetryError, 2.0) + std::pow(derivNeg*calcTotalAsymmetryError, 2.0), 0.5);
 
-
-        std::cout << "Expected Detection Asymmetry: " << expDetAsymmetry << " +/- " << expDetAsymmetryError << std::endl;
+        std::cout << "Expected Detection Asymmetry: " << expDetAsymmetry << " +/- " << expDetAsymmetryError << std::endl << std::endl;
 
         // Total asymmetry calculation
+
+        std::cout << "Calculated Total Asymmetry: " << calcTotalAsymmetry << " +/- " << calcTotalAsymmetryError << std::endl;
+
+        double expTotalAsymmetry, expTotalAsymmetryError;
+        expTotalAsymmetry = (asymmetry + intDetAsymmetry[0])/(1.0 + asymmetry*intDetAsymmetry[0]);
+        derivPos = 1.0 / (1.0 + intDetAsymmetry[0]*asymmetry) - asymmetry*(asymmetry + intDetAsymmetry[0])/std::pow(1.0 + intDetAsymmetry[0]*asymmetry, 2.0);
+        derivPos = derivPos * intDetAsymmetry[1];
+        expDetAsymmetryError = std::abs(derivPos);
+        std::cout << "Expected Total Asymmetry: " << expTotalAsymmetry << " +/- " << expDetAsymmetryError<< std::endl << std::endl;
         
         
 
