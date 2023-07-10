@@ -43,4 +43,12 @@
 - [x] Calculate total asymmetry with the correct formula and uncertainty due to the integrated detection asymmetry
 - [x] Create LaTeX report for this week
 
+## $5^{th}$ Week 10/07 - 14/07
+### MomentumDependence
+- [ ] Add more bins to the detection asymmetry histogram
+- [ ] Minor stuff on LaTeX report
+- [ ] Save final TTrees in new files
+
+### WeightingFunction
+- [ ] Create normalized 3d distributions according to the Decay formalism pdf
 
