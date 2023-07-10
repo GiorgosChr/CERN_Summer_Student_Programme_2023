@@ -45,35 +45,44 @@ std::vector<double> integratedAsymmetry(ROOT::RDF::RResultPtr<TH2D> hist, double
         dPX = (xMax - xMin)/(static_cast<double>(binNumber));
         dPZ = (zMax - zMin)/(static_cast<double>(binNumber));
 
+        // define the two integrals
+        double integralA, integralN;
+        double integralError;
+        integralA = 0.0;
+        integralN = 0.0;
+        integralError == 0.0;
+
         // calculate the momentum at the bin center
         PX = -0.4 + dPX/2.0;
         PZ = 0.0 + dPX/2.0;
 
-        // define the two integrals
-        double integralN, integralA;
-        double integralNError, integralAError;
-        integralN = 0.0;
-        integralA = 0.0;
-        integralNError == 0.0;
-        integralAError == 0.0;
-
         for (size_t i = 0; i < binNumber; i++){ // runs over sPi_PX
                 for (size_t j = 0; j < binNumber; j++){ // runs over sPi_PZ
-                        if (detection(slope, PZ, PX) == 1.0){
-                                // if we have an asymmetry then we have to take into account
-                                // that contribution to the integralA
-                                integralA += hist->GetBinContent(j, i);
-                        }
+                        integralA += detection(slope, PZ, PX) * hist->GetBinContent(j, i);
                         integralN += hist->GetBinContent(j, i);
                         PZ += dPZ;
                 }
                 PX += dPX;
                 PZ = 0.0 + dPX/2.0;
         }
-        integralAError = std::pow(integralA, 0.5);
-        integralAError = std::pow(integralN, 0.5);
+
+        // calculate the momentum at the bin center
+        PX = -0.4 + dPX/2.0;
+        PZ = 0.0 + dPX/2.0;
+
+        for (size_t i = 0; i < binNumber; i++){ // runs over sPi_PX
+                for (size_t j = 0; j < binNumber; j++){ // runs over sPi_PZ
+                        integralError += std::pow(detection(slope, PZ, PX)*integralN - integralA, 2.0) * hist->GetBinContent(j, i);
+                        PZ += dPZ;
+                }
+                PX += dPX;
+                PZ = 0.0 + dPX/2.0;
+        }
+        integralError = std::pow(integralError/std::pow(integralN, 4.0), 0.5);
+
         asymmetry[0] = integralA/integralN;
-        asymmetry[1] = std::pow(std::pow((integralAError/integralN), 2.0) + std::pow(integralA*integralNError/std::pow(integralN, 2.0), 2.0), 0.5);
+        asymmetry[1] = integralError;
+
 
         return asymmetry;
 }
@@ -86,11 +95,11 @@ void detectionAsymmetry(const std::string fileName, const std::string fileNameNe
 
         int binNumber;
         double xMin, xMax, zMin, zMax;
-        binNumber = 600;
+        binNumber = 100;
         xMin = -0.4;
         xMax = -xMin;
         zMin = 0.0;
-        zMax = 15.0;
+        zMax = 10.0;
 
         int countPos, countNeg;
         double errorPos, errorNeg;
@@ -98,7 +107,9 @@ void detectionAsymmetry(const std::string fileName, const std::string fileNameNe
 
         // // Generate soft pion charges with uniform distribution
         auto dataFramesPi = dataFrame.Define(
-                "sPi_C", [random](){return (random->Uniform() < 0.5) ? -1 : 1;}
+                "sPi_C", [random](){
+                        return (random->Uniform() < 0.5) ? -1 : 1;
+                }
         );
 
 
@@ -202,7 +213,8 @@ void detectionAsymmetry(const std::string fileName, const std::string fileNameNe
         std::cout << "|Calc - Exp|/σ: " << std::abs(calcAsymmetry - asymmetry)/calcAsymmetryError << " σ" << std::endl << std::endl;
 
         // Detection asymmetry calculation
-        std::vector<double> intDetAsymmetry = integratedAsymmetry(histAfter, slope, binNumber, xMin, xMax, zMin, zMax);
+        // std::vector<double> intDetAsymmetry = integratedAsymmetry(histAfter, slope, binNumber, xMin, xMax, zMin, zMax);
+        std::vector<double> intDetAsymmetry = integratedAsymmetry(dataFrameDetection.Histo2D({"histAfter", "", 600, 0.0, 15.0, 600, -0.4, 0.4}, "sPi_PZ", "sPi_PX"), slope, 600, -0.4, 0.4, 0.0, 15.0);
         std::cout << "Calculated Detection Asymmetry: " << intDetAsymmetry[0] << " +/- " << intDetAsymmetry[1] << std::endl;
 
         double calcTotalAsymmetry, calcTotalAsymmetryError;
@@ -224,7 +236,7 @@ void detectionAsymmetry(const std::string fileName, const std::string fileNameNe
         derivNeg = 1.0/(1.0 - calcTotalAsymmetry*calcAsymmetry) + calcAsymmetry*(calcTotalAsymmetry - calcAsymmetry)/std::pow(1.0 - calcTotalAsymmetry*calcAsymmetry, 2.0);
         expDetAsymmetryError = std::pow(std::pow(derivPos*calcAsymmetryError, 2.0) + std::pow(derivNeg*calcTotalAsymmetryError, 2.0), 0.5);
 
-        std::cout << "Expected Detection Asymmetry: " << expDetAsymmetry << " +/- " << expDetAsymmetryError << std::endl << std::endl;
+        // std::cout << "Expected Detection Asymmetry: " << expDetAsymmetry << " +/- " << expDetAsymmetryError << std::endl << std::endl;
 
         // Total asymmetry calculation
 
@@ -238,7 +250,7 @@ void detectionAsymmetry(const std::string fileName, const std::string fileNameNe
         std::cout << "Expected Total Asymmetry: " << expTotalAsymmetry << " +/- " << expDetAsymmetryError<< std::endl << std::endl;
         
         
-
+        dataFrameDetection.Snapshot(treeName, fileNameNew);
 
         std::cout << std::endl << std::endl;
 }
