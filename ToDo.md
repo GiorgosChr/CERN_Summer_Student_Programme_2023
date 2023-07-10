@@ -50,5 +50,11 @@
 - [x] Save final TTrees in new files
 
 ### WeightingFunction
-- [ ] Create normalized 3d distributions according to the Decay formalism pdf
+- [x] Create normalized 3d distributions according to the Decay formalism pdf
+- [ ] Equalize $KK$ and $\pi\pi$ distributions
+
+### CDS Report
+- [ ] Begin writing the CDS Report.
+- [ ] Add introduction and motivation
+- [ ] Add $\Delta A_{CP}$ formalism and the weighting function
 
