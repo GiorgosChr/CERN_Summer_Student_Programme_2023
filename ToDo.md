@@ -45,9 +45,9 @@
 
 ## $5^{th}$ Week 10/07 - 14/07
 ### MomentumDependence
-- [ ] Add more bins to the detection asymmetry histogram
-- [ ] Minor stuff on LaTeX report
-- [ ] Save final TTrees in new files
+- [x] Add more bins to the detection asymmetry histogram
+- [x] Minor stuff on LaTeX report
+- [x] Save final TTrees in new files
 
 ### WeightingFunction
 - [ ] Create normalized 3d distributions according to the Decay formalism pdf
