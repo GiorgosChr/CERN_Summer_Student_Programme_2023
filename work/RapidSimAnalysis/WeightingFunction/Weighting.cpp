@@ -9,22 +9,40 @@
 #include <chrono>
 #include <cmath>
 
-ROOT::RDF::RResultPtr<TH3D> normDistribution(std::string fileName, std::string treeName){
+void assignWeights(std::string fileName, std::string fileNameNew, std::string treeName, int binNumber, std::vector<double> xRange, std::vector<double> yRange, std::vector<double> zRange, std::vector<std::vector<std::vector<double>>> weights){
+	ROOT::RDataFrame dataFrame(treeName, fileName);
+	
+	double dPT = (xRange[1] - xRange[0])/static_cast<double>(binNumber);
+	double dEta = (yRange[1] - yRange[0])/static_cast<double>(binNumber);
+	double dPhi = (zRange[1] - zRange[0])/static_cast<double>(binNumber);
+
+
+	auto dataFrameWeighted = dataFrame.Filter(
+		[xRange, yRange, zRange](const double& D0_PT, const double& D0_eta, const double& D0_phi){
+			if (D0_PT >=xRange[0] && D0_PT <=xRange[1], D0_eta >=yRange[0] && D0_eta <=yRange[1], D0_phi >=zRange[0] && D0_phi <=zRange[1]){
+				return true;
+			}
+			return false;
+		}, {"D0_PT", "D0_eta", "D0_phi"}
+	).Define(
+		"Weight", [weights, dPT, dEta, dPhi](const double& D0_PT, const double& D0_eta, const double& D0_phi){
+			int i = static_cast<int>(D0_PT/dPT);
+			int j = static_cast<int>(D0_eta/dEta);
+			int k = static_cast<int>(D0_phi/dPhi);
+
+			return weights[i][j][k];
+		}, {"D0_PT", "D0_eta", "D0_phi"}		
+	);
+
+	dataFrameWeighted.Snapshot(treeName, fileNameNew);
+
+
+
+}
+
+ROOT::RDF::RResultPtr<TH3D> normDistribution(std::string fileName, std::string treeName, int binNumber, std::vector<double> xRange, std::vector<double> yRange, std::vector<double> zRange){
         ROOT::RDataFrame dataFrame(treeName, fileName);
 
-        int binNumber = 15;
-        std::vector<double> xRange = {
-                -0.0,
-                20.0
-        };
-        std::vector<double> yRange = {
-                0.0,
-                7.0
-        };
-        std::vector<double> zRange = {
-                -3.5,
-                3.5
-        };
         auto hist = dataFrame.Histo3D(
                 {(fileName).c_str(), "", binNumber, xRange[0], xRange[1], binNumber, yRange[0], yRange[1], binNumber, zRange[0], zRange[1]}, "D0_PT", "D0_eta","D0_phi"
         );
@@ -50,7 +68,6 @@ std::vector<std::vector<std::vector<double>>> getWeights(std::vector<ROOT::RDF::
                         for (size_t k = 0; k < distributions[0]->GetNbinsZ(); k++){
                                 weight = distributions[1]->GetBinContent(i, j, k)/distributions[0]->GetBinContent(i, j, k);
                                 weights[i][j][k] = weight;
-                                
                         }
                 }
         }
@@ -85,9 +102,22 @@ int main(){
         };
         std::string treeName = "DecayTree";
 
+        int binNumber = 15;
+        std::vector<double> xRange = {
+                -0.0,
+                20.0
+        };
+        std::vector<double> yRange = {
+                0.0,
+                7.0
+        };
+        std::vector<double> zRange = {
+                -3.5,
+                3.5
+        };
         TCanvas* canvas = new TCanvas("canvas", "");
         for (size_t i = 0; i < fileNames.size(); i++){
-                distributions.push_back(normDistribution(fileNames[i], treeName));
+                distributions.push_back(normDistribution(fileNames[i], treeName, binNumber, xRange, yRange, zRange));
                 distributions[i]->SetStats(0);
                 distributions[i]->GetXaxis()->SetTitle("P_{T} GeV/c");
                 distributions[i]->GetYaxis()->SetTitle("#eta");
@@ -98,6 +128,9 @@ int main(){
 
         auto weights = getWeights(distributions);
 
+	for (size_t i = 0; i < fileNames.size(); i++){
+		assignWeights(fileNames[i], fileNamesNew[i], treeName, binNumber, xRange, yRange, zRange, weights);
+	}
 
         //  Stop timer
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
