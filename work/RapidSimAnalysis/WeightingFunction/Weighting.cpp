@@ -12,7 +12,7 @@
 ROOT::RDF::RResultPtr<TH3D> normDistribution(std::string fileName, std::string treeName, std::string filter){
         ROOT::RDataFrame dataFrame(treeName, fileName);
 
-        int binNumber = 100;
+        int binNumber = 15;
         std::vector<double> xRange = {
                 -0.0,
                 20.0
@@ -55,11 +55,26 @@ int main(){
                 "Dstp_D0__KmKp_pip_sPi_weighted_tree.root",
                 "Dstp_D0__pimpip_pip_sPi_weighted_tree.root"
         };
+        std::vector<std::string> plotNames = {
+                "Plots/KmKpPositive.pdf",
+                "Plots/KmKpNegative.pdf",
+                "Plots/pimpipPositive.pdf",
+                "Plots/pimpipNegative.pdf"
+        };
         std::string treeName = "DecayTree";
 
+        TCanvas* canvas = new TCanvas("canvas", "");
+        int k = 0;
         for (size_t i = 0; i < fileNames.size(); i++){
                 for (size_t j = 0; j < filters.size(); j++){
                         distributions.push_back(normDistribution(fileNames[i], treeName, filters[j]));
+                        distributions[k]->SetStats(0);
+                        distributions[k]->GetXaxis()->SetTitle("P_{T} GeV/c");
+                        distributions[k]->GetYaxis()->SetTitle("#eta");
+                        distributions[k]->GetZaxis()->SetTitle("#phi");
+                        distributions[k]->Draw("LEGO2");
+                        canvas->SaveAs(plotNames[k].c_str());
+                        k += 1;
                 }
         }
 
