@@ -30,7 +30,33 @@ ROOT::RDF::RResultPtr<TH3D> normDistribution(std::string fileName, std::string t
         );
         hist->Scale(1.0/hist->Integral());
         return hist;
-};
+}
+
+std::vector<std::vector<std::vector<double>>> getWeights(std::vector<ROOT::RDF::RResultPtr<TH3D>> distributions){
+        // // distributions[0] -> KK
+        // // distributions[1] -> ππ
+
+        // // w = Γ_{ππ}/Γ_{KK} -> Γ_{ππ} = w*Γ_{KK}
+        
+        int xSize, ySize, zSize;
+        xSize = distributions[0]->GetNbinsX();
+        ySize = distributions[0]->GetNbinsY();
+        zSize = distributions[0]->GetNbinsX();
+        
+        double weight;
+        std::vector<std::vector<std::vector<double>>> weights(xSize, std::vector<std::vector<double>>(ySize, std::vector<double>(zSize)));
+        for (size_t i = 0; i < distributions[0]->GetNbinsX(); i++){
+                for (size_t j = 0; j < distributions[0]->GetNbinsY(); j++){
+                        for (size_t k = 0; k < distributions[0]->GetNbinsZ(); k++){
+                                weight = distributions[1]->GetBinContent(i, j, k)/distributions[0]->GetBinContent(i, j, k);
+                                weights[i][j][k] = weight;
+                                
+                        }
+                }
+        }
+
+        return weights;
+}
 
 int main(){
         // Start timer
@@ -69,6 +95,8 @@ int main(){
                 distributions[i]->Draw("LEGO2");
                 canvas->SaveAs(plotNames[i].c_str());
         }
+
+        auto weights = getWeights(distributions);
 
 
         //  Stop timer
