@@ -2,6 +2,7 @@
 #include <ROOT/RVec.hxx>
 #include <TCanvas.h>
 #include <TStyle.h>
+#include <TLegend.h>
 
 
 #include <iostream>
@@ -25,19 +26,43 @@ void assignWeights(std::string fileName, std::string fileNameNew, std::string tr
 			return false;
 		}, {"D0_PT", "D0_eta", "D0_phi"}
 	).Define(
-		"Weight", [weights, dPT, dEta, dPhi](const double& D0_PT, const double& D0_eta, const double& D0_phi){
-			int i = static_cast<int>(D0_PT/dPT);
-			int j = static_cast<int>(D0_eta/dEta);
-			int k = static_cast<int>(D0_phi/dPhi);
+		"Weight", [weights, dPT, dEta, dPhi, xRange, yRange, zRange, binNumber](const double& D0_PT, const double& D0_eta, const double& D0_phi){
+			int iIndex, jIndex, kIndex;
+                        iIndex = 0;
+                        jIndex = 0;
+                        kIndex = 0;
 
-			return weights[i][j][k];
+                        double PT = xRange[0];
+                        double eta = yRange[0];
+                        double phi = zRange[0];
+
+			for (size_t i = 0; i < binNumber - 1; i++){
+				if ((D0_PT > PT) && (D0_PT < (PT + dPT))){
+					iIndex = i;
+				}
+				PT += dPT;
+			}
+
+                        for (size_t j = 0; j < binNumber - 1; j++){
+                                if ((D0_eta > eta) && (D0_eta < (eta + dEta))){
+                                        jIndex = j;
+                                }
+                                eta += dEta;
+                        }
+
+			for (size_t k = 0; k < binNumber - 1; k++){
+				if ((D0_phi > phi) && (D0_phi < (phi + dPhi))){
+					kIndex = k;
+				}
+				phi += dPhi;
+			}
+
+
+			return weights[iIndex][jIndex][kIndex];
 		}, {"D0_PT", "D0_eta", "D0_phi"}		
 	);
 
 	dataFrameWeighted.Snapshot(treeName, fileNameNew);
-
-
-
 }
 
 ROOT::RDF::RResultPtr<TH3D> normDistribution(std::string fileName, std::string treeName, int binNumber, std::vector<double> xRange, std::vector<double> yRange, std::vector<double> zRange){
@@ -51,8 +76,8 @@ ROOT::RDF::RResultPtr<TH3D> normDistribution(std::string fileName, std::string t
 }
 
 std::vector<std::vector<std::vector<double>>> getWeights(std::vector<ROOT::RDF::RResultPtr<TH3D>> distributions){
-        // // distributions[0] -> KK
-        // // distributions[1] -> ππ
+        // // distributions[1] -> KK
+        // // distributions[0] -> ππ
 
         // // w = Γ_{ππ}/Γ_{KK} -> Γ_{ππ} = w*Γ_{KK}
         
@@ -66,13 +91,47 @@ std::vector<std::vector<std::vector<double>>> getWeights(std::vector<ROOT::RDF::
         for (size_t i = 0; i < distributions[0]->GetNbinsX(); i++){
                 for (size_t j = 0; j < distributions[0]->GetNbinsY(); j++){
                         for (size_t k = 0; k < distributions[0]->GetNbinsZ(); k++){
-                                weight = distributions[1]->GetBinContent(i, j, k)/distributions[0]->GetBinContent(i, j, k);
+                                weight = distributions[0]->GetBinContent(i, j, k)/distributions[1]->GetBinContent(i, j, k);
                                 weights[i][j][k] = weight;
                         }
                 }
         }
 
         return weights;
+}
+
+void plotWeightedKinematics(std::string fileNameNew, std::string treeName, std::vector<std::string> particles, std::vector<std::string> observables, std::vector<std::string> labels, std::vector<std::vector<double>> ranges){
+
+        ROOT::RDataFrame dataFrame(treeName, fileNameNew);
+        TCanvas* canvasNew = new TCanvas("canvasNew", "");
+
+        for (const auto& particle : particles){
+                for (size_t i = 0; i < observables.size(); i++){
+                        auto histUnweighted = dataFrame.Histo1D(
+                                {(particle + observables[i] + "Unweighted").c_str(), "", 50, ranges[i][0], ranges[i][1]
+                                }, (particle + "_" + observables[i]).c_str()
+                        );
+
+                        auto histWeighted = dataFrame.Histo1D(
+                                {(particle + observables[i] + "Weighted").c_str(), "", 50, ranges[i][0], ranges[i][1]
+                                }, (particle + "_" + observables[i]).c_str(), "Weight"
+                        );
+
+                        histUnweighted->SetStats(0);
+                        histWeighted->SetStats(0);
+
+                        histUnweighted->SetLineColor(kBlack);
+                        histWeighted->SetLineColor(kRed);
+
+                        histUnweighted->GetXaxis()->SetTitle((particle + " " + labels[i]).c_str());
+
+                        histUnweighted->DrawNormalized("HIST");
+                        histWeighted->DrawNormalized("HIST SAME");
+                        canvasNew->SaveAs(("Plots/" + particle + observables[i] + ".pdf").c_str());
+                        
+                }
+        }
+
 }
 
 int main(){
@@ -93,18 +152,18 @@ int main(){
         // };
         std::vector<ROOT::RDF::RResultPtr<TH3D>> distributions;
         std::vector<std::string> fileNamesNew = {
-                "Dstp_D0__KmKp_pip_sPi_weighted_tree.root",
-                "Dstp_D0__pimpip_pip_sPi_weighted_tree.root"
+                "Dstp_D0__pimpip_pip_sPi_weighted_tree.root",
+                "Dstp_D0__KmKp_pip_sPi_weighted_tree.root"
         };
         std::vector<std::string> plotNames = {
-                "Plots/KmKpNormalized.pdf",
-                "Plots/pimpipNormalized.pdf"
+                "Plots/pimpipNormalized.pdf",
+                "Plots/KmKpNormalized.pdf"
         };
         std::string treeName = "DecayTree";
 
         int binNumber = 15;
         std::vector<double> xRange = {
-                -0.0,
+                0.0,
                 20.0
         };
         std::vector<double> yRange = {
@@ -131,6 +190,14 @@ int main(){
 	for (size_t i = 0; i < fileNames.size(); i++){
 		assignWeights(fileNames[i], fileNamesNew[i], treeName, binNumber, xRange, yRange, zRange, weights);
 	}
+
+        std::vector<std::string> particles = {"D0"};
+        std::vector<std::string> observables = {"PT", "eta", "phi"};
+        std::vector<std::string> labels = {"p_{T} GeV/c", "#eta", "#phi Rad"};
+        std::vector<std::vector<double>> ranges {xRange, yRange, zRange};
+
+        plotWeightedKinematics(fileNamesNew[0], treeName, particles, observables, labels, ranges);
+        
 
         //  Stop timer
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
