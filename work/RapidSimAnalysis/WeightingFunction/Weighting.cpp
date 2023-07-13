@@ -20,7 +20,7 @@ void assignWeights(std::string fileName, std::string fileNameNew, std::string tr
 
 	auto dataFrameWeighted = dataFrame.Filter(
 		[xRange, yRange, zRange](const double& D0_PT, const double& D0_eta, const double& D0_phi){
-			if (D0_PT >=xRange[0] && D0_PT <=xRange[1], D0_eta >=yRange[0] && D0_eta <=yRange[1], D0_phi >=zRange[0] && D0_phi <=zRange[1]){
+			if (D0_PT >=xRange[0] && D0_PT <=xRange[1] &&  D0_eta >=yRange[0] && D0_eta <=yRange[1] &&  D0_phi >=zRange[0] && D0_phi <=zRange[1]){
 				return true;
 			}
 			return false;
@@ -36,21 +36,21 @@ void assignWeights(std::string fileName, std::string fileNameNew, std::string tr
                         double eta = yRange[0];
                         double phi = zRange[0];
 
-			for (size_t i = 0; i < binNumber - 1; i++){
+			for (size_t i = 0; i < binNumber; i++){
 				if ((D0_PT > PT) && (D0_PT < (PT + dPT))){
 					iIndex = i;
 				}
 				PT += dPT;
 			}
 
-                        for (size_t j = 0; j < binNumber - 1; j++){
+                        for (size_t j = 0; j < binNumber; j++){
                                 if ((D0_eta > eta) && (D0_eta < (eta + dEta))){
                                         jIndex = j;
                                 }
                                 eta += dEta;
                         }
 
-			for (size_t k = 0; k < binNumber - 1; k++){
+			for (size_t k = 0; k < binNumber; k++){
 				if ((D0_phi > phi) && (D0_phi < (phi + dPhi))){
 					kIndex = k;
 				}
@@ -91,7 +91,12 @@ std::vector<std::vector<std::vector<double>>> getWeights(std::vector<ROOT::RDF::
         for (size_t i = 0; i < distributions[0]->GetNbinsX(); i++){
                 for (size_t j = 0; j < distributions[0]->GetNbinsY(); j++){
                         for (size_t k = 0; k < distributions[0]->GetNbinsZ(); k++){
-                                weight = distributions[0]->GetBinContent(i, j, k)/distributions[1]->GetBinContent(i, j, k);
+				if (distributions[1]->GetBinContent(i + 1, j + 1, k + 1) == 0.0){
+					weight = 0.0;
+				}
+				else{
+					weight = distributions[0]->GetBinContent(i + 1, j + 1, k + 1)/distributions[1]->GetBinContent(i + 1, j + 1, k + 1);
+				}
                                 weights[i][j][k] = weight;
                         }
                 }
@@ -104,6 +109,7 @@ void plotWeightedKinematics(std::string fileNameNew, std::string treeName, std::
 
         ROOT::RDataFrame dataFrame(treeName, fileNameNew);
         TCanvas* canvasNew = new TCanvas("canvasNew", "");
+        TLegend *legend = new TLegend(0.7, 0.7, 0.9, 0.9);
 
         for (const auto& particle : particles){
                 for (size_t i = 0; i < observables.size(); i++){
@@ -123,16 +129,25 @@ void plotWeightedKinematics(std::string fileNameNew, std::string treeName, std::
                         histUnweighted->SetLineColor(kBlack);
                         histWeighted->SetLineColor(kRed);
 
-                        histUnweighted->GetXaxis()->SetTitle((particle + " " + labels[i]).c_str());
+                        histUnweighted->GetXaxis()->SetTitle(("D^{0}#rightarrow#pi^{-}#pi^{+}, " + labels[i]).c_str());
+
+                        legend->AddEntry(histUnweighted.GetPtr(), "Unweighted", "l");
+                        legend->AddEntry(histWeighted.GetPtr(), "Weighted", "l");
+                        legend->SetFillColor(0);
+                        legend->SetBorderSize(0);
 
                         histUnweighted->DrawNormalized("HIST");
                         histWeighted->DrawNormalized("HIST SAME");
+                        legend->Draw();
                         canvasNew->SaveAs(("Plots/" + particle + observables[i] + ".pdf").c_str());
-                        
+
+                        legend->Clear();
                 }
         }
 
 }
+
+
 
 int main(){
         // Start timer

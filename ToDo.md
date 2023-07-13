@@ -51,10 +51,20 @@
 
 ### WeightingFunction
 - [x] Create normalized 3d distributions according to the Decay formalism pdf
-- [ ] Equalize $KK$ and $\pi\pi$ distributions
+- [x] Equalize $KK$ and $\pi\pi$ distributions
+- [ ] Increase statistics using RapidSim
+- [x] Fix NaN weight problem
+- [ ] Plot some kinematics
 
+ 
 ### CDS Report
 - [ ] Begin writing the CDS Report.
 - [ ] Add introduction and motivation
 - [ ] Add $\Delta A_{CP}$ formalism and the weighting function
 
+### FullAnalysis
+- [ ] 1 and -1 detection asymmetry for up and down on $p_x-p_z$ plane (optional)
+- [ ] 5th week LaTeX report
+- [ ] Compare $\Delta A_{\text{total}}$ and $\Delta A_{CP}$ before and after applying the weights
+- [ ] Put everything in the CDS Report
+- [ ] First introduce CP, calculate weights, then introduce the detection asymmetry and then apply the weights on the detection asymmetry sample.
