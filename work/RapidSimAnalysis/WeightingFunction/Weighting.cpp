@@ -148,7 +148,6 @@ void plotWeightedKinematics(std::string fileNameNew, std::string treeName, std::
 }
 
 
-
 int main(){
         // Start timer
         std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
@@ -195,24 +194,24 @@ int main(){
                 distributions[i]->SetStats(0);
                 distributions[i]->GetXaxis()->SetTitle("P_{T} GeV/c");
                 distributions[i]->GetYaxis()->SetTitle("#eta");
-                distributions[i]->GetZaxis()->SetTitle("#phi");
+                distributions[i]->GetZaxis()->SetTitle("#phi Rad");
                 distributions[i]->Draw("LEGO2");
                 canvas->SaveAs(plotNames[i].c_str());
         }
 
-        auto weights = getWeights(distributions);
+        // auto weights = getWeights(distributions);
 
-	for (size_t i = 0; i < fileNames.size(); i++){
-		assignWeights(fileNames[i], fileNamesNew[i], treeName, binNumber, xRange, yRange, zRange, weights);
-	}
+	// for (size_t i = 0; i < fileNames.size(); i++){
+	// 	assignWeights(fileNames[i], fileNamesNew[i], treeName, binNumber, xRange, yRange, zRange, weights);
+	// }
 
-        std::vector<std::string> particles = {"D0"};
-        std::vector<std::string> observables = {"PT", "eta", "phi"};
-        std::vector<std::string> labels = {"p_{T} GeV/c", "#eta", "#phi Rad"};
-        std::vector<std::vector<double>> ranges {xRange, yRange, zRange};
+        // std::vector<std::string> particles = {"D0"};
+        // std::vector<std::string> observables = {"PT", "eta", "phi"};
+        // std::vector<std::string> labels = {"p_{T} GeV/c", "#eta", "#phi Rad"};
+        // std::vector<std::vector<double>> ranges {xRange, yRange, zRange};
 
-        plotWeightedKinematics(fileNamesNew[0], treeName, particles, observables, labels, ranges);
-        
+        // plotWeightedKinematics(fileNamesNew[0], treeName, particles, observables, labels, ranges);
+        // compareResults(fileNamesNew, treeName, ranges);
 
         //  Stop timer
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();

@@ -52,8 +52,9 @@
 ### WeightingFunction
 - [x] Create normalized 3d distributions according to the Decay formalism pdf
 - [x] Equalize $KK$ and $\pi\pi$ distributions
-- [ ] Increase statistics using RapidSim
+- [x] Increase statistics for Weighting function using RapidSim
 - [x] Fix NaN weight problem
+- [ ] Fix other weight problems
 - [ ] Plot some kinematics
 
  
