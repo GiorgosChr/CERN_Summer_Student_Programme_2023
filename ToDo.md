@@ -55,7 +55,7 @@
 - [x] Increase statistics for Weighting function using RapidSim
 - [x] Fix NaN weight problem
 - [ ] Fix other weight problems
-- [ ] Plot some kinematics
+- [x] Plot some kinematics
 
  
 ### CDS Report
@@ -69,3 +69,12 @@
 - [ ] Compare $\Delta A_{\text{total}}$ and $\Delta A_{CP}$ before and after applying the weights
 - [ ] Put everything in the CDS Report
 - [ ] First introduce CP, calculate weights, then introduce the detection asymmetry and then apply the weights on the detection asymmetry sample.
+
+## $6^{th}$ Week 17/07 - 21/07
+### WeightingFunction
+- [ ] Check weighting function regarding $\phi$
+
+### CDS Report
+- [ ] Begin writing the CDS Report.
+- [ ] Add introduction and motivation
+- [ ] Add $\Delta A_{CP}$ formalism and the weighting function
