@@ -75,13 +75,13 @@ int main(){
                 "#eta(D^{0})",
                 "#phi(D^{0}) Rad"
         };
-        std::vector<std::vector<double>> ranges = {
-                {0.0, 20},
-                {0.0, 8.0},
-                {-3.2, 6.0}
-        };
+        // std::vector<std::vector<double>> ranges = {
+        //         {0.0, 20},
+        //         {0.0, 8.0},
+        //         {-3.2, 6.0}
+        // };
         for (size_t i = 0; i < observables.size(); i++){
-                compareKinematics(fileNamesLowStatisticsAsymmetryWeights, treeName, ranges[i], binNumber, observables[i], labels[i]);
+                compareKinematics(fileNamesLowStatisticsAsymmetryWeights, treeName, filters[i], binNumber, observables[i], labels[i]);
         }
 
         //  Stop timer
@@ -228,7 +228,7 @@ void compareKinematics(std::vector<std::string> fileNamesLowStatisticsAsymmetryW
         legend->SetFillColor(0);
         legend->SetBorderSize(0);
         legend->SetTextSize(0.05);
-        legend->Draw();
+        // legend->Draw();
         canvas->SaveAs(("Plots/" + observable + "_Comparison.pdf").c_str());
 
 
