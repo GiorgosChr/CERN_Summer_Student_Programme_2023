@@ -70,21 +70,50 @@ int main(){
         std::vector<std::string> observables = {
                 "D0_PT",
                 "D0_eta",
-                "D0_phi"
+                "D0_phi",
+                "Dst_PT",
+                "Dst_eta",
+                "Dst_phi",
+                "sPi_PT",
+                "sPi_eta",
+                "sPi_phi"
         };
         std::vector<std::string> labels = {
                 "p_{T}(D^{0}) GeV/c",
                 "#eta(D^{0})",
-                "#phi(D^{0}) Rad"
+                "#phi(D^{0}) Rad",
+                "p_{T}(D^{*}) GeV/c",
+                "#eta(D^{*})",
+                "#phi(D^{*}) Rad",
+                "p_{T}(#pi) GeV/c",
+                "#eta(#pi)",
+                "#phi(#pi) Rad"
         };
         std::vector<std::vector<double>> legendPosition = {
                 {0.5, 0.7, 0.7, 0.9},
                 {0.2, 0.7, 0.4, 0.9},
+                {0.4, 0.4, 0.6, 0.6},
+                {0.5, 0.7, 0.7, 0.9},
+                {0.2, 0.7, 0.4, 0.9},
+                {0.4, 0.4, 0.6, 0.6},
+                {0.5, 0.7, 0.7, 0.9},
+                {0.2, 0.7, 0.4, 0.9},
                 {0.4, 0.4, 0.6, 0.6}
         };
+        std::vector<std::vector<double>> ranges = {
+                {0.0, 15},
+                {0.0, 6.1},
+                {-3.2, 3.2},
+                {0.0, 15},
+                {0.0, 6.1},
+                {-3.2, 3.2},
+                {0.0, 1.5},
+                {0.0, 6.1},
+                {-3.2, 3.2}
+        };
         for (size_t i = 0; i < observables.size(); i++){
-                compareKinematics(fileNamesLowStatisticsAsymmetryWeights, treeName, filters[i], binNumber, observables[i], labels[i], legendPosition[i]);
-                comparisonPlots(fileNamesLowStatisticsAsymmetryWeights, treeName, filters[i], binNumber, observables[i], labels[i], legendPosition[i]);
+                compareKinematics(fileNamesLowStatisticsAsymmetryWeights, treeName, ranges[i], binNumber, observables[i], labels[i], legendPosition[i]);
+                comparisonPlots(fileNamesLowStatisticsAsymmetryWeights, treeName, ranges[i], binNumber, observables[i], labels[i], legendPosition[i]);
         }
 
         //  Stop timer
