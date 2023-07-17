@@ -75,8 +75,13 @@ int main(){
                 "#eta(D^{0})",
                 "#phi(D^{0}) Rad"
         };
+        std::vector<std::vector<double>> ranges = {
+                {0.0, 20},
+                {0.0, 8.0},
+                {-3.2, 6.0}
+        };
         for (size_t i = 0; i < observables.size(); i++){
-                compareKinematics(fileNamesLowStatisticsAsymmetryWeights, treeName, filters[i], binNumber, observables[i], labels[i]);
+                compareKinematics(fileNamesLowStatisticsAsymmetryWeights, treeName, ranges[i], binNumber, observables[i], labels[i]);
         }
 
         //  Stop timer
@@ -213,9 +218,10 @@ void compareKinematics(std::vector<std::string> fileNamesLowStatisticsAsymmetryW
         histP->SetLineColor(kRed);
 
         histK->GetXaxis()->SetTitle(label.c_str());
+        histK->Sumw2();
 
-        histK->DrawNormalized("HIST");
-        histP->DrawNormalized("HIST SAME");
+        histK->DrawNormalized("HIST E O");
+        histP->DrawNormalized("HIST E O SAME");
 
         legend->AddEntry(histK.GetPtr(), "D^{0}#rightarrow K^{-}K^{+}", "l");
         legend->AddEntry(histP.GetPtr(), "D^{0}#rightarrow #pi^{-}#pi^{+}", "l");
