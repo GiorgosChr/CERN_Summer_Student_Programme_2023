@@ -79,3 +79,4 @@
 - [ ] Begin writing the CDS Report.
 - [ ] Add introduction and motivation
 - [ ] Add $\Delta A_{CP}$ formalism and the weighting function
+- [ ] Add plots from Federico's thesis for asymmetry.
