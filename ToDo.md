@@ -72,7 +72,8 @@
 
 ## $6^{th}$ Week 17/07 - 21/07
 ### WeightingFunction
-- [ ] Check weighting function regarding $\phi$
+- [x] Check weighting function regarding $\phi$
+- [x] Write $6^{th}$ week report
 
 ### CDS Report
 - [ ] Begin writing the CDS Report.
