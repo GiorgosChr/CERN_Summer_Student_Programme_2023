@@ -19,7 +19,7 @@ void calculateWeights(std::vector<ROOT::RDF::RResultPtr<TH3D>> normDistributions
 
 void assignWeights(std::string fileNameLowStatisticsAsymmetry, std::string fileNameLowStatisticsAsymmetryWeights, std::string treeName, std::vector<std::vector<std::vector<double>>> weights, std::vector<std::vector<double>> filters, int binNumber);
 
-void compareKinematics(std::vector<std::string> fileNamesLowStatisticsAsymmetryWeights, std::string treeName, std::vector<std::vector<double>> filters, int binNumber);
+void compareKinematics(std::vector<std::string> fileNamesLowStatisticsAsymmetryWeights, std::string treeName, std::vector<double> filters, int binNumber, std::string observable, std::string label);
 
 int main(){
         // Start timer
@@ -48,7 +48,7 @@ int main(){
         };
         std::vector<ROOT::RDF::RResultPtr<TH3D>> normDistributions;
         std::vector<std::vector<double>> filters = {
-                {0.0, 20},
+                {0.0, 15},
                 {0.0, 6.1},
                 {-3.2, 3.2}
         };
@@ -63,6 +63,21 @@ int main(){
         }
 
         calculateWeights(normDistributions, fileNamesLowStatisticsAsymmetry, fileNamesLowStatisticsAsymmetryWeights, treeName, filters, binNumber);
+
+        
+        std::vector<std::string> observables = {
+                "D0_PT",
+                "D0_eta",
+                "D0_phi"
+        };
+        std::vector<std::string> labels = {
+                "p_{T}(D^{0}) GeV/c",
+                "#eta(D^{0})",
+                "#phi(D^{0}) Rad"
+        };
+        for (size_t i = 0; i < observables.size(); i++){
+                compareKinematics(fileNamesLowStatisticsAsymmetryWeights, treeName, filters[i], binNumber, observables[i], labels[i]);
+        }
 
         //  Stop timer
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
@@ -172,7 +187,7 @@ void assignWeights(std::string fileNameLowStatisticsAsymmetry, std::string fileN
 	dataFrameWeighted.Snapshot(treeName, fileNameLowStatisticsAsymmetryWeights);
 }
 
-void compareKinematics(std::vector<std::string> fileNamesLowStatisticsAsymmetryWeights, std::string treeName, std::vector<std::vector<double>> filters, int binNumber){
+void compareKinematics(std::vector<std::string> fileNamesLowStatisticsAsymmetryWeights, std::string treeName, std::vector<double> filters, int binNumber, std::string observable, std::string label){
         ROOT::RDataFrame dataFrameK(treeName, fileNamesLowStatisticsAsymmetryWeights[0]);
         ROOT::RDataFrame dataFrameP(treeName, fileNamesLowStatisticsAsymmetryWeights[1]);
         
@@ -180,10 +195,35 @@ void compareKinematics(std::vector<std::string> fileNamesLowStatisticsAsymmetryW
                 dataFrameK,
                 dataFrameP
         };
-        std::vector<ROOT::RDF::RResultPtr<TH1D>> histograms;
-
 
         TCanvas* canvas = new TCanvas("canvas", "");
+        TLegend *legend = new TLegend(0.7, 0.7, 0.9, 0.9);
+
+        auto histK = dataFrames[0].Histo1D(
+                {"histK", "", binNumber, filters[0], filters[1]}, observable.c_str(), "Weight"
+        );
+        auto histP = dataFrames[1].Histo1D(
+                {"histP", "", binNumber, filters[0], filters[1]}, observable.c_str()
+        );
+
+        histK->SetStats(0);
+        histP->SetStats(0);
+
+        histK->SetLineColor(kBlack);
+        histP->SetLineColor(kRed);
+
+        histK->GetXaxis()->SetTitle(label.c_str());
+
+        histK->DrawNormalized("HIST");
+        histP->DrawNormalized("HIST SAME");
+
+        legend->AddEntry(histK.GetPtr(), "D^{0}#rightarrow K^{-}K^{+}", "l");
+        legend->AddEntry(histP.GetPtr(), "D^{0}#rightarrow #pi^{-}#pi^{+}", "l");
+        legend->SetFillColor(0);
+        legend->SetBorderSize(0);
+        legend->SetTextSize(0.05);
+        legend->Draw();
+        canvas->SaveAs(("Plots/" + observable + "_Comparison.pdf").c_str());
 
 
 }
