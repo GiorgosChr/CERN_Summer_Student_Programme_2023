@@ -43,8 +43,8 @@ int main(){
         };
         std::string treeName = "DecayTree";
         std::vector<std::string> distributionNames = {
-                "Plots/KmKpNormalizedDIstribution.pdf",
-                "Plots/pimpipNormalizedDIstribution.pdf"
+                "Plots/KmKpNormalizedDistribution.pdf",
+                "Plots/pimpipNormalizedDistribution.pdf"
         };
         std::vector<ROOT::RDF::RResultPtr<TH3D>> normDistributions;
         std::vector<std::vector<double>> filters = {
@@ -220,8 +220,10 @@ void compareKinematics(std::vector<std::string> fileNamesLowStatisticsAsymmetryW
         histK->GetXaxis()->SetTitle(label.c_str());
         histK->Sumw2();
 
-        histK->DrawNormalized("HIST E O");
-        histP->DrawNormalized("HIST E O SAME");
+        histK->SetMarkerSize(0);
+        histP->SetMarkerSize(0);
+        histK->DrawNormalized("HIST E");
+        histP->DrawNormalized("HIST E SAME");
 
         legend->AddEntry(histK.GetPtr(), "D^{0}#rightarrow K^{-}K^{+}", "l");
         legend->AddEntry(histP.GetPtr(), "D^{0}#rightarrow #pi^{-}#pi^{+}", "l");
