@@ -1,0 +1,145 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{LHCb:2014set}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=8ca3e82f9358ba6fd01f7c11e88a3b2c}{%
+           family={Aaij},
+           familyi={A\bibinitperiod},
+           given={Roel},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{fullhash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{bibnamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{authorbibnamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{authornamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{authorfullhash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ex}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Int. J. Mod. Phys. A}
+      \field{number}{07}
+      \field{title}{{LHCb Detector Performance}}
+      \field{volume}{30}
+      \field{year}{2015}
+      \true{nocite}
+      \field{pages}{1530022}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1142/S0217751X15300227
+      \endverb
+      \verb{eprint}
+      \verb 1412.6352
+      \endverb
+    \endentry
+    \entry{Cowan:2016tnm}{article}{}
+      \name{author}{3}{}{%
+        {{hash=dfe054d3796426eec6c6f370c7ae438c}{%
+           family={Cowan},
+           familyi={C\bibinitperiod},
+           given={G.\bibnamedelimi A.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=143ab702634363f3d1f3322bb0e5796a}{%
+           family={Craik},
+           familyi={C\bibinitperiod},
+           given={D.\bibnamedelimi C.},
+           giveni={D\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=9b317cf0c5034886c2e7b35ba49ee282}{%
+           family={Needham},
+           familyi={N\bibinitperiod},
+           given={M.\bibnamedelimi D.},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{dd4a87589b52eded8166727985ec7de7}
+      \strng{fullhash}{dd4a87589b52eded8166727985ec7de7}
+      \strng{bibnamehash}{dd4a87589b52eded8166727985ec7de7}
+      \strng{authorbibnamehash}{dd4a87589b52eded8166727985ec7de7}
+      \strng{authornamehash}{dd4a87589b52eded8166727985ec7de7}
+      \strng{authorfullhash}{dd4a87589b52eded8166727985ec7de7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ex}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Comput. Phys. Commun.}
+      \field{title}{{RapidSim: an application for the fast simulation of heavy-quark hadron decays}}
+      \field{volume}{214}
+      \field{year}{2017}
+      \true{nocite}
+      \field{pages}{239\bibrangedash 246}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1016/j.cpc.2017.01.029
+      \endverb
+      \verb{eprint}
+      \verb 1612.07489
+      \endverb
+    \endentry
+    \entry{LHCb:2019hro}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=8ca3e82f9358ba6fd01f7c11e88a3b2c}{%
+           family={Aaij},
+           familyi={A\bibinitperiod},
+           given={Roel},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{fullhash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{bibnamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{authorbibnamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{authornamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{authorfullhash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ex}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Phys. Rev. Lett.}
+      \field{number}{21}
+      \field{title}{{Observation of CP Violation in Charm Decays}}
+      \field{volume}{122}
+      \field{year}{2019}
+      \true{nocite}
+      \field{pages}{211803}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1103/PhysRevLett.122.211803
+      \endverb
+      \verb{eprint}
+      \verb 1903.08726
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

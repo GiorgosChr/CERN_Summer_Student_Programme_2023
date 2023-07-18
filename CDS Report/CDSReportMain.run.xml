@@ -59,7 +59,6 @@
       <file>numeric-comp.bbx</file>
       <file>numeric-comp.cbx</file>
       <file>biblatex.cfg</file>
-      <file>greek.lbx</file>
       <file>english.lbx</file>
     </requires>
   </internal>
@@ -80,6 +79,9 @@
     </provides>
     <requires type="dynamic">
       <file>CDSReportMain.bcf</file>
+    </requires>
+    <requires type="editable">
+      <file>references.bib</file>
     </requires>
   </external>
 </requests>

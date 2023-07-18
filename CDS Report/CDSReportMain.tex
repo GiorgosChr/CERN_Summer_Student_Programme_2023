@@ -1,31 +1,96 @@
 \documentclass{article}
-
 \usepackage[utf8]{inputenc}
-\usepackage[english,greek]{babel}
+% \usepackage[english,greek]{babel}
 \usepackage[unicode]{hyperref}
 \usepackage[LGR, T1]{fontenc}
 \usepackage{amsfonts, alphabeta, amssymb}
 \usepackage[none]{hyphenat}
 \usepackage{amsmath, slashed, graphicx, physics, tikz, braket, caption, subfig, comment, geometry, multicol, lipsum, fancyhdr, tcolorbox, siunitx, authblk, xcolor, abstract, float, indentfirst, xfrac, cancel, bbold, appendix, tikz, tikz-feynman, tensor, multirow, makecell, algpseudocode, algorithmicx, algorithm, changepage, adjustbox, lscape, placeins}
 \usepackage[style=numeric-comp,sorting=none]{biblatex}
+\addbibresource{references.bib}
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
-\title{
-        \textbf{Study of a new kinematic weighting algorithm for the measurement of CP asymmetries in charm decays}
+\title{\textbf{
+        Study of a new kinematic weighting algorithm for the measurement of CP asymmetries in charm decays}
         \\
         LHCb Collaboration
 }
-\author{Georgios Christou}
-\date{August 2023}
+\author{
+        Georgios Christou
+        \\
+        Supervisors: Dr Federico Betti, Prof. Angelo Carbone
+}
+\date{
+        August 2023
+}
 
 \begin{document}
-    \begin{figure}[t]
-        \centering
-        \subfloat{\includegraphics[height = 3.5cm]{../.images/CERN_logo.png}}
-        \hspace{1cm}
-        \subfloat{\includegraphics[height = 3.5cm]{../.images/Lhcb-logo-new.svg.png}}
-    \end{figure}
-    
-    \maketitle
-    
+        \begin{figure}[t]
+                \centering
+                \subfloat{\includegraphics[height = 3.5cm]{../.images/CERN_logo.png}}
+                \hspace{1cm}
+                \subfloat{\includegraphics[height = 3.5cm]{../.images/Lhcb-logo-new.svg.png}}
+        \end{figure}
+
+        \maketitle
+
+        \begin{abstract}
+                We investigate the asymmetries that occur in charm decays at the LHCb, specifically we study $D^{\star+}\to D^0\pi^+$ and $\bar{D}^{\star-}\to D^0\pi^-$ where $D^0\to K^-K^+$ or $D^0\to \pi^-\pi^+$.
+                We study the effect of $CP$ and detection asymmetries on MC samples generated via RapidSim and implement a new kinematic weighting function which allows us to keep events that are otherwise discarded from LHCb data, since they are associated with large detection asymetries.
+        \end{abstract}
+        
+        \pagebreak
+        % \tableofcontents
+        % \pagebreak
+
+        \section{Introduction}
+
+        \begin{figure}[h!]
+                \centering
+                \subfloat{
+                        \begin{tikzpicture}
+                                \begin{feynman}
+                                        \vertex (DStarC) {$c$};
+                                        \vertex[below = 1cm of DStarC] (DStarDBar) {$\bar{d}$};
+
+                                        \vertex[right = 4cm of DStarC] (D0C) {$c$};
+                                        \vertex[right = 4cm of DStarDBar] (D0UBar) {$\bar{u}$};
+
+                                        \vertex[below right = 1cm and 2cm of DStarDBar] (WStart);
+                                        \vertex[below right = 1cm and 2cm of WStart] (WEnd);
+
+                                        \vertex[above right = 0.5cm and 1cm of WEnd] (PiD) {$d$};
+                                        \vertex[below right = 0.5cm and 1cm of WEnd] (PiUBar) {$\bar{u}$};
+                                        \diagram*{
+                                                (DStarC) -- [fermion] (D0C);
+                                                (DStarDBar) -- [fermion] (WStart);
+                                                (D0UBar) -- [fermion] (WStart);
+                                                (WStart) -- [photon, edge label = $W^+$] (WEnd);
+                                                (PiUBar) -- [fermion] (WEnd);
+                                                (WEnd) -- [fermion] (PiD);
+                                        };
+                                        \draw [decoration={brace}, decorate] (DStarDBar.south west) -- (DStarC.north west) node [pos=0.5, left] {$D^{\star +}$};
+                                        \draw [decoration={brace}, decorate] (D0C.north east) --  (D0UBar.south east) node [pos=0.5, right] {$D^0$};
+                                        \draw [decoration={brace}, decorate] (PiD.north east) --  (PiUBar.south east) node [pos=0.5, right] {$\pi^+$};
+                                \end{feynman}
+                        \end{tikzpicture}
+                }
+                % \subfloat{
+                %         \begin{tikzpicture}
+                %                 \begin{feynman}
+                                        
+                %                 \end{feynman}
+                %         \end{tikzpicture}
+                % }
+                \caption{Feynman diagram showing $D^{\star \pm}\to D^{0} \pi^{\pm}$ decays.}
+        \end{figure}
+        \section{Analysis}
+        \subsection{RapidSim}
+
+        \pagebreak
+        % \listoftables
+        % \listoffigures
+        \nocite{*}
+        \printbibliography[notcategory=cited]
+        \addcontentsline{toc}{chapter}{Bibliography}
 \end{document}
