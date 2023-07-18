@@ -1,0 +1,59 @@
+#!/usr/bin/python3
+# For later use:
+import socket
+import struct
+import sys
+from datetime import datetime
+# Main method in Python:
+message_size = 1024
+BUFFER_SIZE = 20
+if __name__ == "__main__":
+    mode = sys.argv[1]
+    if mode == "client":
+        name = sys.argv[2]
+        port = int(sys.argv[3])
+        client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        client_socket.connect((name, port))
+        message = b" " * message_size
+        message_num = 0
+        message = bytearray(b'\0' * message_size)
+        while(True):
+            message[:8] = struct.pack('Q', message_num)
+            client_socket.send(message)
+            message_num += 1
+    elif mode == "server":
+        port = int(sys.argv[2])
+        server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        server_socket.bind(("0.0.0.0", port))
+        # server_socket.listen()
+        while True:
+            # conn, addr = server_socket.accept()
+            start = datetime.now()
+            counter = 0
+            length = 0
+            last_num = 0
+            missing_messages = 0
+            while True:
+                message, client_address = server_socket.recvfrom(message_size) 
+                if len(message) == 0:
+                    break
+                message_num = struct.unpack('Q', message[0:8])[0]
+                missing_messages += message_num - last_num - 1
+                last_num = message_num
+                counter += 1
+                now = datetime.now()
+                length += len(message)
+                if counter %10000 == 0:
+                    seconds = (now - start).total_seconds()
+
+                    print("Bandwidth: ", 8 * length * 10**(-6)/seconds, " MBit/s", " Missing percentage: ", end="")
+                    length = 0
+                    start = datetime.now()
+
+                    missing_percentage = \
+                            100 * missing_messages / (counter + missing_messages)
+                    counter = 0
+                    missing_messages = 0
+
+                    print(missing_percentage)
+
