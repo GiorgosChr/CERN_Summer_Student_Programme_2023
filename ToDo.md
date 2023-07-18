@@ -74,10 +74,14 @@
 ### WeightingFunction
 - [x] Check weighting function regarding $\phi$
 - [x] Write $6^{th}$ week report
+- [ ] Calculate $\Delta A$
+- [x] Generate new high statistics samples for analysis for $D^0\to K^-K^+$ and $D^0\to \pi^-\pi^+$ decay modes
+- [ ] Check asymmetries for new high statistics samples and compare with low statistics
 
 ### CDS Report
-- [ ] Begin writing the CDS Report.
-- [ ] Add introduction and motivation
+- [x] Begin writing the CDS Report.
+- [ ] Add introduction and motivation.
+- [ ] Feynman diagrams
 - [ ] Add $\Delta A_{CP}$ formalism and the weighting function
 - [ ] Add plots from Federico's thesis for asymmetry.
 

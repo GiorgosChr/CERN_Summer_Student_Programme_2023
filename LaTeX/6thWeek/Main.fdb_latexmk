@@ -1,5 +1,5 @@
 # Fdb version 3
-["lualatex"] 1689608507 "/home/george/CERN_Summer_Student_Programme_2023/LaTeX/6thWeek/Main.tex" "Main.pdf" "Main" 1689608511
+["lualatex"] 1689668998 "/home/george/CERN_Summer_Student_Programme_2023/LaTeX/6thWeek/Main.tex" "Main.pdf" "Main" 1689669002
   "../../.images/CERN_logo.png" 1688027387 16476 93f32a507342b9f1cac087a6bc36da52 ""
   "../../.images/Lhcb-logo-new.svg.png" 1688027387 96300 948e7c326c4084056c65c44da5747f9a ""
   "../../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf" 1689600283 16244 410960762c78906c3372229f2fbb0647 ""
@@ -15,7 +15,7 @@
   "../../work/RapidSimAnalysis/WeightingFunction/Plots/sPi_phi_All.pdf" 1689600284 15996 c95bae4dc5051e7d1633751b56570957 ""
   "/home/george/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1675959279 123142 a5bb91f587c7a560590d95e654431ffa ""
   "/home/george/.texlive2021/texmf-var/luatex-cache/generic/names/luaotfload-names.luc" 1675959279 1676208 5defce338bee79a31006effb6c085592 ""
-  "/home/george/CERN_Summer_Student_Programme_2023/LaTeX/6thWeek/Main.tex" 1689608506 5589 8ad6d4e184a63c689c7e5e1afe99ce12 ""
+  "/home/george/CERN_Summer_Student_Programme_2023/LaTeX/6thWeek/Main.tex" 1689668998 5589 3c03401f0b7e968b166b60d49edf5269 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -414,8 +414,8 @@
   "/usr/share/texmf/tex/latex/lm/t1lmr.fd" 1256929440 1865 afbfccbe7fda9c2dc5078ad7c486bbed ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1675936650 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1685518232 4555379 9ebdd0c6f3494b3429e05a76c4a21a8a ""
-  "Main.aux" 1689608511 2324 8147ae4766360072c1f2948a69d940c3 "lualatex"
-  "Main.out" 1689608511 103 9814c2d956916adb9290eca4e25c967a "lualatex"
+  "Main.aux" 1689669002 2324 8147ae4766360072c1f2948a69d940c3 "lualatex"
+  "Main.out" 1689669002 103 9814c2d956916adb9290eca4e25c967a "lualatex"
   (generated)
   "Main.aux"
   "Main.log"
