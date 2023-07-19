@@ -1,15 +1,15 @@
 [0] Config.pm:307> INFO - This is Biber 2.17
 [0] Config.pm:310> INFO - Logfile is 'CDSReportMain.blg'
-[164] biber:340> INFO - === Tue Jul 18, 2023, 13:01:39
-[189] Biber.pm:418> INFO - Reading 'CDSReportMain.bcf'
-[300] Biber.pm:969> INFO - Using all citekeys in bib section 0
-[323] Biber.pm:4383> INFO - Processing section 0
-[341] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
-[343] bibtex.pm:1713> INFO - LaTeX decoding ...
-[353] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
-[439] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[440] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[440] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[440] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[445] bbl.pm:654> INFO - Writing 'CDSReportMain.bbl' with encoding 'UTF-8'
-[448] bbl.pm:757> INFO - Output to CDSReportMain.bbl
+[161] biber:340> INFO - === Wed Jul 19, 2023, 10:49:48
+[196] Biber.pm:418> INFO - Reading 'CDSReportMain.bcf'
+[309] Biber.pm:969> INFO - Using all citekeys in bib section 0
+[333] Biber.pm:4383> INFO - Processing section 0
+[360] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[362] bibtex.pm:1713> INFO - LaTeX decoding ...
+[373] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[470] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[470] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[470] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[470] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[475] bbl.pm:654> INFO - Writing 'CDSReportMain.bbl' with encoding 'UTF-8'
+[479] bbl.pm:757> INFO - Output to CDSReportMain.bbl

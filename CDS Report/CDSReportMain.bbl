@@ -139,6 +139,35 @@
       \verb 1903.08726
       \endverb
     \endentry
+    \entry{Betti:2019gca}{thesis}{}
+      \name{author}{1}{}{%
+        {{hash=30ba695d2352a81a86bbb737acd5d000}{%
+           family={Betti},
+           familyi={B\bibinitperiod},
+           given={Federico},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Bologna U.}%
+      }
+      \strng{namehash}{30ba695d2352a81a86bbb737acd5d000}
+      \strng{fullhash}{30ba695d2352a81a86bbb737acd5d000}
+      \strng{bibnamehash}{30ba695d2352a81a86bbb737acd5d000}
+      \strng{authorbibnamehash}{30ba695d2352a81a86bbb737acd5d000}
+      \strng{authornamehash}{30ba695d2352a81a86bbb737acd5d000}
+      \strng{authorfullhash}{30ba695d2352a81a86bbb737acd5d000}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{CP violation in $D^0 \to K^+K^-$ and $D^0 \to \pi^+ \pi^-$ decays and lepton-flavour universality test with the decay $B^0 \to D^{*-}\tau^+ \nu_\tau$}}
+      \field{type}{phdthesis}
+      \field{year}{2019}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.6092/unibo/amsdottorato/8769
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

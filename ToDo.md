@@ -74,14 +74,17 @@
 ### WeightingFunction
 - [x] Check weighting function regarding $\phi$
 - [x] Write $6^{th}$ week report
-- [ ] Calculate $\Delta A$
+- [ ] Calculate $\Delta A$ with uncertainty
 - [x] Generate new high statistics samples for analysis for $D^0\to K^-K^+$ and $D^0\to \pi^-\pi^+$ decay modes
 - [ ] Check asymmetries for new high statistics samples and compare with low statistics
 
 ### CDS Report
 - [x] Begin writing the CDS Report.
-- [ ] Add introduction and motivation.
-- [ ] Feynman diagrams
-- [ ] Add $\Delta A_{CP}$ formalism and the weighting function
-- [ ] Add plots from Federico's thesis for asymmetry.
+- [x] Add introduction and motivation.
+- [x] Feynman diagrams
+- [x] Add $\Delta A_{CP}$ formalism and the weighting function
+- [ ] Add analysis section
+- [ ] Add RapidSim section
 
+### LaTeX Report
+- [ ] Add $\Delta A$ calculation and compare with the expected value
