@@ -139,15 +139,48 @@
                 Q(\vec{p}_{D^\star}, \vec{p}_{\pi_s}) \simeq \frac{\Gamma_{D^0}^{\pi\pi}(\vec{p}_{D^\star} - \vec{p}_{\pi_s}) + \Gamma_{\bar{D}^0}^{\pi\pi}(\vec{p}_{D^\star} - \vec{p}_{\pi_s})}{\Gamma_{D^0}^{KK}(\vec{p}_{D^\star} - \vec{p}_{\pi_s}) + \Gamma_{\bar{D}^0}^{KK}(\vec{p}_{D^\star} - \vec{p}_{\pi_s})}
         \end{equation}
         where $\Gamma_{D^{0}/\bar{D}^0}^{\pi\pi/KK}$ are the normalized distributions of $D^0$ candidates.
-        Unfortunately in Run-2 such candidates were discarded, thus, we do not have a large enough sample to accurately calculate the weighting function, thus we resort to Monte Carlo simulations.
+        Unfortunately in Run-2 such candidates were discarded, thus, we do not have a large enough sample to accurately calculate the weighting function and we resort to Monte Carlo simulations.
 
         
         \section{Analysis}
         \subsection{RapidSim}
+        For the analysis we make use of the RapidSim simulation \cite{Cowan:2016tnm} to generate $D^{\star \pm}\to D^0 \pi^\pm$ events where $D^0$ subsequently decays into $K^-K^+$ or $\pi^-\pi^+$.
+        We present the RapiDSim parameters in Tab. \ref{tab:RapidSim}
+
+        \begin{center}
+                \begin{tabular}{c|c|c}
+                        & Parameter & Value\\
+                        \hline\hline
+                        Center of mass energy & \texttt{energy} &               \texttt{13}\\
+                        Detector geometry & \texttt{geometry} &                 \texttt{LHCb}\\
+                        Acceptance region & \texttt{acceptance} &               \texttt{AllIn}\\
+                        Smearing on produced particles & \texttt{smear} &       \texttt{LHCbGeneric}
+                \end{tabular}
+                \captionof{table}{RapidSim parameters used to generate our data.}
+                \label{tab:RapidSim}
+        \end{center}
+
+        \subsection{Calculation of the $Q$ function}
+        As previously discussed, the weighting function Eq. \ref{eq:weighting} allows us to keep more events from LHCb to more accurate results, thus, the calculation of 
+        the weighting function needs to be done correctly and with enough precision.
+
+        We generate separate samples for calculating the weighting function $Q$ and analyzing our data to eliminate correlations between the two.
+        Both samples start with 10 million events, to have high enough statistics and then events are discarded due to the selections we applied in Tab. \ref{tab:RapidSim}.
+
+        \begin{figure}[h!]
+                \centering
+                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/WeightingFunction/Plots/KmKpNormalizedDistribution.pdf}}
+                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/WeightingFunction/Plots/pimpipNormalizedDistribution.pdf}}
+                \caption{Normalized distributions of $D^0\to K^-K^+$ (left) and $D^0\to \pi^-\pi^+$ (right) as functions of $p_T$, $\eta$ and $\phi$}
+        \end{figure}
+
+        \begin{figure}[h!]
+                \centering
+                \includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/WeightingFunction/Plots/Weights.pdf}
+                \caption{The weighting function $Q$ values.}
+        \end{figure}
 
         \pagebreak
-        % \listoftables
-        % \listoffigures
         \nocite{*}
         \printbibliography[notcategory=cited]
         \addcontentsline{toc}{chapter}{Bibliography}

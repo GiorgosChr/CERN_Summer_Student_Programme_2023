@@ -1,6 +1,6 @@
 PWD /home/george/Nextcloud/CERN_Summer_Student_Programme_2023/CDS Report
 INPUT /var/lib/texmf/web2c/luahbtex/lualatex.fmt
-INPUT /home/george/Nextcloud/CERN_Summer_Student_Programme_2023/CDS Report/CDSReportMain.tex
+INPUT /home/george/CERN_Summer_Student_Programme_2023/CDS Report/CDSReportMain.tex
 OUTPUT CDSReportMain.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/lualatexquotejobname.lua
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ltluatex.lua
@@ -729,16 +729,38 @@ INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmri10.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr7.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmr5.tfm
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmbx12.tfm
-INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmcsc10.tfm
 INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
 INPUT /usr/share/texmf/tex/latex/lm/t1lmtt.fd
 INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmtt10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT ../work/RapidSimAnalysis/WeightingFunction/Plots/KmKpNormalizedDistribution.pdf
+INPUT ../work/RapidSimAnalysis/WeightingFunction/Plots/KmKpNormalizedDistribution.pdf
+INPUT ../work/RapidSimAnalysis/WeightingFunction/Plots/KmKpNormalizedDistribution.pdf
+INPUT ../work/RapidSimAnalysis/WeightingFunction/Plots/pimpipNormalizedDistribution.pdf
+INPUT ../work/RapidSimAnalysis/WeightingFunction/Plots/pimpipNormalizedDistribution.pdf
+INPUT ../work/RapidSimAnalysis/WeightingFunction/Plots/pimpipNormalizedDistribution.pdf
+INPUT ../work/RapidSimAnalysis/WeightingFunction/Plots/Weights.pdf
+INPUT ../work/RapidSimAnalysis/WeightingFunction/Plots/Weights.pdf
+INPUT ../work/RapidSimAnalysis/WeightingFunction/Plots/Weights.pdf
+INPUT /usr/share/texmf/fonts/tfm/public/lm/ec-lmcsc10.tfm
 INPUT ./CDSReportMain.aux
 INPUT ./CDSReportMain.out
 INPUT ./CDSReportMain.run.xml
 OUTPUT CDSReportMain.run.xml
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb

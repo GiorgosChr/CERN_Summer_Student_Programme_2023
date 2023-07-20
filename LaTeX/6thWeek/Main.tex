@@ -69,13 +69,13 @@
     \begin{equation}
         \sigma A_{\text{total}} ^2 = \left(\pdv{A_{\text{total}}}{N^+}\sigma N^+\right)^2 + \left(\pdv{A_{\text{total}}}{N^-}\sigma N^-\right)^2
     \end{equation}
-    For the weighted sample, $N^{\pm} = \sum_i w^\pm_i$ and $\sigma N^\pm = \sqrt{\sum_i w_i^\pm}$
+    For the weighted sample, $N^{\pm} = \sum_i w^\pm_i$ and $\sigma N^\pm = \sqrt{\sum_i (w_i^\pm)^2}$
 
     \begin{center}
         \begin{tabular}{c|c|c}
              & Weighted & Unweighted\\
              \hline\hline
-            $A_{\text{total}}$ & $0.14994 \pm 0.00064$ & $0.16268 \pm 0.00064$\\
+            $A_{\text{total}}$ & $0.14994 \pm 0.00066$ & $0.16268 \pm 0.00064$\\
         \end{tabular}
         \captionof{table}{Total asymmetry for $D^0\to K^-K^+$ sample with and without weights.}
     \end{center}
@@ -84,11 +84,25 @@
     \begin{equation}
         A_{\text{total}} = 0.24571 \pm 0.00067
     \end{equation}
-    Calculating the total asymmetry difference, we get
-    \begin{equation}
-        \Delta A_{\text{total}} = 0.09578 \pm 0.00093
-    \end{equation}
-    which deviates $4.55\sigma$ from the expected value.
+    The total asymmetry difference results are shown in Tab. \ref{tab:total}
+    \begin{center}
+        \begin{tabular}{c|c|c}
+             & Weighted & Unweighted\\
+             \hline\hline
+            $\Delta A_{\text{total}}$ & $- 0.09578 \pm 0.00094$ & $-0.08304 \pm 0.00092$\\
+            Deviation $(\sigma)$&  4.49 & 4.59\\
+        \end{tabular}
+        \captionof{table}{Total asymmetry for $D^0\to K^-K^+$ sample with and without weights.}
+        \label{tab:total}
+    \end{center}
+    where the $CP$ asymmetry for each sample is 
+    \begin{center}
+        \begin{tabular}{c|c|c}
+            & $D^0\to K^-K^+$ & $D^0\to \pi^-\pi^+$\\
+            \hline\hline
+            $A_{CP}$ & 0.1 & 0.2 
+        \end{tabular}
+    \end{center}
 
     Furthermore, we compare the kinematics of $D^\star$ and $\pi_s$ to see whether or not the distributions are equalized after the weighting.
 

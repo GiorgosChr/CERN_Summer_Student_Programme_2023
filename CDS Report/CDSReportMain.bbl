@@ -19,44 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
-    \entry{LHCb:2014set}{article}{}
-      \true{moreauthor}
-      \true{morelabelname}
-      \name{author}{1}{}{%
-        {{hash=8ca3e82f9358ba6fd01f7c11e88a3b2c}{%
-           family={Aaij},
-           familyi={A\bibinitperiod},
-           given={Roel},
-           giveni={R\bibinitperiod}}}%
-      }
-      \strng{namehash}{37166355a0326aa05fdf7eca8f9ad8f3}
-      \strng{fullhash}{37166355a0326aa05fdf7eca8f9ad8f3}
-      \strng{bibnamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
-      \strng{authorbibnamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
-      \strng{authornamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
-      \strng{authorfullhash}{37166355a0326aa05fdf7eca8f9ad8f3}
-      \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{eprintclass}{hep-ex}
-      \field{eprinttype}{arXiv}
-      \field{journaltitle}{Int. J. Mod. Phys. A}
-      \field{number}{07}
-      \field{title}{{LHCb Detector Performance}}
-      \field{volume}{30}
-      \field{year}{2015}
-      \true{nocite}
-      \field{pages}{1530022}
-      \range{pages}{1}
-      \verb{doi}
-      \verb 10.1142/S0217751X15300227
-      \endverb
-      \verb{eprint}
-      \verb 1412.6352
-      \endverb
-    \endentry
     \entry{Cowan:2016tnm}{article}{}
       \name{author}{3}{}{%
         {{hash=dfe054d3796426eec6c6f370c7ae438c}{%
@@ -81,8 +43,8 @@
       \strng{authorbibnamehash}{dd4a87589b52eded8166727985ec7de7}
       \strng{authornamehash}{dd4a87589b52eded8166727985ec7de7}
       \strng{authorfullhash}{dd4a87589b52eded8166727985ec7de7}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{hep-ex}
@@ -91,7 +53,6 @@
       \field{title}{{RapidSim: an application for the fast simulation of heavy-quark hadron decays}}
       \field{volume}{214}
       \field{year}{2017}
-      \true{nocite}
       \field{pages}{239\bibrangedash 246}
       \range{pages}{8}
       \verb{doi}
@@ -99,6 +60,44 @@
       \endverb
       \verb{eprint}
       \verb 1612.07489
+      \endverb
+    \endentry
+    \entry{LHCb:2014set}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{hash=8ca3e82f9358ba6fd01f7c11e88a3b2c}{%
+           family={Aaij},
+           familyi={A\bibinitperiod},
+           given={Roel},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{fullhash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{bibnamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{authorbibnamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{authornamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \strng{authorfullhash}{37166355a0326aa05fdf7eca8f9ad8f3}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{hep-ex}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{Int. J. Mod. Phys. A}
+      \field{number}{07}
+      \field{title}{{LHCb Detector Performance}}
+      \field{volume}{30}
+      \field{year}{2015}
+      \true{nocite}
+      \field{pages}{1530022}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1142/S0217751X15300227
+      \endverb
+      \verb{eprint}
+      \verb 1412.6352
       \endverb
     \endentry
     \entry{LHCb:2019hro}{article}{}
@@ -118,8 +117,8 @@
       \strng{authornamehash}{37166355a0326aa05fdf7eca8f9ad8f3}
       \strng{authorfullhash}{37166355a0326aa05fdf7eca8f9ad8f3}
       \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprintclass}{hep-ex}
@@ -156,8 +155,8 @@
       \strng{authorbibnamehash}{30ba695d2352a81a86bbb737acd5d000}
       \strng{authornamehash}{30ba695d2352a81a86bbb737acd5d000}
       \strng{authorfullhash}{30ba695d2352a81a86bbb737acd5d000}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{{CP violation in $D^0 \to K^+K^-$ and $D^0 \to \pi^+ \pi^-$ decays and lepton-flavour universality test with the decay $B^0 \to D^{*-}\tau^+ \nu_\tau$}}
