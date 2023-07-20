@@ -87,4 +87,4 @@
 - [ ] Add RapidSim section
 
 ### LaTeX Report
-- [ ] Add $\Delta A$ calculation and compare with the expected value
+- [x] Add $\Delta A$ calculation and compare with the expected value
