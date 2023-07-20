@@ -74,9 +74,9 @@
 ### WeightingFunction
 - [x] Check weighting function regarding $\phi$
 - [x] Write $6^{th}$ week report
-- [ ] Calculate $\Delta A$ with uncertainty
+- [x] Calculate $\Delta A$ with uncertainty
 - [x] Generate new high statistics samples for analysis for $D^0\to K^-K^+$ and $D^0\to \pi^-\pi^+$ decay modes
-- [ ] Check asymmetries for new high statistics samples and compare with low statistics
+- [x] Check asymmetries for new high statistics samples and compare with low statistics
 
 ### CDS Report
 - [x] Begin writing the CDS Report.

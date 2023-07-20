@@ -22,16 +22,20 @@ int main(){
         // ROOT::EnableImplicitMT();
 
         std::vector<std::string> fileNamesHighStatistics = {
-                "Dstp_D0__KmKp_pip_tree_HighStatistics.root",
-                "Dstp_D0__pimpip_pip_tree_HighStatistics.root"
+                // "Dstp_D0__KmKp_pip_tree_HighStatistics.root",
+                // "Dstp_D0__pimpip_pip_tree_HighStatistics.root",
+                "Dstp_D0__KmKp_pip_tree_HighStatistics_Analysis.root",
+                "Dstp_D0__pimpip_pip_tree_HighStatistics_Analysis.root"
         };
         std::vector<std::string> fileNamesLowStatistics = {
                 "Dstp_D0__KmKp_pip_tree_LowStatistics.root",
                 "Dstp_D0__pimpip_pip_tree_LowStatistics.root"
         };
         std::vector<std::string> fileNamesHighStatisticsAsymmetry = {
-                "Dstp_D0__KmKp_pip_tree_HighStatistics_Asymmetry.root",
-                "Dstp_D0__pimpip_pip_tree_HighStatistics_Asymmetry.root"
+                // "Dstp_D0__KmKp_pip_tree_HighStatistics_Asymmetry.root",
+                // "Dstp_D0__pimpip_pip_tree_HighStatistics_Asymmetry.root",
+                "Dstp_D0__KmKp_pip_tree_HighStatistics_Analysis_Asymmetry.root",
+                "Dstp_D0__pimpip_pip_tree_HighStatistics_Analysis_Asymmetry.root"
         };
         std::vector<std::string> fileNamesLowStatisticsAsymmetry = {
                 "Dstp_D0__KmKp_pip_tree_LowStatistics_Asymmetry.root",
@@ -39,7 +43,7 @@ int main(){
         };
         
         introduceAsymmetries(fileNamesHighStatistics, fileNamesHighStatisticsAsymmetry);
-        introduceAsymmetries(fileNamesLowStatistics, fileNamesLowStatisticsAsymmetry);
+        // introduceAsymmetries(fileNamesLowStatistics, fileNamesLowStatisticsAsymmetry);
 
 
         //  Stop timer
@@ -66,11 +70,9 @@ void introduceAsymmetries(std::vector<std::string> fileNames, std::vector<std::s
                 dataFrame1,
                 dataFrame2
         };
-        std::vector<ROOT::RDataFrame> dataFramesFinal;
-        std::vector<ROOT::RDataFrame> dataFramesAsymmetry;
 
         TRandom3* random = new TRandom3();
-        // random->SetSeed();
+        random->SetSeed();
         
         for (size_t i = 0; i < dataFrames.size(); i++){
                 dataFrames[i].Define(

@@ -36,12 +36,12 @@ int main(){
                 "Dstp_D0__pimpip_pip_tree_HighStatistics_Asymmetry.root"
         };
         std::vector<std::string> fileNamesLowStatisticsAsymmetry = {
-                "Dstp_D0__KmKp_pip_tree_LowStatistics_Asymmetry.root",
-                "Dstp_D0__pimpip_pip_tree_LowStatistics_Asymmetry.root"
+                "Dstp_D0__KmKp_pip_tree_HighStatistics_Analysis_Asymmetry.root",
+                "Dstp_D0__pimpip_pip_tree_HighStatistics_Analysis_Asymmetry.root"
         };
         std::vector<std::string> fileNamesLowStatisticsAsymmetryWeights = {
-                "Dstp_D0__KmKp_pip_tree_LowStatistics_Asymmetry_Weights.root",
-                "Dstp_D0__pimpip_pip_tree_LowStatistics_Asymmetry_Weights.root"
+                "Dstp_D0__KmKp_pip_tree_HighStatistics_Analysis_Asymmetry_Weights.root",
+                "Dstp_D0__pimpip_pip_tree_HighStatistics_Analysis_Asymmetry_Weights.root"
         };
         std::string treeName = "DecayTree";
         std::vector<std::string> distributionNames = {
