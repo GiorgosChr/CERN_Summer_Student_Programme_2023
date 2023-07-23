@@ -38,7 +38,7 @@ int main(){
         //         "Dstp_D0__pimpip_pip_tree_LowStatistics_Asymmetry.root"
         // };
         
-        auto detection = false; 
+        auto detection = true; 
         introduceAsymmetries(fileNamesHighStatistics, fileNamesHighStatisticsAsymmetry, detection);
         // introduceAsymmetries(fileNamesLowStatistics, fileNamesLowStatisticsAsymmetry, detection);
 
