@@ -88,3 +88,11 @@
 
 ### LaTeX Report
 - [x] Add $\Delta A$ calculation and compare with the expected value
+
+## $7^{th}$ Week 24/07 - 28/07
+### NewWeightingFunction
+- [x] Calculate weighting function without detection asymmetry
+- [x] Calculate $\Delta A_{total}$ 
+
+### LaTeX Report
+- [x] Write report for this week with plots and results.
