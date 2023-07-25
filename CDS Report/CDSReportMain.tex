@@ -167,23 +167,36 @@
         We generate separate samples for calculating the weighting function $Q$ and analyzing our data to eliminate correlations between the two.
         Both samples start with 10 million events, to have high enough statistics and then events are discarded due to the selections we applied in Tab. \ref{tab:RapidSim}.
 
+        We calculate the weighting function twice, once with detection asymmetry and once without, and compare the results.
+        We present the weighting function distributions for before and after the detection asymmetry in Fig.~\ref{fig:weightsBeforeAfter}.
         \begin{figure}[h!]
                 \centering
-                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/WeightingFunction/Plots/KmKpNormalizedDistribution.pdf}}
-                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/WeightingFunction/Plots/pimpipNormalizedDistribution.pdf}}
-                \caption{Normalized distributions of $D^0\to K^-K^+$ (left) and $D^0\to \pi^-\pi^+$ (right) as functions of $p_T$, $\eta$ and $\phi$ after detection asymmetry.}
+                \includegraphics[width = 0.7\textwidth]{../work/RapidSimAnalysis/NewWeightingFunction/Plots/WeighsBeforeAfter.pdf}
+                \caption{Distribution of weighting function values before and after the detection asymmetry.}
+                \label{fig:weightsBeforeAfter}
         \end{figure}
+        It is obvious that the introduction of the detection asymmetry slightly affects the weighting function distribution.
 
         \begin{figure}[h!]
                 \centering
-                \includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/WeightingFunction/Plots/Weights.pdf}
-                \caption{The weighting function $Q$ values.}
+                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf}}
+                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf}}
+
+                \hfill
+
+                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf}}
+                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf}}
+
+                \hfill
+
+                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_phi_All.pdf}}
+                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/WeightingFunction/Plots/D0_phi_All.pdf}}
+
+                \caption{Comparison of $D^0$ kinematics with and without weighting. On the left and right columns we present the weighting before and after the introduction of the detection asymmetry respectively.}
         \end{figure}
 
-        
 
         \section{Results}
-
 
         \pagebreak
         \nocite{*}

@@ -1,19 +1,23 @@
 # Fdb version 3
-["biber CDSReportMain"] 1689857384 "CDSReportMain.bcf" "CDSReportMain.bbl" "CDSReportMain" 1690115559
-  "CDSReportMain.bcf" 1690115559 106444 9643e18c692e1be04238d28bb30b0ace "lualatex"
+["biber CDSReportMain"] 1689857384 "CDSReportMain.bcf" "CDSReportMain.bbl" "CDSReportMain" 1690294945
+  "CDSReportMain.bcf" 1690294945 106444 9643e18c692e1be04238d28bb30b0ace "lualatex"
   "references.bib" 1689752986 1615 3f6923796ec4b480899d1ef9d9d94f10 ""
   (generated)
   "CDSReportMain.bbl"
   "CDSReportMain.blg"
-["lualatex"] 1690115551 "/home/george/CERN_Summer_Student_Programme_2023/CDS Report/CDSReportMain.tex" "CDSReportMain.pdf" "CDSReportMain" 1690115559
+["lualatex"] 1690294939 "/home/george/CERN_Summer_Student_Programme_2023/CDS Report/CDSReportMain.tex" "CDSReportMain.pdf" "CDSReportMain" 1690294945
   "../.images/CERN_logo.png" 1688027387 16476 93f32a507342b9f1cac087a6bc36da52 ""
   "../.images/Lhcb-logo-new.svg.png" 1688027387 96300 948e7c326c4084056c65c44da5747f9a ""
-  "../work/RapidSimAnalysis/WeightingFunction/Plots/KmKpNormalizedDistribution.pdf" 1689860507 1480257 c7b770f43fb268829b5f9839409c9605 ""
-  "../work/RapidSimAnalysis/WeightingFunction/Plots/Weights.pdf" 1689860508 14362 f57369a2cae8fa00d3171ac206edfba7 ""
-  "../work/RapidSimAnalysis/WeightingFunction/Plots/pimpipNormalizedDistribution.pdf" 1689860508 1481807 ce6f9d03b745a3246f3ebf0f862d6d57 ""
+  "../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf" 1690294034 16185 654b82ed10d372742185937a45cc660f ""
+  "../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf" 1690294034 15451 d2aa15c2c6043ec223d335e99c4faf7d ""
+  "../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_phi_All.pdf" 1690294034 15950 352a52fee24f37c5fed11494153febee ""
+  "../work/RapidSimAnalysis/NewWeightingFunction/Plots/WeighsBeforeAfter.pdf" 1690294035 16265 372e795ed3c097660f9c6ddfb6ded8bc ""
+  "../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf" 1689860508 16176 b274bfc8de5c7afe50c99e61eee1eef2 ""
+  "../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf" 1689860508 15460 082c0c502bec6629aee638603d140231 ""
+  "../work/RapidSimAnalysis/WeightingFunction/Plots/D0_phi_All.pdf" 1689860508 15938 8775740168d13761964a4c3ca056536e ""
   "/home/george/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1675959279 123142 a5bb91f587c7a560590d95e654431ffa ""
   "/home/george/.texlive2021/texmf-var/luatex-cache/generic/names/luaotfload-names.luc" 1675959279 1676208 5defce338bee79a31006effb6c085592 ""
-  "/home/george/CERN_Summer_Student_Programme_2023/CDS Report/CDSReportMain.tex" 1690115551 11612 1a3204fc3bc5113fd18bf7f4e46b37df ""
+  "/home/george/CERN_Summer_Student_Programme_2023/CDS Report/CDSReportMain.tex" 1690294931 12689 376adc998825d6a9ac90f6897296dc8a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm" 1246382020 996 a18840b13b499c08ac2de96a99eda4bc ""
@@ -443,10 +447,10 @@
   "/usr/share/texmf/tex/latex/lm/t1lmtt.fd" 1256929440 2681 354015af3b61e7be30009f084986375a ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1675936650 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1685518232 4555379 9ebdd0c6f3494b3429e05a76c4a21a8a ""
-  "CDSReportMain.aux" 1690115559 3231 fb9bd8847452cac101d471d59bea0b98 "lualatex"
+  "CDSReportMain.aux" 1690294945 3350 28a59a4421e1dfecf0d64e915b62991c "lualatex"
   "CDSReportMain.bbl" 1689857386 6129 458728fc13ad14c6a39ae42c37885530 "biber CDSReportMain"
-  "CDSReportMain.out" 1690115559 679 315ddba411c0dbbc3d94a23625f3b9fc "lualatex"
-  "CDSReportMain.run.xml" 1690115559 2444 5a89c42fd9ba88c929e2baf984f51430 "lualatex"
+  "CDSReportMain.out" 1690294945 679 315ddba411c0dbbc3d94a23625f3b9fc "lualatex"
+  "CDSReportMain.run.xml" 1690294945 2444 5a89c42fd9ba88c929e2baf984f51430 "lualatex"
   (generated)
   "CDSReportMain.aux"
   "CDSReportMain.bcf"
