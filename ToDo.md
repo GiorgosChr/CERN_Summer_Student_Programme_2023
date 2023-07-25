@@ -96,3 +96,11 @@
 
 ### LaTeX Report
 - [x] Write report for this week with plots and results.
+
+### PGunAnalysis
+- [ ] Caluclate $A_{total}$ for $KK$ and $\pi\pi$ and $\Delta A_{total}$
+- [ ] Calculate Weights $p_T, \eta \phi$ from $D^0$ and add the weight to $D^\star$
+- [ ] Calculate the $\Delta A_{total}$
+- [ ] Calculate weights $p_T, \eta, \phi$ from $D^\star$ and add the weights to $D^\star$
+- [ ] Calculate the $\Delta A_{total}$
+- [ ] Write everything on this weeks' report
