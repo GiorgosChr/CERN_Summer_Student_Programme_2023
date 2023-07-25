@@ -36,7 +36,7 @@
 
         \begin{abstract}
                 We investigate the asymmetries that occur in charm decays at the LHCb, specifically we study $D^{\star+}\to D^0\pi^+$ and $\bar{D}^{\star-}\to D^0\pi^-$ where $D^0\to K^-K^+$ or $D^0\to \pi^-\pi^+$.
-                We study the effect of $CP$ and detection asymmetries on MC samples generated via RapidSim and implement a new kinematic weighting function which allows us to keep events that are otherwise discarded from LHCb data, since they are associated with large detection asymetries.
+                We study the effect of $CP$ and detection asymmetries on MC samples generated via RapidSim and implement a new kinematic weighting function which allows us to keep events that are otherwise discarded from LHCb data, since they are associated with large detection asymmetries.
         \end{abstract}
         
         \pagebreak
@@ -131,6 +131,7 @@
                 A_\text{D} = \frac{\int \dd \vec{p} N(\vec{p})A_\text{D}(\vec{p})}{\int dd \vec{p} N(\vec{p})}
         \end{equation}
 
+
         At the LHCb one observes large pion detection asymmetries that are associated with specific kinematic regions, which so far have been discarded, thus reducing the statistics.
         We can, however, introduce a \textit{weighting function} that allows us to keep events associated with large asymmetries.
         Such a weighting function can be expressed as the following ratio
@@ -176,7 +177,6 @@
                 \label{fig:weightsBeforeAfter}
         \end{figure}
         It is obvious that the introduction of the detection asymmetry slightly affects the weighting function distribution.
-
         \begin{figure}[h!]
                 \centering
                 \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf}}
@@ -195,8 +195,63 @@
                 \caption{Comparison of $D^0$ kinematics with and without weighting. On the left and right columns we present the weighting before and after the introduction of the detection asymmetry respectively.}
         \end{figure}
 
+        \subsection{Asymmetry calculation}
+        Using the weighting function we can calculate the total asymmetry for $D^0\to K^-K^+$ and $D^0\to\pi^-\pi^+$ samples and compare to the unweighted result.
+        The total asymmetry can be calculated using
+        \begin{equation}
+                A_\text{total} = \frac{N_+ - N_-}{N_+ + N_-}
+        \end{equation}
+        where 
+        \begin{equation}
+                N_\pm = \sum_i w_i^\pm, \text{ and } \sigma N_\pm = \sqrt{\sum_i (w_i^\pm)^2}
+        \end{equation} 
+        and using propagation of uncertainties we can calculate the total asymmetry error
+        \begin{equation}
+                \sigma A_{\text{total}} ^2 = \left(\pdv{A_{\text{total}}}{N^+}\sigma N^+\right)^2 + \left(\pdv{A_{\text{total}}}{N^-}\sigma N^-\right)^2
+        \end{equation}
+        For the case of the unweighted total asymmetry, $N_\pm$ is the number of events with positive and negative soft pions.
 
-        \section{Results}
+        We present the calculated asymmetries for the $D^0\to K^-K^+$ sample in Tab.~\ref{tab:asymmetries_total}
+        \begin{center}
+                \begin{tabular}{c|c|c}
+                        & Weighted & Unweighted\\
+                        \hline\hline
+                        Before & $0.14726 \pm 0.00066$ & \multirow{2}{*}{$0.16268 \pm 0.00064$}\\
+                        \cline{1-2}
+                        After & $0.14994 \pm 0.00066$ & \\
+                \end{tabular}
+                \captionof{table}{$A_\text{total}$ for the $D^0\to K^-K^+$ sample with and without weighting.}
+                \label{tab:asymmetries_total}
+        \end{center}
+        and for the $D^0\to \pi^-\pi^+$ sample we get
+        \begin{equation}
+                A_\text{total} = 0.24571 \pm 0.00067
+        \end{equation} 
+
+        We calculate the difference between the total asymmetries of the two samples
+        \begin{equation}
+                \Delta A_\text{total} = A_\text{total}^{KK} - A_\text{total}^{\pi\pi}
+        \end{equation}
+        We introduce $A_{CP}^{KK} = 0.1$ and $A_{CP}^{\pi\pi} = 0.2$, thus, the estimated total asymmetry difference is $\Delta A_\text{total} = -0.1$.
+        We present the results of the total asymmetry difference in Tab.~\ref{tab:asymmetry_difference} as well as the deviation from the expected value.
+        \begin{center}
+                \begin{tabular}{c|c|c|c}
+                        & & Weighted & Unweighted\\
+                        \hline\hline
+                        \multirow{2}{*}{Before} & $\Delta A_\text{total}$ & $-0.09578 \pm 0.00094$ & $-0.08304 \pm 0.00092$\\
+                        & Deviation $(\sigma)$ & $4.49$ & $4.59$\\
+                        \hline
+                        \multirow{2}{*}{After} & $\Delta A_\text{total}$ & $-0.09845 \pm 0.00094$ & $-0.08304 \pm 0.00092$\\
+                        & Deviation $(\sigma)$ & $1.64$ & $4.59$\\
+                \end{tabular}
+                \captionof{table}{Total asymmetry difference with and without weights.
+                We present both weighting procedures, before and after the detection asymmetry.}
+                \label{tab:asymmetry_difference}
+        \end{center}
+
+
+        \subsection{Particle Gun analysis}
+        ADD PLOTS FOR DETECTION ASYMMETRY IN THE ANALYSIS AS WELL AS IN THE PARTICLE GUN SECTION.
 
         \pagebreak
         \nocite{*}
