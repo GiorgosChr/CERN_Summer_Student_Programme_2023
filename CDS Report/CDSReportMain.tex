@@ -169,6 +169,15 @@
         Both samples start with 10 million events, to have high enough statistics and then events are discarded due to the selections we applied in Tab. \ref{tab:RapidSim}.
 
         We calculate the weighting function twice, once with detection asymmetry and once without, and compare the results.
+        The detection asymmetry is shown in Fig.~\ref{fig:detection}.
+        \begin{figure}[h!]
+                \centering
+                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf}}
+                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf}}
+                \caption{Positive and negative soft pion $p_x - p_z$ momentum plane for the $D^0\to k^-K^+$ sample. We add a detection asymmetry only on the negative soft pion.}
+                \label{fig:detection}
+        \end{figure}
+
         We present the weighting function distributions for before and after the detection asymmetry in Fig.~\ref{fig:weightsBeforeAfter}.
         \begin{figure}[h!]
                 \centering
@@ -216,9 +225,9 @@
                 \begin{tabular}{c|c|c}
                         & Weighted & Unweighted\\
                         \hline\hline
-                        Before & $0.14726 \pm 0.00066$ & \multirow{2}{*}{$0.16268 \pm 0.00064$}\\
+                        After & $0.14726 \pm 0.00066$ & \multirow{2}{*}{$0.16268 \pm 0.00064$}\\
                         \cline{1-2}
-                        After & $0.14994 \pm 0.00066$ & \\
+                        Before & $0.14994 \pm 0.00066$ & \\
                 \end{tabular}
                 \captionof{table}{$A_\text{total}$ for the $D^0\to K^-K^+$ sample with and without weighting.}
                 \label{tab:asymmetries_total}
@@ -251,7 +260,83 @@
 
 
         \subsection{Particle Gun analysis}
-        ADD PLOTS FOR DETECTION ASYMMETRY IN THE ANALYSIS AS WELL AS IN THE PARTICLE GUN SECTION.
+        The final test of the weighting function Eq.~\ref{eq:weighting} is the implementation on samples generated with Particle Gun.
+        In these samples, we do not introduce a $CP$ asymmetry, however the simulation includes a detection asymmetry for soft pions as shown in Fig.~\ref{fig:detection_pgun}.
+        \begin{figure}[h!]
+                \centering
+                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf}}
+                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf}}
+                \caption{We present the positive (left) and negative (right) soft pion $p_x - p_z$ momentum planes for the $D^0\to K^-K^+$ sample generated using Particle Gun.}
+                \label{fig:detection_pgun}
+        \end{figure}
+
+        We present the distribution of the weighting function values in Fig.~\ref{fig:weightingPgun}.
+        With the implementation of the weighting function, the detection asymmetries should cancel out when calculating $\Delta A_\text{total}$, thus the calculated value should be consistent with zero.
+
+        \begin{figure}[h!]
+                \centering
+                \includegraphics[width = 0.7\textwidth]{../work/RapidSimAnalysis/PGunAnalysis/Plots/Weights.pdf}
+                \caption{Normalized weighting function distributions obtained from the $D^0$ and $D^\star$ samples.}
+                \label{fig:weightingPgun}
+        \end{figure}
+
+        Using the same procedure as before, we calculate the total asymmetries of the two samples and the total asymmetry difference.
+        Our results are shown in Tab.~\ref{tab:asymmetries_total_pgun} for the $D^0\to K^-K^+$ sample, while for the $D^0\to\pi^-\pi^+$ sample we get
+        \begin{equation}
+                A_\text{total} = -0.00024 \pm 0.00074
+        \end{equation}
+        \begin{center}
+                \begin{tabular}{c|c|c}
+                        & Weighted & Unweighted\\
+                        \hline\hline
+                        $D^0$ weighting & $-0.00023 \pm 0.00079$ & \multirow{2}{*}{$0.000016 \pm 0.000787$}\\
+                        \cline{1-2}
+                        $D^\star$ weighting & $-0.000018 \pm 0.000790$ & \\
+                \end{tabular}
+                \captionof{table}{We present the $A_\text{total}$ for the $D^0\to K^-K^+$ Particle Gun sample with weights from two different samples and without weights.}
+                \label{tab:asymmetries_total_pgun}
+        \end{center}
+
+        Using the total asymmetries we calculate the total asymmetry difference between the $D^0\to K^-K^+$ and $D^0\to \pi^-\pi^+$ samples.
+        The results are shown in Tab.~\ref{tab:asymmetry_difference_pgun}.
+
+        \begin{center}
+                \begin{tabular}{c|c|c|c}
+                        & $D^0$ Weighting & $D^\star$ Weighting & Unweighted\\
+                        \hline\hline
+                        $\Delta A_\text{total}$ & $0.00001 \pm 0.00108$ & $0.00022 \pm 0.00108$ & $0.00026 \pm 0.00108$\\
+                        \hline
+                        Deviation $(\sigma)$ & 0.009 & 0.20 & 0.24\\
+                \end{tabular}
+                \captionof{table}{Total asymmetry difference and deviation from the expected value.}
+                \label{tab:asymmetry_difference_pgun}
+        \end{center}
+
+        Lastly, we present the kinematics of $D^0$ with and without weighting in Fig.~\ref{fig:kimenaticspgun}
+
+        \begin{figure}[h!]
+                \centering
+                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PT.pdf}}
+                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_ETA.pdf}}
+                \hfill
+                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PHI.pdf}}
+
+                \caption{We present the $D^0$ normalized kinematic distributions with and without weighting for the two Particle Gun samples.}
+                \label{fig:kimenaticspgun}
+        \end{figure}
+
+        \section{Conclusions}
+        As demonstrated the weighting function allows us to keep events with kinematics associated with large detection asymmetries.
+        As demonstrated in the RapidSim data analysis the weighting function slightly reduces the deviation of $\Delta A_\text{total}$ for the case of weighting after the detection asymmetry.
+        However, if the calculation of the weighting function predates the introduction of the detection asymmetry, then we observe a significant improvement of our results.
+
+        For the case of Particle Gun data, all measurements are consistent with the expected value of zero, however we notice that the weighting using the $D^0$ samples yields a much smaller deviation.
+
+        Furthermore, we observe from the kinematic distributions of $D^0$ that the weighting function essentially equalizes the kinematics of $D^0\to K^-K^+$ and $D^0\to \pi^-\pi^+$, which is expected, since the weight value is the ratio of the two.
+        
+        In conclusion, the weighting function we examined can be effectively used in further analyses using LHCb data where detection soft pion detection asymmetries with similarities to our results occur and are otherwise discarded.
+        
+
 
         \pagebreak
         \nocite{*}

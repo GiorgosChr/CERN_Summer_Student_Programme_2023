@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  25 JUL 2023 21:28
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  26 JUL 2023 13:44
  restricted system commands enabled.
  file:line:error style messages enabled.
 **"/home/george/CERN_Summer_Student_Programme_2023/CDS Report/CDSReportMain.tex"
@@ -1252,12 +1252,12 @@ Package biblatex Info: ... file 'CDSReportMain.bbl' found.
  (./CDSReportMain.bbl)
 Package biblatex Info: Reference section=0 on input line 27.
 Package biblatex Info: Reference segment=0 on input line 27.
-<../.images/CERN_logo.png, id=35, 208.78pt x 205.76875pt>
+<../.images/CERN_logo.png, id=39, 208.78pt x 205.76875pt>
 File: ../.images/CERN_logo.png Graphic file (type png)
 <use ../.images/CERN_logo.png>
 Package luatex.def Info: ../.images/CERN_logo.png  used on input line 30.
 (luatex.def)             Requested size: 101.04153pt x 99.58464pt.
-<../.images/Lhcb-logo-new.svg.png, id=36, 1606.0pt x 963.6pt>
+<../.images/Lhcb-logo-new.svg.png, id=40, 1606.0pt x 963.6pt>
 File: ../.images/Lhcb-logo-new.svg.png Graphic file (type png)
 <use ../.images/Lhcb-logo-new.svg.png>
 Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 32.
@@ -1298,84 +1298,152 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 164.
 
-<../work/RapidSimAnalysis/NewWeightingFunction/Plots/WeighsBeforeAfter.pdf, id=85, 569.12625pt x 385.44pt>
+<../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf, id=89, 569.12625pt x 385.44pt>
+File: ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf Graphic file (type pdf)
+<use ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf>
+Package luatex.def Info: ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf  used on input line 175.
+(luatex.def)             Requested size: 215.0023pt x 145.61005pt.
+<../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf, id=90, 569.12625pt x 385.44pt>
+File: ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf Graphic file (type pdf)
+<use ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf>
+Package luatex.def Info: ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf  used on input line 176.
+(luatex.def)             Requested size: 215.0023pt x 145.61005pt.
+<../work/RapidSimAnalysis/NewWeightingFunction/Plots/WeighsBeforeAfter.pdf, id=92, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/WeighsBeforeAfter.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/NewWeightingFunction/Plots/WeighsBeforeAfter.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/WeighsBeforeAfter.pdf  used on input line 175.
+Package luatex.def Info: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/WeighsBeforeAfter.pdf  used on input line 184.
 (luatex.def)             Requested size: 301.00192pt x 203.85876pt.
-<../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf, id=86, 569.12625pt x 385.44pt>
+<../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf, id=93, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf  used on input line 182.
+Package luatex.def Info: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf  used on input line 191.
 (luatex.def)             Requested size: 215.0023pt x 145.61005pt.
-<../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf, id=87, 569.12625pt x 385.44pt>
+<../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf, id=94, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf  used on input line 183.
+Package luatex.def Info: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf  used on input line 192.
 (luatex.def)             Requested size: 215.0023pt x 145.61005pt.
-<../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf, id=88, 569.12625pt x 385.44pt>
+<../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf, id=95, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf  used on input line 187.
+Package luatex.def Info: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf  used on input line 196.
 (luatex.def)             Requested size: 215.0023pt x 145.61005pt.
-<../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf, id=89, 569.12625pt x 385.44pt>
+<../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf, id=96, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf  used on input line 188.
+Package luatex.def Info: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf  used on input line 197.
 (luatex.def)             Requested size: 215.0023pt x 145.61005pt.
-<../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_phi_All.pdf, id=90, 569.12625pt x 385.44pt>
+<../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_phi_All.pdf, id=97, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_phi_All.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_phi_All.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_phi_All.pdf  used on input line 192.
+Package luatex.def Info: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_phi_All.pdf  used on input line 201.
 (luatex.def)             Requested size: 215.0023pt x 145.61005pt.
-<../work/RapidSimAnalysis/WeightingFunction/Plots/D0_phi_All.pdf, id=91, 569.12625pt x 385.44pt>
+<../work/RapidSimAnalysis/WeightingFunction/Plots/D0_phi_All.pdf, id=98, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_phi_All.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_phi_All.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_phi_All.pdf  used on input line 193.
+Package luatex.def Info: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_phi_All.pdf  used on input line 202.
 (luatex.def)             Requested size: 215.0023pt x 145.61005pt.
-[3<../work/RapidSimAnalysis/NewWeightingFunction/Plots/WeighsBeforeAfter.pdf>] [4<../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf><../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf><../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf><../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf><../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_phi_All.pdf><../work/RapidSimAnalysis/WeightingFunction/Plots/D0_phi_All.pdf>]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[3<../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf><../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf>]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 223.
+(caption)                particular \caption on input line 232.
+See the caption package documentation for explanation.
+
+[4<../work/RapidSimAnalysis/NewWeightingFunction/Plots/WeighsBeforeAfter.pdf>]
+
+LaTeX Warning: Text page 5 contains only floats.
+
+[5<../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf><../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf><../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf><../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf><../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_phi_All.pdf><../work/RapidSimAnalysis/WeightingFunction/Plots/D0_phi_All.pdf>]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 257.
+See the caption package documentation for explanation.
+
+<../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf, id=534, 569.12625pt x 385.44pt>
+File: ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf Graphic file (type pdf)
+<use ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf>
+Package luatex.def Info: ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf  used on input line 267.
+(luatex.def)             Requested size: 215.0023pt x 145.61005pt.
+<../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf, id=535, 569.12625pt x 385.44pt>
+File: ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf Graphic file (type pdf)
+<use ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf>
+Package luatex.def Info: ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf  used on input line 268.
+(luatex.def)             Requested size: 215.0023pt x 145.61005pt.
+<../work/RapidSimAnalysis/PGunAnalysis/Plots/Weights.pdf, id=537, 569.12625pt x 385.44pt>
+File: ../work/RapidSimAnalysis/PGunAnalysis/Plots/Weights.pdf Graphic file (type pdf)
+<use ../work/RapidSimAnalysis/PGunAnalysis/Plots/Weights.pdf>
+Package luatex.def Info: ../work/RapidSimAnalysis/PGunAnalysis/Plots/Weights.pdf  used on input line 278.
+(luatex.def)             Requested size: 301.00192pt x 203.85876pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[6<../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf><../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf>]
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 296.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 248.
+(caption)                particular \caption on input line 311.
 See the caption package documentation for explanation.
 
-[5]
-Overfull \hbox (3.08658pt too wide) in paragraph at lines 258--258
+<../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PT.pdf, id=641, 569.12625pt x 385.44pt>
+File: ../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PT.pdf Graphic file (type pdf)
+<use ../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PT.pdf>
+Package luatex.def Info: ../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PT.pdf  used on input line 319.
+(luatex.def)             Requested size: 215.0023pt x 145.61005pt.
+<../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_ETA.pdf, id=642, 569.12625pt x 385.44pt>
+File: ../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_ETA.pdf Graphic file (type pdf)
+<use ../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_ETA.pdf>
+Package luatex.def Info: ../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_ETA.pdf  used on input line 320.
+(luatex.def)             Requested size: 215.0023pt x 145.61005pt.
+<../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PHI.pdf, id=643, 569.12625pt x 385.44pt>
+File: ../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PHI.pdf Graphic file (type pdf)
+<use ../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PHI.pdf>
+Package luatex.def Info: ../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PHI.pdf  used on input line 322.
+(luatex.def)             Requested size: 215.0023pt x 145.61005pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[7<../work/RapidSimAnalysis/PGunAnalysis/Plots/Weights.pdf>] [8<../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PT.pdf><../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_ETA.pdf><../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PHI.pdf>]
+Overfull \hbox (3.08658pt too wide) in paragraph at lines 343--343
 \T1/lmr/m/n/10 sim-u-la-tion of heavy-quark hadron de-cays''. In: \T1/lmr/m/it/10 Com-put. Phys. Com-mun. \T1/lmr/m/n/10 214 (2017), pp. 239246.
  []
 
 
-Overfull \hbox (2.88931pt too wide) in paragraph at lines 258--258
+Overfull \hbox (2.88931pt too wide) in paragraph at lines 343--343
 []\T1/lmr/m/n/10 Roel Aaij et al. ``LHCb De-tec-tor Per-for-mance''. In: \T1/lmr/m/it/10 Int. J. Mod. Phys. A \T1/lmr/m/n/10 30.07 (2015), p. 1530022.
  []
 
-[6] (./CDSReportMain.aux)
+[9] (./CDSReportMain.aux)
 Package rerunfilecheck Info: File `CDSReportMain.out' has not changed.
-(rerunfilecheck)             Checksum: 359A7E9347EF3187B7D6425D6764FB48;934.
+(rerunfilecheck)             Checksum: 75366D49B2D782AAB55BDE0A0C0E923A;1032.
 Package logreq Info: Writing requests to 'CDSReportMain.run.xml'.
 
 \openout1 = CDSReportMain.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 46923 strings out of 477805
+ 47044 strings out of 477805
  125016,1977958 words of node,token memory allocated
- 700 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 24 attribute, 79 glue_spec, 24 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 1:9,2:4219,3:1899,4:45,5:401,6:39,7:6723,8:72,9:1086,10:11,11:309
- 65851 multiletter control sequences out of 65536+600000
+ 708 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 26 attribute, 79 glue_spec, 26 attribute_list, 2 write, 1 pdf_action nodes
+   avail lists: 1:9,2:4215,3:1899,4:45,5:401,6:47,7:6723,8:72,9:1086,10:11,11:353
+ 65906 multiletter control sequences out of 65536+600000
  71 fonts using 4484159 bytes
  84i,15n,89p,806b,2095s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on CDSReportMain.pdf (6 pages, 562100 bytes).
+Output written on CDSReportMain.pdf (9 pages, 792696 bytes).
 
-PDF statistics: 541 PDF objects out of 1000 (max. 8388607)
- 317 compressed objects within 4 object streams
- 41 named destinations out of 1000 (max. 131072)
- 72 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 942 PDF objects out of 1000 (max. 8388607)
+ 505 compressed objects within 6 object streams
+ 59 named destinations out of 1000 (max. 131072)
+ 80 words of extra memory for PDF output out of 10000 (max. 100000000)
 
