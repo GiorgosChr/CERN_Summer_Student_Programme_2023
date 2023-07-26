@@ -1,0 +1,8 @@
+\babel@toc {greek}{}\relax 
+\babel@toc {english}{}\relax 
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Asymmetries at the LHCb}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{The weighting function}{7}{0}{1}
+\beamer@sectionintoc {2}{RapidSim}{8}{0}{2}
+\beamer@subsectionintoc {2}{1}{Injecting detection asymmetry}{9}{0}{2}
+\beamer@subsectionintoc {2}{2}{Weighting function}{10}{0}{2}
