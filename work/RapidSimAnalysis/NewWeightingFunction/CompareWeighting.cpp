@@ -47,8 +47,8 @@ int main(){
         histBefore->DrawNormalized("HIST E");
         histAfter->DrawNormalized("HIST E SAME");
 
-        legend->AddEntry(histBefore.GetPtr(), "Before", "l");
-        legend->AddEntry(histAfter.GetPtr(), "After", "l");
+        legend->AddEntry(histBefore.GetPtr(), "New Technique", "l");
+        legend->AddEntry(histAfter.GetPtr(), "D*/#pi_{s} Reconstruction", "l");
 
         legend->SetFillColor(0);
         legend->SetBorderSize(0);

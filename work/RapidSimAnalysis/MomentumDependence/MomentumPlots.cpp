@@ -57,15 +57,15 @@ int main(){
         histPos->SetStats(0);
         histNeg->SetStats(0);
 
-        histPos->GetYaxis()->SetTitle("p_{x}(#pi^{+}) MeV/c");
-        histPos->GetXaxis()->SetTitle("p_{z}(#pi^{+}) MeV/c");
+        histPos->GetYaxis()->SetTitle("p_{x}(#pi^{+}) GeV/c");
+        histPos->GetXaxis()->SetTitle("p_{z}(#pi^{+}) GeV/c");
 
-        histNeg->GetYaxis()->SetTitle("p_{x}(#pi^{-}) MeV/c");
-        histNeg->GetXaxis()->SetTitle("p_{z}(#pi^{-}) MeV/c");
+        histNeg->GetYaxis()->SetTitle("p_{x}(#pi^{-}) GeV/c");
+        histNeg->GetXaxis()->SetTitle("p_{z}(#pi^{-}) GeV/c");
 
-        histPos->DrawNormalized("COLZ");
-        // histNeg->DrawNormalized("COLZ");
-        canvas->SaveAs("Plots/KK_Dst_PXPZ_Positive.pdf");
+        // histPos->DrawNormalized("COLZ");
+        histNeg->DrawNormalized("COLZ");
+        canvas->SaveAs("Plots/KK_Dst_PXPZ_Negative.pdf");
 
 
         //  Stop timer

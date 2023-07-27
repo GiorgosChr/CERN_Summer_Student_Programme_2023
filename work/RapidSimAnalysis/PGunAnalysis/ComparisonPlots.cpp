@@ -67,7 +67,7 @@ int main(){
         }
 
         TCanvas* canvas = new TCanvas("canvas", "");
-        TLegend* legend = new TLegend(0.7, 0.7, 0.9, 0.9);
+        TLegend* legend = new TLegend(0.6, 0.7, 0.7, 0.9);
 
         ROOT::RDataFrame dataFrameKD0(treeName, fileNames[0]);
         ROOT::RDataFrame dataFrameKDst(treeName, fileNames[1]);
@@ -92,8 +92,8 @@ int main(){
         histD0->DrawNormalized("HIST E");
         histDst->DrawNormalized("HIST E SAME");
 
-        legend->AddEntry(histD0.GetPtr(), "D^{0} Weights", "l");
-        legend->AddEntry(histDst.GetPtr(), "D* Weights", "l");
+        legend->AddEntry(histD0.GetPtr(), "New Technique", "l");
+        legend->AddEntry(histDst.GetPtr(), "D*/#pi_{s} Reconstruction", "l");
         legend->SetFillColor(0);
         legend->SetBorderSize(0);
         legend->SetTextSize(0.05);
@@ -169,8 +169,8 @@ void comparisonPlots(std::vector<std::string> fileNames, std::string treeName, s
 
         legend->AddEntry(histP.GetPtr(), "D^{0}#rightarrow #pi^{-}#pi^{+}", "l");
         legend->AddEntry(histKD0.GetPtr(), "D^{0}#rightarrow K^{-}K^{+}", "l");
-        legend->AddEntry(histKD0Weighted.GetPtr(), "D^{0}#rightarrow K^{-}K^{+}, D^{0} Weights", "l");
-        legend->AddEntry(histKDstWeighted.GetPtr(), "D^{0}#rightarrow K^{-}K^{+}, D* Weights", "l");
+        legend->AddEntry(histKD0Weighted.GetPtr(), "D^{0}#rightarrow K^{-}K^{+}, New Technique", "l");
+        legend->AddEntry(histKDstWeighted.GetPtr(), "D^{0}#rightarrow K^{-}K^{+}, D*/#pi_{s} Reconstr.", "l");
         legend->SetFillColor(0);
         legend->SetBorderSize(0);
         legend->SetTextSize(0.05);
