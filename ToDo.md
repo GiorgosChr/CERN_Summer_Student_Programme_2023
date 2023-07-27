@@ -103,9 +103,9 @@
 - [x] Calculate the $\Delta A_{total}$
 - [x] Calculate weights $p_T, \eta, \phi$ from $D^\star$ and add the weights to $D^\star$
 - [x] Calculate the $\Delta A_{total}$
-
 - [x] Make plots for detection asymmetry
 
 ### CDS Report
-- [ ] Add detection asymmetry plots on the report.
-- [ ] Add Particle Gun analysis and results.
+- [x] Add detection asymmetry plots on the report.
+- [x] Add Particle Gun analysis and results.
+- [x] Fix what we discussed with Federico

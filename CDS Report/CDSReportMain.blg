@@ -1,15 +1,15 @@
-[1] Config.pm:307> INFO - This is Biber 2.17
-[1] Config.pm:310> INFO - Logfile is 'CDSReportMain.blg'
-[151] biber:340> INFO - === Wed Jul 26, 2023, 12:38:11
-[175] Biber.pm:418> INFO - Reading 'CDSReportMain.bcf'
-[286] Biber.pm:969> INFO - Using all citekeys in bib section 0
-[308] Biber.pm:4383> INFO - Processing section 0
-[325] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
-[326] bibtex.pm:1713> INFO - LaTeX decoding ...
-[338] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
-[440] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[440] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[440] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[441] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
-[446] bbl.pm:654> INFO - Writing 'CDSReportMain.bbl' with encoding 'UTF-8'
-[450] bbl.pm:757> INFO - Output to CDSReportMain.bbl
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'CDSReportMain.blg'
+[86] biber:340> INFO - === Thu Jul 27, 2023, 18:46:08
+[98] Biber.pm:418> INFO - Reading 'CDSReportMain.bcf'
+[153] Biber.pm:969> INFO - Using all citekeys in bib section 0
+[165] Biber.pm:4383> INFO - Processing section 0
+[176] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[176] bibtex.pm:1713> INFO - LaTeX decoding ...
+[184] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[244] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[244] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[244] Biber.pm:4203> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[244] Biber.pm:4209> INFO - No sort tailoring available for locale 'en-US'
+[247] bbl.pm:654> INFO - Writing 'CDSReportMain.bbl' with encoding 'UTF-8'
+[249] bbl.pm:757> INFO - Output to CDSReportMain.bbl
