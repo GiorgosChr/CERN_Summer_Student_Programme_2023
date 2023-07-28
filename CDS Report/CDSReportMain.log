@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  27 JUL 2023 18:50
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  28 JUL 2023 23:07
  restricted system commands enabled.
  file:line:error style messages enabled.
 **"/home/george/CERN_Summer_Student_Programme_2023/CDS Report/CDSReportMain.tex"
@@ -1337,22 +1337,22 @@ Package luatex.def Info: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/Wei
 File: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf>
 Package luatex.def Info: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf  used on input line 157.
-(luatex.def)             Requested size: 215.0023pt x 145.61005pt.
+(luatex.def)             Requested size: 193.50076pt x 131.04787pt.
 <../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf, id=101, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf>
 Package luatex.def Info: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf  used on input line 158.
-(luatex.def)             Requested size: 215.0023pt x 145.61005pt.
+(luatex.def)             Requested size: 193.50076pt x 131.04787pt.
 <../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf, id=102, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf>
 Package luatex.def Info: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf  used on input line 160.
-(luatex.def)             Requested size: 215.0023pt x 145.61005pt.
+(luatex.def)             Requested size: 193.50076pt x 131.04787pt.
 <../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf, id=103, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf>
 Package luatex.def Info: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf  used on input line 161.
-(luatex.def)             Requested size: 215.0023pt x 145.61005pt.
+(luatex.def)             Requested size: 193.50076pt x 131.04787pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -1400,35 +1400,63 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 271.
 See the caption package documentation for explanation.
 
-<../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PT.pdf, id=553, 569.12625pt x 385.44pt>
+<../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PT.pdf, id=554, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PT.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PT.pdf>
 Package luatex.def Info: ../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PT.pdf  used on input line 277.
 (luatex.def)             Requested size: 215.0023pt x 145.61005pt.
-<../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_ETA.pdf, id=554, 569.12625pt x 385.44pt>
+<../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_ETA.pdf, id=555, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_ETA.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_ETA.pdf>
 Package luatex.def Info: ../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_ETA.pdf  used on input line 278.
 (luatex.def)             Requested size: 215.0023pt x 145.61005pt.
-<../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PHI.pdf, id=555, 569.12625pt x 385.44pt>
+<../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PHI.pdf, id=556, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PHI.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PHI.pdf>
 Package luatex.def Info: ../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PHI.pdf  used on input line 280.
 (luatex.def)             Requested size: 215.0023pt x 145.61005pt.
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Overfull \hbox (1.09216pt too wide) in paragraph at lines 286--288
+[]\T1/lmr/m/n/10 Lastly, we test the new weight-ing tech-nique on Par-ti-cle Gun data with dif-fer-ent mag-net po-lar-i-ties.
+ []
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 306.
+See the caption package documentation for explanation.
 
 [6<../work/RapidSimAnalysis/PGunAnalysis/Plots/Weights.pdf>] [7<../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PT.pdf><../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_ETA.pdf><../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PHI.pdf>]
-Overfull \hbox (3.08658pt too wide) in paragraph at lines 299--299
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 322.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 338.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 354.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 370.
+See the caption package documentation for explanation.
+
+[8] [9] [10]
+Overfull \hbox (3.08658pt too wide) in paragraph at lines 456--456
 \T1/lmr/m/n/10 sim-u-la-tion of heavy-quark hadron de-cays''. In: \T1/lmr/m/it/10 Com-put. Phys. Com-mun. \T1/lmr/m/n/10 214 (2017), pp. 239246.
  []
 
 
-Overfull \hbox (2.88931pt too wide) in paragraph at lines 299--299
+Overfull \hbox (2.88931pt too wide) in paragraph at lines 456--456
 []\T1/lmr/m/n/10 Roel Aaij et al. ``LHCb De-tec-tor Per-for-mance''. In: \T1/lmr/m/it/10 Int. J. Mod. Phys. A \T1/lmr/m/n/10 30.07 (2015), p. 1530022.
  []
 
-[8] (./CDSReportMain.aux)
+[11] (./CDSReportMain.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1440,19 +1468,19 @@ Package logreq Info: Writing requests to 'CDSReportMain.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 46750 strings out of 477805
+ 46763 strings out of 477805
  125016,1977958 words of node,token memory allocated
  719 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 27 attribute, 79 glue_spec, 27 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 1:8,2:669,3:241,4:51,5:607,6:42,7:6427,8:72,9:743,10:11,11:457
- 65619 multiletter control sequences out of 65536+600000
+   avail lists: 1:8,2:1404,3:241,4:51,5:625,6:42,7:6381,8:72,9:1762,10:11,11:446
+ 65624 multiletter control sequences out of 65536+600000
  76 fonts using 4856279 bytes
  84i,14n,89p,806b,1296s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
-Output written on CDSReportMain.pdf (9 pages, 814097 bytes).
+Output written on CDSReportMain.pdf (12 pages, 822203 bytes).
 
-PDF statistics: 864 PDF objects out of 1000 (max. 8388607)
- 477 compressed objects within 5 object streams
- 55 named destinations out of 1000 (max. 131072)
+PDF statistics: 888 PDF objects out of 1000 (max. 8388607)
+ 498 compressed objects within 5 object streams
+ 63 named destinations out of 1000 (max. 131072)
  80 words of extra memory for PDF output out of 10000 (max. 100000000)
 

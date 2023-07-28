@@ -38,7 +38,7 @@
         \thispagestyle{empty}
 
         \begin{abstract}
-                We investigate the asymmetries that occur in charm decays at the LHCb, specifically we study $D^{\star+}\to D^0\pi^+$ and $\bar{D}^{\star-}\to D^0\pi^-$ where $D^0\to K^-K^+$ or $D^0\to \pi^-\pi^+$.
+                We investigate the asymmetries that occur in charm decays at the LHCb, specifically we study $D^{\star+}\to D^0\pi^+$ and $D^{\star-}\to \bar{D}^0\pi^-$ where $D^0\to K^-K^+$ or $D^0\to \pi^-\pi^+$.
                 We study the effect of $CP$ and detection asymmetries on MC samples generated via RapidSim and implement a new kinematic weighting function which allows us to keep events that are otherwise discarded from LHCb data, since they are associated with large detection asymmetries.
         \end{abstract}
 
@@ -54,7 +54,7 @@
         By studying the differences between $D^{\star +}$ and $D^{\star -}$ decays we can estimate the $CP$ asymmetry.
         Specifically, we are interested in
         \begin{eqnarray}
-                &D^{\star\pm} \to D^0 \pi^\pm, \nonumber\\
+                &D^{\star+}\to D^0\pi^+ \text{ and } D^{\star-}\to \bar{D}^0\pi^-, \nonumber\\
                 &D^0 \to K^-K^+ \text{ and } D^0 \to \pi^-\pi^+
         \end{eqnarray}
         decay modes where we refer to the $\pi^\pm$ as \textit{soft pion}.
@@ -84,14 +84,14 @@
         however, we are interested in $\Delta A_{CP}$, thus, we require a method to eliminate $\Delta A_D$.
 
         At the LHCb one observes large pion detection asymmetries that are associated with specific kinematic regions, which so far have been discarded, thus reducing the statistics.
-        We can, however, introduce a \textit{weighting function} that allows us to keep events in these kinematic regions.
-        Such a weighting function can be expressed as the following ratio
+        We can, however, introduce a \textit{weighting function} based on $D^0$ kinematics
         \begin{equation}
                 \label{eq:weighting}
                 Q(\vec{p}_{D^\star}, \vec{p}_{\pi_s}) \simeq \frac{\Gamma_{D^0}^{\pi\pi}(\vec{p}_{D^\star} - \vec{p}_{\pi_s}) + \Gamma_{\bar{D}^0}^{\pi\pi}(\vec{p}_{D^\star} - \vec{p}_{\pi_s})}{\Gamma_{D^0}^{KK}(\vec{p}_{D^\star} - \vec{p}_{\pi_s}) + \Gamma_{\bar{D}^0}^{KK}(\vec{p}_{D^\star} - \vec{p}_{\pi_s})}
         \end{equation}
         where $\Gamma_{D^{0}/\bar{D}^0}^{\pi\pi/KK}$ are the normalized distributions of $D^0$ candidates.
-        Here, the $D^0$ candidates are reconstructed using the $D^\star$ and $\pi_s$, however, the new weighting function which is much more effective comes from reconstructing $D^0$ candidates from $K^-K^+$ or $\pi^-\pi^+$.
+        Here, the $D^0$ candidates are reconstructed using the $D^\star$ and $\pi_s$, however, this weighting function does not allow for events associated with large detection asymmetries to be included to the analysis since it is biased.
+        A new weighting function which is much more effective comes from reconstructing $D^0$ candidates from $K^-K^+$ or $\pi^-\pi^+$, thus, the weighting is not affected by the detection asymmetry that occurs from the soft pions.
         This weighting function reads
         \begin{equation}
                 \label{eq:weighting}
@@ -110,7 +110,7 @@
         \section{Analysis}
         \subsection{RapidSim}
         For the analysis we make use of the RapidSim simulation \cite{Cowan:2016tnm} to generate $D^{\star \pm}\to D^0 \pi^\pm$ events where $D^0$ subsequently decays into $K^-K^+$ or $\pi^-\pi^+$.
-        We present the RapiDSim parameters in Tab. \ref{tab:RapidSim}
+        We present the RapidSim parameters in Tab. \ref{tab:RapidSim}
 
         \begin{center}
                 \begin{tabular}{c|c|c}
@@ -126,7 +126,7 @@
         \end{center}
 
         \subsection{Calculation of the $Q$ function}
-        As previously discussed, the weighting function allows us to keep events from LHCb with large detection asymmetries in order to have more accurate results.
+        As previously discussed, the new weighting technique allows us to keep events from LHCb with large detection asymmetries in order to have more accurate results.
         Thus, the calculation of the weighting function needs to be done correctly and with enough precision.
 
         We generate separate samples for calculating the weighting function $Q$ and analyzing our data.
@@ -140,9 +140,9 @@
                 We remove negative soft pions from kinematic regions associated with $A_D(\vec{p}) = 1$.}
                 \label{fig:detection}
         \end{figure}
-        Subsequently, we calculate the weighting function using both methods, once with $D^0$ candidates reconstructed using $D^\star$ and $\pi_s$ and once reconstructed with $K^-K^+$ or $\pi^-\pi^+$.
+        Subsequently, we calculate the weighting function using both techniques.
 
-        We present the distribution of the weighting function values using the two techniques we discussed in Fig.~\ref{fig:weightsBeforeAfter}.
+        We present  in Fig.~\ref{fig:weightsBeforeAfter} the distribution of the weighting function values using the two techniques we discussed.
         \begin{figure}[h!]
                 \centering
                 \includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/NewWeightingFunction/Plots/WeighsBeforeAfter.pdf}
@@ -154,11 +154,11 @@
         Lastly, we present the $D^0$ kinematic distributions with and without weighting in Fig.~\ref{fig:D0Comparison}.
         \begin{figure}[h!]
                 \centering
-                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf}}
-                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf}}
+                \subfloat{\includegraphics[width = 0.45\textwidth]{../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf}}
+                \subfloat{\includegraphics[width = 0.45\textwidth]{../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf}}
                 \hfill
-                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf}}
-                \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf}}
+                \subfloat{\includegraphics[width = 0.45\textwidth]{../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf}}
+                \subfloat{\includegraphics[width = 0.45\textwidth]{../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf}}
                 \caption{Comparison of $D^0$ kinematics with and without weighting. On the left column we present we new weighting technique with $D^0$ candidates reconstructed from $K^-K^+$ and on the right the baseline technique.}
                 \label{fig:D0Comparison}
         \end{figure}
@@ -184,11 +184,11 @@
         We present the calculated asymmetries for the $D^0\to K^-K^+$ sample in Tab.~\ref{tab:asymmetries_total}
         \begin{center}
                 \begin{tabular}{c|c|c}
-                        Reconstruction & Weighted & Unweighted\\
+                        Technique & Weighted & Unweighted\\
                         \hline\hline
-                        $K^-K^+$ & $A_\text{total} = 0.14726 \pm 0.00066$ & \multirow{2}{*}{$A_\text{total} = 0.16268 \pm 0.00064$}\\
+                        Not associated & $A_\text{total} = 0.14726 \pm 0.00066$ & \multirow{2}{*}{$A_\text{total} = 0.16268 \pm 0.00064$}\\
                         \cline{1-2}
-                        $D^\star\pi_s$ & $A_\text{total} = 0.14994 \pm 0.00066$ & \\
+                        Associated with $\pi_s$ & $A_\text{total} = 0.14994 \pm 0.00066$ & \\
                 \end{tabular}
                 \captionof{table}{$A_\text{total}$ for the $D^0\to K^-K^+$ sample with and without weighting.}
                 \label{tab:asymmetries_total}
@@ -198,17 +198,17 @@
                 A_\text{total} = 0.24571 \pm 0.00067
         \end{equation} 
 
-        The estimated total asymmetry difference is $\Delta A_\text{total} = -0.1$, according to the $CP$ asymmetries we introduced. 
+        If the effect of the detection asymmetry is properly canceled, then he estimated total asymmetry difference should be $\Delta A_\text{total} = \Delta A_{CP} = -0.1$, according to the $CP$ asymmetries we introduced. 
         We present the results of the total asymmetry difference in Tab.~\ref{tab:asymmetry_difference} as well as the deviation from the expected value.
         Both weighting techniques appear to correct the measurement of $\Delta A_\text{total}$, however, there is much improvement between the previous weighting function and the new one.
         \begin{center}
                 \begin{tabular}{c|c|c|c}
-                        Reconstruction & & Weighted & Unweighted\\
+                        Technique& & Weighted & Unweighted\\
                         \hline\hline
-                        \multirow{2}{*}{$K^-K^+$} & $\Delta A_\text{total}$ & $-0.09845 \pm 0.00094$ & $-0.08303 \pm 0.00093$\\
+                        \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & $-0.09845 \pm 0.00094$ & $-0.08303 \pm 0.00093$\\
                         & Deviation $(\sigma)$ & $1.65$ & $18.2$\\
                         \hline
-                        \multirow{2}{*}{$D^\star\pi_s$} & $\Delta A_\text{total}$ & $-0.09578 \pm 0.00094$ & $-0.08303 \pm 0.00093$\\
+                        \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & $-0.09578 \pm 0.00094$ & $-0.08303 \pm 0.00093$\\
                         & Deviation $(\sigma)$ & $4.49$ & $18.2$\\
                 \end{tabular}
                 \captionof{table}{Total asymmetry difference with and without weights.
@@ -218,7 +218,7 @@
 
 
         \subsection{Particle Gun analysis}
-        The final test of the weighting function Eq.~\ref{eq:weighting} is the implementation on samples generated with Particle Gun.
+        The final test of the weighting function in Eq.~\ref{eq:weighting} is the implementation on samples generated with Particle Gun.
         In these samples there is no $CP$ asymmetry, however the simulation includes a detection asymmetry for soft pions as shown in Fig.~\ref{fig:detection_pgun}.
         \begin{figure}[h!]
                 \centering
@@ -245,11 +245,11 @@
         \end{equation}
         \begin{center}
                 \begin{tabular}{c|c|c}
-                        Reconstruction & Weighted & Unweighted\\
+                        Technique & Weighted & Unweighted\\
                         \hline\hline
-                        $K^-K^+$ & $A_\text{total} = - 0.00023 \pm 0.00079$ & \multirow{2}{*}{$A_\text{total} = 0.00002 \pm 0.00079$}\\
+                        Not associated & $A_\text{total} = - 0.00023 \pm 0.00079$ & \multirow{2}{*}{$A_\text{total} = 0.00002 \pm 0.00079$}\\
                         \cline{1-2}
-                        $D^\star\pi_s$ & $A_\text{total} = -0.00002 \pm 0.00079$ & \\
+                        Associated with $\pi_s$ & $A_\text{total} = -0.00002 \pm 0.00079$ & \\
                 \end{tabular}
                 \captionof{table}{We present the $A_\text{total}$ for the $D^0\to K^-K^+$ Particle Gun sample with weighted using the two techniques and unweighted.}
                 \label{tab:asymmetries_total_pgun}
@@ -259,12 +259,12 @@
         The results are shown in Tab.~\ref{tab:asymmetry_difference_pgun}, and the kinematics of $D^0$ with and without weights are shown in Fig.~\ref{fig:kimenaticspgun}.
         \begin{center}
                 \begin{tabular}{c|c|c|c}
-                        Reconstruction & & Weighted & Unweighted\\
+                        Technique & & Weighted & Unweighted\\
                         \hline\hline
-                        \multirow{2}{*}{$K^-K^+$} & $\Delta A_\text{total}$ & $0.00001 \pm 0.00108$ & $0.00026 \pm 0.00108$\\
+                        \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & $0.00001 \pm 0.00108$ & $0.00026 \pm 0.00108$\\
                         & Deviation $(\sigma)$ & $0.009$ & $0.24$\\
                         \hline
-                        \multirow{2}{*}{$D^\star\pi_s$} & $\Delta A_\text{total}$ & $0.00022 \pm 0.00108$ & $0.00026 \pm 0.00108$\\
+                        \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & $0.00022 \pm 0.00108$ & $0.00026 \pm 0.00108$\\
                         & Deviation $(\sigma)$ & $0.20$ & $0.24$\\
                 \end{tabular}
                 \captionof{table}{Total asymmetry difference and deviation from the expected value.
@@ -272,7 +272,7 @@
                 \label{tab:asymmetry_difference_pgun}
         \end{center}
 
-        \begin{figure}[h!]
+        \begin{figure}
                 \centering
                 \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PT.pdf}}
                 \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_ETA.pdf}}
@@ -283,8 +283,165 @@
                 \label{fig:kimenaticspgun}
         \end{figure}
 
+        Lastly, we test the new weighting technique on Particle Gun data with different magnet polarities.
+        We present in Tab.~\ref{tab:2015}, \ref{tab:2016}, \ref{tab:2017} and \ref{tab:2018} the $A_\text{total}$ for various $D^0\to K^-K^+$ samples, and for $D^0\to \pi^-\pi^+$ in Tab.~\ref{tab:20152018}.
+        \begin{center}
+                \begin{tabular}{c|c|c}
+                        Year & Polarity & $A_\text{total}$\\
+                        \hline\hline
+                        \multirow{2}{*}{2015} & Down & $0.00284 \pm 0.00001$\\
+                        \cline{2-3}
+                        & Up & $-0.00033 \pm 0.00002$\\
+                        \hline
+                        \multirow{2}{*}{2016} & Down & $0.00296 \pm 0.00002$\\
+                        \cline{2-3}
+                        & Up & $-0.00130\pm 0.00002$\\
+                        \hline
+                        \multirow{2}{*}{2017} & Down & $0.00349 \pm 0.00002$\\
+                        \cline{2-3}
+                        & Up & $-0.00091 \pm 0.00002$\\
+                        \multirow{2}{*}{2018} & Down & $0.00260 \pm 0.00002$\\
+                        & Up & $-0.00024 \pm 0.00001$\\
+                \end{tabular}
+                \captionof{table}{Total asymmetry of 2015-2018 $D^0\to\pi^-\pi^+$ samples with both magnet polarities.}
+                \label{tab:20152018}
+        \end{center}
+        \begin{center}
+                \begin{tabular}{c|c|c|c}
+                        Polarity & Technique & Weighted & Unweighted\\
+                        \hline\hline
+                        \multirow{2}{*}{Down} & Not associated & $A_\text{total} = 0.00300 \pm 0.00075$ & \multirow{2}{*}{$A_\text{total} = 0.00279 \pm 0.00002$}\\
+                        \cline{2-3}
+                        & Associated with $\pi_s$ & $A_\text{total} = 0.00306 \pm 0.00075$ & \\
+                        % \cline{1-3}
+                        \hline
+                        \multirow{2}{*}{Up} & Not associated & $A_\text{total} = - 0.00063 \pm 0.00074$ & \multirow{2}{*}{$A_\text{total} = - 0.00018 \pm 0.00002$}\\
+                        \cline{2-3}
+                        & Associated with $\pi_s$ & $A_\text{total} = - 0.00031 \pm 0.00074$ & \\
+                \end{tabular}
+                \captionof{table}{We present the $A_\text{total}$ for the $D^0\to K^-K^+$ Particle Gun 2015 sample weighted using the two techniques and unweighted for both polarities.}
+                \label{tab:2015}
+        \end{center}
+        \begin{center}
+                \begin{tabular}{c|c|c|c}
+                        Polarity & Technique & Weighted & Unweighted\\
+                        \hline\hline
+                        \multirow{2}{*}{Down} & Not associated & $A_\text{total} = 0.00359 \pm 0.00074$ & \multirow{2}{*}{$A_\text{total} = 0.00331 \pm 0.00002$}\\
+                        \cline{2-3}
+                        & Associated with $\pi_s$ & $A_\text{total} = 0.00339 \pm 0.00074$ & \\
+                        % \cline{1-3}
+                        \hline
+                        \multirow{2}{*}{Up} & Not associated & $A_\text{total} = - 0.00122 \pm 0.00074$ & \multirow{2}{*}{$A_\text{total} = - 0.00082 \pm 0.00002$}\\
+                        \cline{2-3}
+                        & Associated with $\pi_s$ & $A_\text{total} = - 0.00105 \pm 0.00075$ & \\
+                \end{tabular}
+                \captionof{table}{We present the $A_\text{total}$ for the $D^0\to K^-K^+$ Particle Gun 2016 sample weighted using the two techniques and unweighted for both polarities.}
+                \label{tab:2016}
+        \end{center}
+        \begin{center}
+                \begin{tabular}{c|c|c|c}
+                        Polarity & Technique & Weighted & Unweighted\\
+                        \hline\hline
+                        \multirow{2}{*}{Down} & Not associated & $A_\text{total} = 0.00359 \pm 0.00074$ & \multirow{2}{*}{$A_\text{total} = 0.00331 \pm 0.00002$}\\
+                        \cline{2-3}
+                        & Associated with $\pi_s$ & $A_\text{total} = 0.00339 \pm 0.00074$ & \\
+                        % \cline{1-3}
+                        \hline
+                        \multirow{2}{*}{Up} & Not associated & $A_\text{total} = - 0.00122 \pm 0.00075$ & \multirow{2}{*}{$A_\text{total} = - 0.00082 \pm 0.00002$}\\
+                        \cline{2-3}
+                        & Associated with $\pi_s$ & $A_\text{total} = - 0.00105 \pm 0.00075$ & \\
+                \end{tabular}
+                \captionof{table}{We present the $A_\text{total}$ for the $D^0\to K^-K^+$ Particle Gun 2017 sample weighted using the two techniques and unweighted for both polarities.}
+                \label{tab:2017}
+        \end{center}
+        \begin{center}
+                \begin{tabular}{c|c|c|c}
+                        Polarity & Technique & Weighted & Unweighted\\
+                        \hline\hline
+                        \multirow{2}{*}{Down} & Not associated & $A_\text{total} = 0.00359 \pm 0.00074$ & \multirow{2}{*}{$A_\text{total} = 0.00331 \pm 0.00002$}\\
+                        \cline{2-3}
+                        & Associated with $\pi_s$ & $A_\text{total} = 0.00339 \pm 0.00074$ & \\
+                        % \cline{1-3}
+                        \hline
+                        \multirow{2}{*}{Up} & Not associated & $A_\text{total} = - 0.00122 \pm 0.00075$ & \multirow{2}{*}{$A_\text{total} = - 0.00082 \pm 0.00002$}\\
+                        \cline{2-3}
+                        & Associated with $\pi_s$ & $A_\text{total} = - 0.00105 \pm 0.00075$ & \\
+                \end{tabular}
+                \captionof{table}{We present the $A_\text{total}$ for the $D^0\to K^-K^+$ Particle Gun 2018 sample weighted using the two techniques and unweighted for both polarities.}
+                \label{tab:2018}
+        \end{center}
+
+        We calculate $\Delta A_{CP}$ for all samples and subsequently perform a weighted average to obtain our final results.
+
+        \begin{center}
+                \begin{tabular}{c|c|c|c|c|c}
+                        Year & Polarity & Technique & & Weighted & Unweighted\\
+                        \hline\hline
+                        \multirow{8}{*}{2015} & \multirow{4}{*}{Down} & \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \cline{3-5}
+                        & & \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \cline{2-6}
+                        & \multirow{4}{*}{Up} & \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \cline{3-5}
+                        & & \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \hline
+                        \multirow{8}{*}{2016} & \multirow{4}{*}{Down} & \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \cline{3-5}
+                        & & \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \cline{2-6}
+                        & \multirow{4}{*}{Up} & \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \cline{3-5}
+                        & & \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \hline
+                        \multirow{8}{*}{2017} & \multirow{4}{*}{Down} & \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \cline{3-5}
+                        & & \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \cline{2-6}
+                        & \multirow{4}{*}{Up} & \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \cline{3-5}
+                        & & \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \hline
+                        \multirow{8}{*}{2018} & \multirow{4}{*}{Down} & \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \cline{3-5}
+                        & & \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \cline{2-6}
+                        & \multirow{4}{*}{Up} & \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \cline{3-5}
+                        & & \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \hline\hline
+                        \multirow{8}{*}{Average} & \multirow{4}{*}{Down} & \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \cline{3-5}
+                        & & \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \cline{2-6}
+                        & \multirow{4}{*}{Up} & \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                        \cline{3-5}
+                        & & \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & & \\
+                        & & & Deviation $(\sigma)$ & & \\
+                \end{tabular}
+
+        \end{center}
+
         \section{Conclusions}
-        As demonstrated the weighting function allows us to keep events with kinematics associated with large detection asymmetries and still perform calculations that are in agreement with the expected values.
+        As demonstrated the weighting function allows us to keep events with kinematics associated with large detection asymmetries without affecting our results.
 
         From the analysis of the RapidSim data we observe a reduction in the deviation of $\Delta A_\text{total}$ when applying the old weighting function (reconstruction with $D^\star\pi_s$), however, by employing the new weighting technique the deviation reduces by more than a factor of 10.
         Thus, from this data sample we conclude that the new weighting technique (reconstruction with $K^-K^+ \text{ or } \pi^-\pi^+$) is much more effective than the previously used one.
