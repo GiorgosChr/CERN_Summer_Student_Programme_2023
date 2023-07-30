@@ -6,6 +6,12 @@ pGun_reducedDst_KK_2015_Up.root
 D0 Weights -0.000634694 +/- 0.000744828
 Dst Weights -0.000312745 +/- 0.000744934
 
+pGun_reducedDst_KK_2015_Down.root
+0.00271854 +/- 2.02681e-05
+
+pGun_reducedDst_KK_2015_Up.root
+-0.0001818 +/- 2.01765e-05
+
 /eos/lhcb/user/f/fbetti/SummerStudent_proj_2023/pGun/pGun_reducedDst_PiPi_2015_Down.root
 0.00283985 +/- 1.07455e-05
 
@@ -20,6 +26,12 @@ pGun_reducedDst_KK_2016_Up.root
 D0 Weights -0.00121859 +/- 0.00075198
 Dst Weights -0.00104632 +/- 0.000752156
 
+pGun_reducedDst_KK_2016_Down.root
+0.0033112 +/- 2.00322e-05
+
+pGun_reducedDst_KK_2016_Up.root
+-0.000818919 +/- 2.04633e-05
+
 /eos/lhcb/user/f/fbetti/SummerStudent_proj_2023/pGun/pGun_reducedDst_PiPi_2016_Down.root
 0.002962 +/- 1.81407e-05
 
@@ -27,12 +39,18 @@ Dst Weights -0.00104632 +/- 0.000752156
 -0.0013024 +/- 1.7925e-05
 
 pGun_reducedDst_KK_2017_Down.root
-D0 Weights 0.00359024 +/- 0.000739915
-Dst Weights 0.0033926 +/- 0.000740408
+D0 Weights 0.00207669 +/- 0.00079266
+Dst Weights 0.00185628 +/- 0.000793391
 
 pGun_reducedDst_KK_2017_Up.root
-D0 Weights -0.00121859 +/- 0.00075198
-Dst Weights -0.00104632 +/- 0.000752156
+D0 Weights -0.000951347 +/- 0.000796369
+Dst Weights -0.00108923 +/- 0.000796918
+
+pGun_reducedDst_KK_2017_Down.root
+0.00190815 +/- 2.22236e-05
+
+pGun_reducedDst_KK_2017_Up.root
+-0.000592162 +/- 2.23372e-05
 
 /eos/lhcb/user/f/fbetti/SummerStudent_proj_2023/pGun/pGun_reducedDst_PiPi_2017_Down.root
 0.00349386 +/- 2.05051e-05
@@ -41,12 +59,18 @@ Dst Weights -0.00104632 +/- 0.000752156
 -0.000910271 +/- 2.00921e-05
 
 pGun_reducedDst_KK_2018_Down.root
-D0 Weights 0.00359024 +/- 0.000739915
-Dst Weights 0.0033926 +/- 0.000740408
+D0 Weights 0.00264916 +/- 0.000790695
+Dst Weights 0.00280969 +/- 0.000791034
 
 pGun_reducedDst_KK_2018_Up.root
-D0 Weights -0.00121859 +/- 0.00075198
-Dst Weights -0.00104632 +/- 0.000752156
+D0 Weights -0.000225602 +/- 0.000558516
+Dst Weights -1.84205e-05 +/- 0.000558771
+
+pGun_reducedDst_KK_2018_Down.root
+0.00245769 +/- 2.21464e-05
+
+pGun_reducedDst_KK_2018_Up.root
+1.64057e-05 +/- 1.31231e-05
 
 /eos/lhcb/user/f/fbetti/SummerStudent_proj_2023/pGun/pGun_reducedDst_PiPi_2018_Down.root
 0.00259762 +/- 2.04218e-05

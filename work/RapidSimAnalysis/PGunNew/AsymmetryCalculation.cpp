@@ -61,6 +61,7 @@ int main(){
 
         for (size_t i = 0; i < fileNamesKK.size(); i++){
                 asymmetryWithWeights(fileNamesKK[i]);
+		asymmetryWithoutWeights(fileNamesKK[i]);
                 asymmetryWithoutWeights(fileNamesPP[i]);
         }
 

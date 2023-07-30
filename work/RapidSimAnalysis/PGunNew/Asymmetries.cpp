@@ -33,12 +33,12 @@ int main(){
                         "pGun_reducedDst_KK_2016_Down.root"
                 },
                 {
-                        "pGun_reducedD0_KK_2016_Down.root",
-                        "pGun_reducedDst_KK_2016_Down.root"
+                        "pGun_reducedD0_KK_2017_Down.root",
+                        "pGun_reducedDst_KK_2017_Down.root"
                 },
                 {
-                        "pGun_reducedD0_KK_2016_Down.root",
-                        "pGun_reducedDst_KK_2016_Down.root"
+                        "pGun_reducedD0_KK_2018_Down.root",
+                        "pGun_reducedDst_KK_2018_Down.root"
                 },
         };
         std::vector<std::vector<std::string>> fileNamesKKUp = {
@@ -51,12 +51,12 @@ int main(){
                         "pGun_reducedDst_KK_2016_Up.root"
                 },
                 {
-                        "pGun_reducedD0_KK_2016_Up.root",
-                        "pGun_reducedDst_KK_2016_Up.root"
+                        "pGun_reducedD0_KK_2017_Up.root",
+                        "pGun_reducedDst_KK_2017_Up.root"
                 },
                 {
-                        "pGun_reducedD0_KK_2016_Up.root",
-                        "pGun_reducedDst_KK_2016_Up.root"
+                        "pGun_reducedD0_KK_2018_Up.root",
+                        "pGun_reducedDst_KK_2018_Up.root"
                 },
         };
         std::vector<std::vector<std::string>> fileNamesPPDown = {
@@ -69,12 +69,12 @@ int main(){
                         "pGun_reducedDst_PiPi_2016_Down.root"
                 },
                 {
-                        "pGun_reducedD0_PiPi_2016_Down.root",
-                        "pGun_reducedDst_PiPi_2016_Down.root"
+                        "pGun_reducedD0_PiPi_2017_Down.root",
+                        "pGun_reducedDst_PiPi_2017_Down.root"
                 },
                 {
-                        "pGun_reducedD0_PiPi_2016_Down.root",
-                        "pGun_reducedDst_PiPi_2016_Down.root"
+                        "pGun_reducedD0_PiPi_2018_Down.root",
+                        "pGun_reducedDst_PiPi_2018_Down.root"
                 },
         };
         std::vector<std::vector<std::string>> fileNamesPPUp = {
@@ -87,12 +87,12 @@ int main(){
                         "pGun_reducedDst_PiPi_2016_Up.root"
                 },
                 {
-                        "pGun_reducedD0_PiPi_2016_Up.root",
-                        "pGun_reducedDst_PiPi_2016_Up.root"
+                        "pGun_reducedD0_PiPi_2017_Up.root",
+                        "pGun_reducedDst_PiPi_2017_Up.root"
                 },
                 {
-                        "pGun_reducedD0_PiPi_2016_Up.root",
-                        "pGun_reducedDst_PiPi_2016_Up.root"
+                        "pGun_reducedD0_PiPi_2018_Up.root",
+                        "pGun_reducedDst_PiPi_2018_Up.root"
                 },
         };
 
