@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber CDSReportMain"] 1690573008 "CDSReportMain.bcf" "CDSReportMain.bbl" "CDSReportMain" 1690709660
-  "CDSReportMain.bcf" 1690709660 106444 9643e18c692e1be04238d28bb30b0ace "lualatex"
+["biber CDSReportMain"] 1690573008 "CDSReportMain.bcf" "CDSReportMain.bbl" "CDSReportMain" 1690745430
+  "CDSReportMain.bcf" 1690745430 106444 9643e18c692e1be04238d28bb30b0ace "lualatex"
   "references.bib" 1689752986 1615 3f6923796ec4b480899d1ef9d9d94f10 ""
   (generated)
   "CDSReportMain.bbl"
   "CDSReportMain.blg"
-["lualatex"] 1690709656 "/home/george/CERN_Summer_Student_Programme_2023/CDS Report/CDSReportMain.tex" "CDSReportMain.pdf" "CDSReportMain" 1690709660
+["lualatex"] 1690745427 "/home/george/CERN_Summer_Student_Programme_2023/CDS Report/CDSReportMain.tex" "CDSReportMain.pdf" "CDSReportMain" 1690745430
   "../.images/CERN_logo.png" 1688027387 16476 93f32a507342b9f1cac087a6bc36da52 ""
   "../.images/Lhcb-logo-new.svg.png" 1688027387 96300 948e7c326c4084056c65c44da5747f9a ""
   "../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf" 1690451790 46392 93ee47a8bd062a79192ce1b46b801045 ""
@@ -23,7 +23,7 @@
   "../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf" 1689860508 15460 082c0c502bec6629aee638603d140231 ""
   "/home/george/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-regular.luc" 1675959279 123142 a5bb91f587c7a560590d95e654431ffa ""
   "/home/george/.texlive2021/texmf-var/luatex-cache/generic/names/luaotfload-names.luc" 1690377113 1672081 08168798d0fff72f108ef15ec38c78d0 ""
-  "/home/george/CERN_Summer_Student_Programme_2023/CDS Report/CDSReportMain.tex" 1690709656 31366 e9786adc294c66046db2da622984fcc9 ""
+  "/home/george/CERN_Summer_Student_Programme_2023/CDS Report/CDSReportMain.tex" 1690745427 32596 e034628c3b004116c35d141ab34ebee6 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm" 1246382020 996 a18840b13b499c08ac2de96a99eda4bc ""
@@ -373,7 +373,6 @@
   "/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty" 1601326656 325 f9f16d12354225b7dd52a3321f085955 ""
   "/usr/share/texlive/texmf-dist/tex/latex/pgfopts/pgfopts.sty" 1405118212 5540 d5c60cf09c59da351aa4023ed084e4eb ""
   "/usr/share/texlive/texmf-dist/tex/latex/physics/physics.sty" 1356048875 29610 a9597219b282d9c78b02393dcd7d4322 ""
-  "/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty" 1137110565 4087 636308456f60d2b31cbf97867db5708d ""
   "/usr/share/texlive/texmf-dist/tex/latex/preprint/authblk.sty" 1368488610 7016 985a983ce041cc8959cd31133cba0244 ""
   "/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty" 1576624809 9878 9e94e8fa600d95f9c7731bb21dfb67a4 ""
   "/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty" 1575674187 9715 b051d5b493d9fe5f4bc251462d039e5f ""
@@ -462,10 +461,10 @@
   "/usr/share/texmf/tex/latex/lm/t1lmtt.fd" 1256929440 2681 354015af3b61e7be30009f084986375a ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1675936650 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1685518232 4555379 9ebdd0c6f3494b3429e05a76c4a21a8a ""
-  "CDSReportMain.aux" 1690709660 9835 84f080161b581ce845d98bc5912c47c4 "lualatex"
+  "CDSReportMain.aux" 1690745430 10518 74d86074547ab0f53909802a99f2a164 "lualatex"
   "CDSReportMain.bbl" 1690573010 6129 458728fc13ad14c6a39ae42c37885530 "biber CDSReportMain"
-  "CDSReportMain.out" 1690709660 1032 a1dd327782102d86b4e7d4a0e217bea4 "lualatex"
-  "CDSReportMain.run.xml" 1690709660 2444 5a89c42fd9ba88c929e2baf984f51430 "lualatex"
+  "CDSReportMain.out" 1690745430 1032 a1dd327782102d86b4e7d4a0e217bea4 "lualatex"
+  "CDSReportMain.run.xml" 1690745430 2444 5a89c42fd9ba88c929e2baf984f51430 "lualatex"
   (generated)
   "CDSReportMain.aux"
   "CDSReportMain.bcf"
