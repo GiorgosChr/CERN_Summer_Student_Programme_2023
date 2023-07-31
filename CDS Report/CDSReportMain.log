@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  30 JUL 2023 22:30
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  31 JUL 2023 15:50
  restricted system commands enabled.
  file:line:error style messages enabled.
 **"/home/george/CERN_Summer_Student_Programme_2023/CDS Report/CDSReportMain.tex"
@@ -1447,31 +1447,31 @@ See the caption package documentation for explanation.
 [8]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 435.
+(caption)                particular \caption on input line 436.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.43285pt too wide) in paragraph at lines 381--435
+Overfull \hbox (12.43285pt too wide) in paragraph at lines 381--436
  [] 
  []
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 455.
+(caption)                particular \caption on input line 456.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (26.59976pt too wide) in paragraph at lines 440--455
+Overfull \hbox (26.59976pt too wide) in paragraph at lines 441--456
  [] 
  []
 
 [9] [10]
-Overfull \hbox (3.08658pt too wide) in paragraph at lines 472--472
+Overfull \hbox (3.08658pt too wide) in paragraph at lines 473--473
 \T1/lmr/m/n/10 sim-u-la-tion of heavy-quark hadron de-cays''. In: \T1/lmr/m/it/10 Com-put. Phys. Com-mun. \T1/lmr/m/n/10 214 (2017), pp. 239246.
  []
 
 
-Overfull \hbox (2.88931pt too wide) in paragraph at lines 472--472
+Overfull \hbox (2.88931pt too wide) in paragraph at lines 473--473
 []\T1/lmr/m/n/10 Roel Aaij et al. ``LHCb De-tec-tor Per-for-mance''. In: \T1/lmr/m/it/10 Int. J. Mod. Phys. A \T1/lmr/m/n/10 30.07 (2015), p. 1530022.
  []
 
@@ -1491,12 +1491,12 @@ Here is how much of LuaTeX's memory you used:
  125016,1977958 words of node,token memory allocated
  719 words of node memory still in use:
    6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 27 attribute, 79 glue_spec, 27 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 1:8,2:1482,3:241,4:51,5:625,6:42,7:7362,8:72,9:1645,10:11,11:446
+   avail lists: 1:8,2:1482,3:241,4:51,5:625,6:42,7:7361,8:72,9:1647,10:11,11:446
  65600 multiletter control sequences out of 65536+600000
  76 fonts using 4856279 bytes
  84i,14n,89p,806b,1296s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
-Output written on CDSReportMain.pdf (12 pages, 825275 bytes).
+Output written on CDSReportMain.pdf (12 pages, 825245 bytes).
 
 PDF statistics: 894 PDF objects out of 1000 (max. 8388607)
  503 compressed objects within 6 object streams

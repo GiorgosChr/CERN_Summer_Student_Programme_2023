@@ -182,8 +182,6 @@ void asymmetryWithoutWeights(std::vector<std::string> fileNames){
                 countPosError = std::pow(countPos, 0.5);
                 countNegError = std::pow(countNeg, 0.5);
 
-                countPosError = std::pow(countPosError, 0.5);
-                countNegError = std::pow(countNegError, 0.5);
 
                 std::cout << fileNames[i] << std::endl;
 
