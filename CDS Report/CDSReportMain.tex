@@ -232,61 +232,6 @@
                 \label{fig:detection_pgun}
         \end{figure}
 
-        % We present the distribution of the weighting function values in Fig.~\ref{fig:weightingPgun}.
-        % With the implementation of the weighting function, the detection asymmetries should cancel out when calculating $\Delta A_\text{total}$, thus the calculated value should be consistent with zero.
-
-        % \begin{figure}[h!]
-        %         \centering
-        %         \includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/PGunAnalysis/Plots/Weights.pdf}
-        %         \caption{Normalized distribution of weighting function values obtained using the two techniques.}
-        %         \label{fig:weightingPgun}
-        % \end{figure}
-
-        % Using the same procedure as before, we calculate the total asymmetries of the two samples and the total asymmetry difference.
-        % Our results are shown in Tab.~\ref{tab:asymmetries_total_pgun} for the $D^0\to K^-K^+$ sample, while for the $D^0\to\pi^-\pi^+$ sample we get
-        % \begin{equation}
-        %         A_\text{total} = -0.00024 \pm 0.00074
-        % \end{equation}
-        % \begin{center}
-        %         \begin{tabular}{c|c|c}
-        %                 Technique & Weighted & Unweighted\\
-        %                 \hline\hline
-        %                 Not associated & $A_\text{total} = - 0.00023 \pm 0.00079$ & \multirow{2}{*}{$A_\text{total} = 0.00002 \pm 0.00079$}\\
-        %                 \cline{1-2}
-        %                 Associated with $\pi_s$ & $A_\text{total} = -0.00002 \pm 0.00079$ & \\
-        %         \end{tabular}
-        %         \captionof{table}{We present the $A_\text{total}$ for the $D^0\to K^-K^+$ Particle Gun sample with weighted using the two techniques and unweighted.}
-        %         \label{tab:asymmetries_total_pgun}
-        % \end{center}
-
-        % Using the these values we calculate the total asymmetry difference between the $D^0\to K^-K^+$ and $D^0\to \pi^-\pi^+$ modes.
-        % The results are shown in Tab.~\ref{tab:asymmetry_difference_pgun}, and the kinematics of $D^0$ with and without weights are shown in Fig.~\ref{fig:kimenaticspgun}.
-        % \begin{center}
-        %         \begin{tabular}{c|c|c|c}
-        %                 Technique & & Weighted & Unweighted\\
-        %                 \hline\hline
-        %                 \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & $0.00001 \pm 0.00108$ & $0.00026 \pm 0.00108$\\
-        %                 & Deviation $(\sigma)$ & $0.009$ & $0.24$\\
-        %                 \hline
-        %                 \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & $0.00022 \pm 0.00108$ & $0.00026 \pm 0.00108$\\
-        %                 & Deviation $(\sigma)$ & $0.20$ & $0.24$\\
-        %         \end{tabular}
-        %         \captionof{table}{Total asymmetry difference and deviation from the expected value.
-        %         We present both weighting procedures and the unweighted result.}
-        %         \label{tab:asymmetry_difference_pgun}
-        % \end{center}
-
-        % \begin{figure}
-        %         \centering
-        %         \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PT.pdf}}
-        %         \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_ETA.pdf}}
-        %         \hfill
-        %         \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/PGunAnalysis/Plots/D0_PHI.pdf}}
-
-        %         \caption{We present the $D^0$ normalized kinematic distributions with and without weighting for the two Particle Gun samples.}
-        %         \label{fig:kimenaticspgun}
-        % \end{figure}
-
         We test the new weighting technique on Particle Gun data with different magnet polarities.
         We present in Tab.~\ref{tab:2015}, \ref{tab:2016}, \ref{tab:2017} and \ref{tab:2018} the $A_\text{total}$ for various $D^0\to K^-K^+$ samples, and for $D^0\to \pi^-\pi^+$ in Tab.~\ref{tab:20152018}.
         \begin{center}
@@ -461,15 +406,16 @@
         \section{Conclusions}
         As demonstrated the weighting function allows us to keep events with kinematics associated with large detection asymmetries without affecting our results.
 
-        From the analysis of the RapidSim data we observe a reduction in the deviation of $\Delta A_\text{total}$ when applying the old weighting function (reconstruction with $D^\star\pi_s$), however, by employing the new weighting technique the deviation reduces by more than a factor of 10.
-        Thus, from this data sample we conclude that the new weighting technique (reconstruction with $K^-K^+ \text{ or } \pi^-\pi^+$) is much more effective than the previously used one.
+        From the analysis of the RapidSim data we observe a reduction in the deviation of $\Delta A_\text{total}$ when applying the old weighting function (association with $\pi_s$), however, by employing the new weighting technique the deviation reduces by more than a factor of 10.
+        Thus, from this data sample we conclude that the new weighting technique (not associated with $\pi_s$) is much more effective.
 
         Furthermore, we employed the weighting functions to Particle Gun data in order to study a more realistic scenario.
-        For these specific datasets we noticed that both weighting functions do not improve the $\Delta A_\text{total}$ result
+        For these specific datasets we noticed that both weighting functions do not improve the $\Delta A_\text{total}$ result after averaging all samples and all magnet polarities.
         
 
         In conclusion, the weighting function we examined needs to be studied further before being employed on real Run-3 data. 
-        For the RapidSim case we noticed an improvement of the $\Delta A_\text{total}$ result, but not for the Particle Gun case, thus, more conclusive study regarding the new weighting technique could be done using a more accurate simulation by generate full events from $pp$ collisions.
+        For the RapidSim case we noticed an improvement of the $\Delta A_\text{total}$ result, but not for the Particle Gun case with the current statistics.
+        We noticed that the effect of $A_D$ is canceled after averaging both magnet polarities, thus, further investigations are needed.
         
         \pagebreak
         \nocite{*}
