@@ -73,6 +73,10 @@
                 A_D = \frac{\int \dd \vec{p} N(\vec{p})A_D(\vec{p})}{\int \dd \vec{p} N(\vec{p})}
         \end{equation}
         where $N(\vec{p})$ and $A_D(\vec{p})$ are the momentum-dependent number of events and detection asymmetry respectively.
+        We can however, approximate the total asymmetry up to $\mathcal{O}(10^{-6})$ if $A_{CP}$ is up to $\mathcal{O}(10^{-3})$ and $A_D$ up to $\mathcal{O}(10^{-2})$ as
+        \begin{equation}
+                A_\text{total} = A_{CP} + A_{D}
+        \end{equation}
 
         The observable we can calculate from an experiment is the \textit{total asymmetry difference} between the two modes which approximately gives us
         \begin{eqnarray}
@@ -91,7 +95,7 @@
         \end{equation}
         where $\Gamma_{D^{0}/\bar{D}^0}^{\pi\pi/KK}$ are the normalized distributions of $D^0$ candidates.
         Here, the $D^0$ candidates are reconstructed using the $D^\star$ and $\pi_s$, however, this weighting function does not allow for events associated with large detection asymmetries to be included to the analysis since it is biased.
-        A new weighting function which is much more effective comes from reconstructing $D^0$ candidates from $K^-K^+$ or $\pi^-\pi^+$, thus, the weighting is not affected by the detection asymmetry that occurs from the soft pions.
+        A new weighting function which is much more effective comes from reconstructing $D^0$ candidates without associating them with $\pi_s$, thus, the weighting is not affected by the detection asymmetry that occurs from the soft pions.
         This weighting function reads
         \begin{equation}
                 \label{eq:weighting}
@@ -131,12 +135,12 @@
 
         We generate separate samples for calculating the weighting function $Q$ and analyzing our data.
         Both samples start with 10 million events, to have high enough statistics and then events are discarded due to the selections we applied in Tab. \ref{tab:RapidSim}, thus we are left with 4.8 and 4.2 million events for the $D^0 \to K^-K^+$ and $D^0 \to \pi^-\pi^+$ samples respectively.
-        We then introduce $A_{CP}^{KK} = 0.1 \text{ and } A_{CP}^{\pi\pi} = 0.2$ and a large detection asymmetry as shown in Fig.~\ref{fig:detection} to emulate the asymmetries that are observed at LHCb.
+        We then introduce $A_{CP}^{KK} = 0.1 \text{ and } A_{CP}^{\pi\pi} = 0.2$ and a large detection asymmetry as shown in Fig.~\ref{fig:detection}.
         \begin{figure}[h!]
                 \centering
                 \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf}}
                 \subfloat{\includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf}}
-                \caption{Positive and negative soft pion $p_x - p_z$ momentum plane for the $D^0\to k^-K^+$ sample.
+                \caption{Positive and negative soft pion $p_x - p_z$ momentum plane for the $D^0\to K^-K^+$ sample.
                 We remove negative soft pions from kinematic regions associated with $A_D(\vec{p}) = 1$.}
                 \label{fig:detection}
         \end{figure}
@@ -385,14 +389,14 @@
                         \multirow{8}{*}{2015} & \multirow{4}{*}{Down} & \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & $0.00016\pm 0.00072$& \\
                         & & & Deviation $(\sigma)$ & 0.22& $-0.00012\pm 0.00072$\\
                         \cline{3-5}
-                        & & \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & $0.00022\pm 0.00072$& 0.17\\
+                        & & \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & $0.00022\pm 0.00072$& -0.17\\
                         & & & Deviation $(\sigma)$ & 0.31& \\
                         \cline{2-6}
                         & \multirow{4}{*}{Up} & \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & $-0.00030\pm 0.00072$& \\
-                        & & & Deviation $(\sigma)$ & 0.30& $0.00015\pm 0.00072$\\
+                        & & & Deviation $(\sigma)$ & -0.30& $0.00015\pm 0.00072$\\
                         \cline{3-5}
                         & & \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & $0.00002\pm 0.00072$& 0.15\\
-                        & & & Deviation $(\sigma)$ & 0.020& \\
+                        & & & Deviation $(\sigma)$ & 0.02& \\
                         \hline
 
                         \multirow{8}{*}{2016} & \multirow{4}{*}{Down} & \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & $0.00063\pm 0.00071$& \\
@@ -411,8 +415,8 @@
                         \multirow{8}{*}{2017} & \multirow{4}{*}{Down} & \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & $-0.00141\pm 0.00077$& \\
                         & & & Deviation $(\sigma)$ & 1.83& $-0.00158\pm 0.00077$\\
                         \cline{3-5}
-                        & & \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & $-0.00163\pm 0.00077$& 2.05\\
-                        & & & Deviation $(\sigma)$ & 2.12& \\
+                        & & \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & $-0.00163\pm 0.00077$& -2.05\\
+                        & & & Deviation $(\sigma)$ & -2.12& \\
                         \cline{2-6}
                         & \multirow{4}{*}{Up} & \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & $-0.00004\pm 0.00076$& \\
                         & & & Deviation $(\sigma)$ & 0.05& $0.00032\pm 0.00076$\\
@@ -438,19 +442,21 @@
                 \label{tab:all}
         \end{center}
 
-        \begin{center}
-                \begin{tabular}{c|c|c|c|c|c}
-                        Year & Polarity & Technique & & Weighted & Unweighted\\
-                        \hline\hline
-                        \multirow{4}{*}{Average} & \multirow{4}{*}{Both} & \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & $-0.00083\pm 0.00026$& \\
-                        & & & Deviation $(\sigma)$ & 3.19& $-0.00028\pm 0.00026$\\
-                        \cline{3-5}
-                        & & \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & $-0.00046\pm 0.00026$& 1.08\\
-                        & & & Deviation $(\sigma)$ & 1.77& \\
-                \end{tabular}
+        \begin{table}[htbp]
+                \begin{adjustbox}{center}
+                        \begin{tabular}{c|c|c|c|c|c}
+                                Year & Polarity & Technique & & Weighted & Unweighted\\
+                                \hline\hline
+                                \multirow{4}{*}{Average} & \multirow{4}{*}{Both} & \multirow{2}{*}{Not associated} & $\Delta A_\text{total}$ & $-0.000084\pm 0.000262$& \\
+                                & & & Deviation $(\sigma)$ & 0.32& $-0.000015\pm 0.000262$\\
+                                \cline{3-5}
+                                & & \multirow{2}{*}{Associated with $\pi_s$} & $\Delta A_\text{total}$ & $-0.000036\pm 0.000262$& 0.057\\
+                                & & & Deviation $(\sigma)$ & 0.14& \\
+                        \end{tabular}
+                \end{adjustbox}
                 \captionof{table}{We present the weighted average value of $\Delta A_{CP}$ for all samples.}
                 \label{tab:average}
-        \end{center}
+        \end{table}
 
         \section{Conclusions}
         As demonstrated the weighting function allows us to keep events with kinematics associated with large detection asymmetries without affecting our results.

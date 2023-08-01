@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  1 AUG 2023 16:42
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  1 AUG 2023 18:10
  restricted system commands enabled.
  file:line:error style messages enabled.
 **"/home/george/CERN_Summer_Student_Programme_2023/CDS Report/CDSReportMain.tex"
@@ -1291,37 +1291,37 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}<../.images/CERN_logo.png><../.images/Lhcb-logo-new.svg.png>]
 
 Package amsmath Warning: Cannot use `split' here;
-(amsmath)                trying to recover with `aligned' on input line 82.
+(amsmath)                trying to recover with `aligned' on input line 86.
 
 
 warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 [1]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 124.
+(caption)                particular \caption on input line 128.
 See the caption package documentation for explanation.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 128.
+(hyperref)                removing `math shift' on input line 132.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 128.
+(hyperref)                removing `math shift' on input line 132.
 
 
 warning  (pdf backend): ignoring duplicate destination with the name 'subfigure.1.1'
 <../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf, id=95, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf  used on input line 137.
+Package luatex.def Info: ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf  used on input line 141.
 (luatex.def)             Requested size: 215.0023pt x 145.61005pt.
 
 warning  (pdf backend): ignoring duplicate destination with the name 'subfigure.1.2'
 <../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf, id=96, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf  used on input line 138.
+Package luatex.def Info: ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf  used on input line 142.
 (luatex.def)             Requested size: 215.0023pt x 145.61005pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1329,27 +1329,27 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <../work/RapidSimAnalysis/NewWeightingFunction/Plots/WeighsBeforeAfter.pdf, id=98, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/WeighsBeforeAfter.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/NewWeightingFunction/Plots/WeighsBeforeAfter.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/WeighsBeforeAfter.pdf  used on input line 148.
+Package luatex.def Info: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/WeighsBeforeAfter.pdf  used on input line 152.
 (luatex.def)             Requested size: 215.0023pt x 145.61005pt.
 <../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf, id=100, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf  used on input line 157.
+Package luatex.def Info: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf  used on input line 161.
 (luatex.def)             Requested size: 193.50076pt x 131.04787pt.
 <../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf, id=101, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf  used on input line 158.
+Package luatex.def Info: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf  used on input line 162.
 (luatex.def)             Requested size: 193.50076pt x 131.04787pt.
 <../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf, id=102, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf  used on input line 160.
+Package luatex.def Info: ../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf  used on input line 164.
 (luatex.def)             Requested size: 193.50076pt x 131.04787pt.
 <../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf, id=103, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf  used on input line 161.
+Package luatex.def Info: ../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf  used on input line 165.
 (luatex.def)             Requested size: 193.50076pt x 131.04787pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1360,79 +1360,69 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [2] [3<../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf><../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf><../work/RapidSimAnalysis/NewWeightingFunction/Plots/WeighsBeforeAfter.pdf>]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 193.
+(caption)                particular \caption on input line 197.
 See the caption package documentation for explanation.
 
 [4<../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_PT_All.pdf><../work/RapidSimAnalysis/WeightingFunction/Plots/D0_PT_All.pdf><../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf><../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf>]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 215.
+(caption)                particular \caption on input line 219.
 See the caption package documentation for explanation.
 
-<../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf, id=447, 569.12625pt x 385.44pt>
+<../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf, id=448, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf  used on input line 225.
+Package luatex.def Info: ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf  used on input line 229.
 (luatex.def)             Requested size: 215.0023pt x 145.61005pt.
-<../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf, id=448, 569.12625pt x 385.44pt>
+<../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf, id=449, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf  used on input line 226.
+Package luatex.def Info: ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf  used on input line 230.
 (luatex.def)             Requested size: 215.0023pt x 145.61005pt.
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 308.
+(caption)                particular \caption on input line 312.
 See the caption package documentation for explanation.
 
 [5<../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf><../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf>]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 324.
+(caption)                particular \caption on input line 328.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 340.
+(caption)                particular \caption on input line 344.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 356.
+(caption)                particular \caption on input line 360.
 See the caption package documentation for explanation.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 372.
+(caption)                particular \caption on input line 376.
 See the caption package documentation for explanation.
 
 [6]
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 437.
+(caption)                particular \caption on input line 441.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (12.43285pt too wide) in paragraph at lines 382--437
- [] 
- []
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 451.
-See the caption package documentation for explanation.
-
-
-Overfull \hbox (26.59976pt too wide) in paragraph at lines 442--451
+Overfull \hbox (12.43285pt too wide) in paragraph at lines 386--441
  [] 
  []
 
 [7] [8]
-Overfull \hbox (3.08658pt too wide) in paragraph at lines 470--470
+Overfull \hbox (3.08658pt too wide) in paragraph at lines 476--476
 \T1/lmr/m/n/10 sim-u-la-tion of heavy-quark hadron de-cays''. In: \T1/lmr/m/it/10 Com-put. Phys. Com-mun. \T1/lmr/m/n/10 214 (2017), pp. 239246.
  []
 
 
-Overfull \hbox (2.88931pt too wide) in paragraph at lines 470--470
+Overfull \hbox (2.88931pt too wide) in paragraph at lines 476--476
 []\T1/lmr/m/n/10 Roel Aaij et al. ``LHCb De-tec-tor Per-for-mance''. In: \T1/lmr/m/it/10 Int. J. Mod. Phys. A \T1/lmr/m/n/10 30.07 (2015), p. 1530022.
  []
 
@@ -1441,26 +1431,26 @@ Overfull \hbox (2.88931pt too wide) in paragraph at lines 470--470
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `CDSReportMain.out' has not changed.
-(rerunfilecheck)             Checksum: 96836EA9160A9BD0AAF5BF5A36E1D5A3;1032.
+(rerunfilecheck)             Checksum: 92B09B5D7CEFA33321872A935E221EE3;1032.
 Package logreq Info: Writing requests to 'CDSReportMain.run.xml'.
 
 \openout1 = CDSReportMain.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 46670 strings out of 477805
+ 46672 strings out of 477805
  125016,1977958 words of node,token memory allocated
- 711 words of node memory still in use:
-   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 25 attribute, 79 glue_spec, 25 attribute_list, 2 write, 1 pdf_action nodes
-   avail lists: 1:8,2:1360,3:241,4:51,5:625,6:42,7:7173,8:72,9:1564,10:11,11:446
- 65572 multiletter control sequences out of 65536+600000
+ 719 words of node memory still in use:
+   6 hlist, 2 vlist, 2 rule, 3 glue, 4 kern, 1 glyph, 27 attribute, 79 glue_spec, 27 attribute_list, 2 write, 1 pdf_action nodes
+   avail lists: 1:8,2:1443,3:255,4:51,5:594,6:42,7:8154,8:73,9:1595,10:11,11:464
+ 65573 multiletter control sequences out of 65536+600000
  76 fonts using 4856279 bytes
  84i,14n,89p,806b,1296s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt10.pfb></usr/share/texmf/fonts/type1/public/lm/lmtt8.pfb>
-Output written on CDSReportMain.pdf (10 pages, 766540 bytes).
+Output written on CDSReportMain.pdf (10 pages, 767332 bytes).
 
-PDF statistics: 689 PDF objects out of 1000 (max. 8388607)
- 405 compressed objects within 5 object streams
- 55 named destinations out of 1000 (max. 131072)
+PDF statistics: 690 PDF objects out of 1000 (max. 8388607)
+ 406 compressed objects within 5 object streams
+ 56 named destinations out of 1000 (max. 131072)
  80 words of extra memory for PDF output out of 10000 (max. 100000000)
 
