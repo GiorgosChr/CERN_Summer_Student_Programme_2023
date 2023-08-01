@@ -23,6 +23,8 @@ void compareKinematics(std::vector<std::string> fileNamesLowStatisticsAsymmetryW
 
 void comparisonPlots(std::vector<std::string> fileNamesLowStatisticsAsymmetryWeights, std::string treeName, std::vector<double> filters, int binNumber, std::string observable, std::string label, std::vector<double> legendPosition);
 
+void plotWeights(std::string fileName, std::string treeName);
+
 int main(){
         // Start timer
         std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
@@ -115,6 +117,8 @@ int main(){
                 compareKinematics(fileNamesLowStatisticsAsymmetryWeights, treeName, ranges[i], binNumber, observables[i], labels[i], legendPosition[i]);
                 comparisonPlots(fileNamesLowStatisticsAsymmetryWeights, treeName, ranges[i], binNumber, observables[i], labels[i], legendPosition[i]);
         }
+
+        plotWeights(fileNamesLowStatisticsAsymmetryWeights[0], treeName);
 
         //  Stop timer
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
@@ -316,4 +320,17 @@ void comparisonPlots(std::vector<std::string> fileNamesLowStatisticsAsymmetryWei
         legend->Draw();
 
         canvas->SaveAs(("Plots/" + observable + "_All.pdf").c_str());
+}
+
+void plotWeights(std::string fileName, std::string treeName){
+        ROOT::RDataFrame dataFrame(treeName, fileName);
+        TCanvas* canvas = new TCanvas("canvas", "");
+        auto hist = dataFrame.Histo1D(
+                {"hist", "", 50, 0, 1.5},
+                "Weight"
+        );
+        hist->SetStats(0);
+        hist->GetXaxis()->SetTitle("Weight");
+        hist->Draw("HIST");
+        canvas->SaveAs("Plots/Weights.pdf");
 }

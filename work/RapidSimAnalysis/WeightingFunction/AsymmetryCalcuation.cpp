@@ -54,13 +54,27 @@ std::vector<double> totalAsymmetry(std::string fileNameLowStatisticsAsymmetryWei
         ).Sum<double>(
                 "Weight"
         );
-        double countPosError = std::pow(countPos, 0.5);
         double countNeg = *dataFrame.Filter(
                 "sPi_C == -1"
         ).Sum<double>(
                 "Weight"
         );
-        double countNegError = std::pow(countNeg, 0.5);
+        double countPosError = *dataFrame.Filter(
+                "sPi_C == 1"
+        ).Define(
+                "Weight2", "Weight*Weight"
+        ).Sum<double>(
+                "Weight2"
+        );
+        double countNegError = *dataFrame.Filter(
+                "sPi_C == -1"
+        ).Define(
+                "Weight2", "Weight*Weight"
+        ).Sum<double>(
+                "Weight2"
+        );
+        countPosError = std::pow(countPosError, 0.5);
+        countNegError = std::pow(countNegError, 0.5);
 
         std::cout << fileNameLowStatisticsAsymmetryWeights << std::endl;
         std::cout << "Total Asymmetry (with weights): ";
@@ -69,8 +83,8 @@ std::vector<double> totalAsymmetry(std::string fileNameLowStatisticsAsymmetryWei
 
         asymmetry = (countPos - countNeg)/(countPos + countNeg);
 
-        derivPos = 1.0/(countPos + countNeg) - (countPos + countNeg)/std::pow(countPos + countNeg, 2.0);
-        derivNeg = - 1.0/(countPos + countNeg) - (countPos + countNeg)/std::pow(countPos + countNeg, 2.0);
+        derivPos = 1.0/(countPos + countNeg) - (countPos - countNeg)/std::pow(countPos + countNeg, 2.0);
+        derivNeg = - 1.0/(countPos + countNeg) - (countPos +- countNeg)/std::pow(countPos + countNeg, 2.0);
 
         asymmetryError = std::pow(derivPos * countPosError, 2.0) + std::pow(derivNeg * countNegError, 2.0);
         asymmetryError = std::pow(asymmetryError, 0.5);
@@ -93,8 +107,8 @@ std::vector<double> totalAsymmetry(std::string fileNameLowStatisticsAsymmetryWei
 
         asymmetry = (countPos - countNeg)/(countPos + countNeg);
 
-        derivPos = 1.0/(countPos + countNeg) - (countPos + countNeg)/std::pow(countPos + countNeg, 2.0);
-        derivNeg = - 1.0/(countPos + countNeg) - (countPos + countNeg)/std::pow(countPos + countNeg, 2.0);
+        derivPos = 1.0/(countPos + countNeg) - (countPos - countNeg)/std::pow(countPos + countNeg, 2.0);
+        derivNeg = - 1.0/(countPos + countNeg) - (countPos - countNeg)/std::pow(countPos + countNeg, 2.0);
 
         asymmetryError = std::pow(derivPos * countPosError, 2.0) + std::pow(derivNeg * countNegError, 2.0);
         asymmetryError = std::pow(asymmetryError, 0.5);

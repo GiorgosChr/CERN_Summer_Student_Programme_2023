@@ -1,79 +1,79 @@
 pGun_reducedDst_KK_2015_Down.root
-D0 Weights 0.00300491 +/- 0.000745896
-Dst Weights 0.00305593 +/- 0.00074624
+D0 Weights 0.00300491 +/- 0.000528296
+Dst Weights 0.00305593 +/- 0.000528547
 
 pGun_reducedDst_KK_2015_Up.root
-D0 Weights -0.000634694 +/- 0.000744828
-Dst Weights -0.000312745 +/- 0.000744934
+D0 Weights -0.000634694 +/- 0.000526403
+Dst Weights -0.000312745 +/- 0.000526633
 
 pGun_reducedDst_KK_2015_Down.root
-0.00271854 +/- 0.000742703
+0.00271854 +/- 0.000525884
 
 pGun_reducedDst_KK_2015_Up.root
--0.0001818 +/- 0.000741179
+-0.0001818 +/- 0.000524045
 
 /eos/lhcb/user/f/fbetti/SummerStudent_proj_2023/pGun/pGun_reducedDst_PiPi_2015_Down.root
-0.00283985 +/- 0.00048649
+0.00283985 +/- 0.000344488
 
 /eos/lhcb/user/f/fbetti/SummerStudent_proj_2023/pGun/pGun_reducedDst_PiPi_2015_Up.root
--0.000325486 +/- 0.000685194
+-0.000325486 +/- 0.000484426
 
 pGun_reducedDst_KK_2016_Down.root
-D0 Weights 0.00359024 +/- 0.000739915
-Dst Weights 0.0033926 +/- 0.000740408
+D0 Weights 0.00359024 +/- 0.000524195
+Dst Weights 0.0033926 +/- 0.000524448
 
 pGun_reducedDst_KK_2016_Up.root
-D0 Weights -0.00121859 +/- 0.00075198
-Dst Weights -0.00104632 +/- 0.000752156
+D0 Weights -0.00121859 +/- 0.000531289
+Dst Weights -0.00104632 +/- 0.000531498
 
 pGun_reducedDst_KK_2016_Down.root
-0.0033112 +/- 0.000736781
+0.0033112 +/- 0.000521845
 
 pGun_reducedDst_KK_2016_Up.root
--0.000818919 +/- 0.000748345
+-0.000818919 +/- 0.000528943
 
 /eos/lhcb/user/f/fbetti/SummerStudent_proj_2023/pGun/pGun_reducedDst_PiPi_2016_Down.root
-0.002962 +/- 0.00068972
+0.002962 +/- 0.000488427
 
 /eos/lhcb/user/f/fbetti/SummerStudent_proj_2023/pGun/pGun_reducedDst_PiPi_2016_Up.root
--0.0013024 +/- 0.000685217
+-0.0013024 +/- 0.000484206
 
 pGun_reducedDst_KK_2017_Down.root
-D0 Weights 0.00207669 +/- 0.00079266
-Dst Weights 0.00185628 +/- 0.000793391
+D0 Weights 0.00207669 +/- 0.00056114
+Dst Weights 0.00185628 +/- 0.000561533
 
 pGun_reducedDst_KK_2017_Up.root
-D0 Weights -0.000951347 +/- 0.000796369
-Dst Weights -0.00108923 +/- 0.000796918
+D0 Weights -0.000951347 +/- 0.000562752
+Dst Weights -0.00108923 +/- 0.000563056
 
 pGun_reducedDst_KK_2017_Down.root
-0.00190815 +/- 0.000789949
+0.00190815 +/- 0.000559111
 
 pGun_reducedDst_KK_2017_Up.root
--0.000592162 +/- 0.000793302
+-0.000592162 +/- 0.000560783
 
 /eos/lhcb/user/f/fbetti/SummerStudent_proj_2023/pGun/pGun_reducedDst_PiPi_2017_Down.root
-0.00349386 +/- 0.000748286
+0.00349386 +/- 0.000530042
 
 /eos/lhcb/user/f/fbetti/SummerStudent_proj_2023/pGun/pGun_reducedDst_PiPi_2017_Up.root
--0.000910271 +/- 0.000739291
+-0.000910271 +/- 0.000522519
 
 pGun_reducedDst_KK_2018_Down.root
-D0 Weights 0.00264916 +/- 0.000790695
-Dst Weights 0.00280969 +/- 0.000791034
+D0 Weights 0.00264916 +/- 0.00055991
+Dst Weights 0.00280969 +/- 0.000560265
 
 pGun_reducedDst_KK_2018_Up.root
-D0 Weights -0.000225602 +/- 0.000789861
-Dst Weights -1.84205e-05 +/- 0.000790221
+D0 Weights -0.000225602 +/- 0.000558388
+Dst Weights -1.84205e-05 +/- 0.000558749
 
 pGun_reducedDst_KK_2018_Down.root
-0.00245769 +/- 0.000787976
+0.00245769 +/- 0.000557867
 
 pGun_reducedDst_KK_2018_Up.root
-1.64057e-05 +/- 0.000786812
+1.64057e-05 +/- 0.000556365
 
 /eos/lhcb/user/f/fbetti/SummerStudent_proj_2023/pGun/pGun_reducedDst_PiPi_2018_Down.root
-0.00259762 +/- 0.000746483
+0.00259762 +/- 0.000528528
 
 /eos/lhcb/user/f/fbetti/SummerStudent_proj_2023/pGun/pGun_reducedDst_PiPi_2018_Up.root
--0.000243467 +/- 0.000738107
+-0.000243467 +/- 0.000521857
