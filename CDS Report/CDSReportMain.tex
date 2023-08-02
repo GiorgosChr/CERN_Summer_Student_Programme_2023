@@ -39,7 +39,7 @@
 
         \begin{abstract}
                 We investigate the asymmetries that occur in charm decays at the LHCb, specifically we study $D^{\star+}\to D^0\pi^+$ and $D^{\star-}\to \bar{D}^0\pi^-$ where $D^0\to K^-K^+$ or $D^0\to \pi^-\pi^+$.
-                We study the effect of $CP$ and detection asymmetries on MC samples generated via RapidSim and implement a new kinematic weighting function which allows us to keep events that are otherwise discarded from LHCb data, since they are associated with large detection asymmetries.
+                We study the effect of $CP$ and detection asymmetries on MC samples generated via RapidSim and Particle Gun and implement a new kinematic weighting function which allows us to keep events that are otherwise discarded from LHCb data, since they are associated with large detection asymmetries.
         \end{abstract}
 
         
@@ -67,7 +67,7 @@
         \begin{equation}
                 A_\text{total} = \frac{A_{CP} + A_D}{1 + A_{CP}A_D},
         \end{equation}
-        where $A_{CP}$ and $A_D$ are the $CP$ and \textit{integrated detection} asymmetries.
+        where $A_{CP}$ and $A_D$ are the $CP$ and \textit{integrated detection} asymmetries respectively.
         The latter is calculated using
         \begin{equation}
                 A_D = \frac{\int \dd \vec{p} N(\vec{p})A_D(\vec{p})}{\int \dd \vec{p} N(\vec{p})}
@@ -151,7 +151,7 @@
                 \centering
                 \includegraphics[width = 0.5\textwidth]{../work/RapidSimAnalysis/NewWeightingFunction/Plots/WeighsBeforeAfter.pdf}
                 \caption{Distribution of weighting function values.
-                The black histogram represents the new technique where we reconstruct $D^0$ candidates from either $K^-K^+$ or $\pi^-\pi^+$ while the red histogram represents the old weighting function where $D^0$ candidates were reconstructed using the $D^\star$ and the soft pion.}
+                The black histogram represents the new technique while the red histogram represents the old weighting function where $D^0$ candidates were associated with soft pion.}
                 \label{fig:weightsBeforeAfter}
         \end{figure}
         As we can see the two weighting methods have subtle differences.
@@ -163,7 +163,7 @@
                 \hfill
                 \subfloat{\includegraphics[width = 0.45\textwidth]{../work/RapidSimAnalysis/NewWeightingFunction/Plots/D0_eta_All.pdf}}
                 \subfloat{\includegraphics[width = 0.45\textwidth]{../work/RapidSimAnalysis/WeightingFunction/Plots/D0_eta_All.pdf}}
-                \caption{Comparison of $D^0$ kinematics with and without weighting. On the left column we present we new weighting technique with $D^0$ candidates reconstructed from $K^-K^+$ and on the right the baseline technique.}
+                \caption{Comparison of $D^0$ kinematics with and without weighting. On the left column we present the new weighting technique and on the right the baseline technique.}
                 \label{fig:D0Comparison}
         \end{figure}
 
@@ -182,7 +182,7 @@
         \end{equation} 
         and using propagation of uncertainties we can calculate the total asymmetry error
         \begin{equation}
-                \sigma\left(A_{\text{total}} ^2\right) = \left(\pdv{A_{\text{total}}}{N^+}\sigma\left(N^+\right)\right)^2 + \left(\pdv{A_{\text{total}}}{N^-}\sigma\left(N^-\right)\right)^2
+                \sigma\left(A_{\text{total}}\right)^2 = \left(\pdv{A_{\text{total}}}{N^+}\sigma\left(N^+\right)\right)^2 + \left(\pdv{A_{\text{total}}}{N^-}\sigma\left(N^-\right)\right)^2
         \end{equation}
 
         We present the calculated asymmetries for the $D^0\to K^-K^+$ sample in Tab.~\ref{tab:asymmetries_total}
@@ -202,7 +202,7 @@
                 A_\text{total} = 0.24571 \pm 0.00053
         \end{equation} 
 
-        If the effect of the detection asymmetry is properly canceled, then he estimated total asymmetry difference should be $\Delta A_\text{total} = \Delta A_{CP} = -0.1$, according to the $CP$ asymmetries we introduced. 
+        If the effect of the detection asymmetry is properly canceled, then the estimated total asymmetry difference should be $\Delta A_\text{total} = \Delta A_{CP} = -0.1$, according to the $CP$ asymmetries we introduced. 
         We present the results of the total asymmetry difference in Tab.~\ref{tab:asymmetry_difference} as well as the deviation from the expected value.
         Both weighting techniques appear to correct the measurement of $\Delta A_\text{total}$, however, there is much improvement between the previous weighting function and the new one.
         \begin{center}
@@ -233,7 +233,7 @@
         \end{figure}
 
         We test the new weighting technique on Particle Gun data with different magnet polarities.
-        We present in Tab.~\ref{tab:2015}, \ref{tab:2016}, \ref{tab:2017} and \ref{tab:2018} the $A_\text{total}$ for various $D^0\to K^-K^+$ samples, and for $D^0\to \pi^-\pi^+$ in Tab.~\ref{tab:20152018}.
+        We present the $A_\text{total}$ results for the $D^0\to \pi^-\pi^+$ samples in Tab.~\ref{tab:20152018} and for $D^0\to K^-K^+$ in Tab.~\ref{tab:2015}, \ref{tab:2016}, \ref{tab:2017} and \ref{tab:2018}.
         \begin{center}
                 \begin{tabular}{c|c|c}
                         Year & Polarity & $A_\text{total}$\\
@@ -322,7 +322,7 @@
                 \label{tab:2018}
         \end{center}
 
-        We calculate $\Delta A_{CP}$ for all samples and subsequently perform a weighted average to obtain our final results.
+        We calculate $\Delta A_\text{total}$ for all samples and subsequently perform a weighted average to obtain our final results.
         We present the average of all samples in Tab.~\ref{tab:average}.
         As we can see, the weighting function where $D^0$ is associated with $\pi_s$ introduced bias to our final results.
         Moreover, we observe that in this instance, the new weighting technique does not improve the $\Delta A_\text{total}$ average value.
