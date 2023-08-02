@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  2 AUG 2023 16:16
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  2 AUG 2023 16:32
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/home/george/CERN_Summer_Student_Programme_2023/Presentation/main.tex
@@ -1542,7 +1542,7 @@ Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 21
 ]
 File: ../.images/Lhcb-logo-new.svg.png Graphic file (type png)
 <use ../.images/Lhcb-logo-new.svg.png>
-Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 219.
+Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 221.
 (luatex.def)             Requested size: 33.18051pt x 19.91684pt.
  [14
 
