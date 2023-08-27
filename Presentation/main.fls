@@ -855,6 +855,8 @@ INPUT ./main.toc
 INPUT ./main.toc
 INPUT ../.images/Lhcb-logo-new.svg.png
 INPUT ../.images/Lhcb-logo-new.svg.png
+INPUT ../.images/Lhcb-logo-new.svg.png
+INPUT ../.images/Lhcb-logo-new.svg.png
 INPUT /usr/share/texmf/fonts/tfm/public/lm/rm-lmss17.tfm
 INPUT ../.images/Lhcb-logo-new.svg.png
 INPUT ../.images/Lhcb-logo-new.svg.png
