@@ -1,10 +1,10 @@
 # Fdb version 3
-["biber main"] 1690981334 "main.bcf" "main.bbl" "main" 1693131751
-  "main.bcf" 1693131750 106633 98407bcbe261aff79c01817c6b8fc981 "lualatex"
+["biber main"] 1693215632 "main.bcf" "main.bbl" "main" 1693218800
+  "main.bcf" 1693218799 106633 98407bcbe261aff79c01817c6b8fc981 "lualatex"
   (generated)
   "main.bbl"
   "main.blg"
-["lualatex"] 1693131747 "/home/george/CERN_Summer_Student_Programme_2023/Presentation/main.tex" "main.pdf" "main" 1693131751
+["lualatex"] 1693218793 "/home/george/CERN_Summer_Student_Programme_2023/Presentation/main.tex" "main.pdf" "main" 1693218800
   "../.images/Lhcb-logo-new.svg.png" 1688027387 96300 948e7c326c4084056c65c44da5747f9a ""
   "../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf" 1690451790 46392 93ee47a8bd062a79192ce1b46b801045 ""
   "../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf" 1690451790 50024 c9da6d17b15e0e03f90f57bfede3465b ""
@@ -20,7 +20,7 @@
   "/home/george/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmsans10-regular.luc" 1676888594 123457 4fb9b03eb134d0a84c0c62d5ee24d075 ""
   "/home/george/.texlive2021/texmf-var/luatex-cache/generic/fonts/otl/lmsans8-regular.luc" 1676888596 123407 a3dc4ba53c54e382d012b32717714f83 ""
   "/home/george/.texlive2021/texmf-var/luatex-cache/generic/names/luaotfload-names.luc" 1690377113 1672081 08168798d0fff72f108ef15ec38c78d0 ""
-  "/home/george/CERN_Summer_Student_Programme_2023/Presentation/main.tex" 1693131746 9910 3e6f7cea334503e17159006f32d8a668 ""
+  "/home/george/CERN_Summer_Student_Programme_2023/Presentation/main.tex" 1693218794 11523 e1364f762b43005dcc89552f150bf26c ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -49,6 +49,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1248133631 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1248133631 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb" 1248133631 30273 87a352d78b6810ae5cfdc68d2fb827b2 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -460,12 +461,13 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1675936650 4379155 98693266ff65f58d9f98aff394de12d2 ""
   "/var/lib/texmf/tex/generic/config/language.dat" 1685518188 5130 faa046588a07010f929229197249028b ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1685518232 4555379 9ebdd0c6f3494b3429e05a76c4a21a8a ""
-  "main.aux" 1693131750 4723 4bf616b70f5dc2b98e7787d275523841 "lualatex"
-  "main.bbl" 1690981335 466 ee04f40f768daeed26442158e95aba61 "biber main"
-  "main.nav" 1693131750 2509 c3d908b250fe687b46c50f63e12691f0 "lualatex"
-  "main.out" 1693131750 683 211531c1daa02ea63b46c9247e87c1a2 "lualatex"
-  "main.run.xml" 1693131750 2369 2efd912030c068d61cd0ccd1de77d866 "lualatex"
-  "main.toc" 1693131750 368 b18dadc71a6b1fa746dfd5c37b97d073 "lualatex"
+  "Figures/FedericoPlot.png" 1690377640 1149309 194ec3ea23fb6635633d1483211138e7 ""
+  "main.aux" 1693218799 4877 ee57eef54f6ad102a8ee04ad2c9ce1c6 "lualatex"
+  "main.bbl" 1693215633 466 ee04f40f768daeed26442158e95aba61 "biber main"
+  "main.nav" 1693218799 2626 4fdf595e68c46f6965a64a927a434a1f "lualatex"
+  "main.out" 1693218799 684 aa18c6b1e1a3fb56e8a3ff02da0ed4f2 "lualatex"
+  "main.run.xml" 1693218799 2369 2efd912030c068d61cd0ccd1de77d866 "lualatex"
+  "main.toc" 1693218799 369 88f35e74915dac5f28c4a4dd76c5e098 "lualatex"
   (generated)
   "main.aux"
   "main.bcf"
