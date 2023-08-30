@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  28 AUG 2023 13:33
+This is LuaHBTeX, Version 1.14.0 (TeX Live 2022/dev/Debian)  (format=lualatex 2023.5.31)  30 AUG 2023 18:45
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/home/george/CERN_Summer_Student_Programme_2023/Presentation/main.tex
@@ -1455,113 +1455,118 @@ Missing character: There is no ! (U+0021) in font nullfont!
 ]
 File: ../.images/Lhcb-logo-new.svg.png Graphic file (type png)
 <use ../.images/Lhcb-logo-new.svg.png>
-Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 89.
+Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 92.
 (luatex.def)             Requested size: 33.18051pt x 19.91684pt.
  [5
 
 ]
 File: ../.images/Lhcb-logo-new.svg.png Graphic file (type png)
 <use ../.images/Lhcb-logo-new.svg.png>
-Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 111.
+Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 114.
 (luatex.def)             Requested size: 33.18051pt x 19.91684pt.
  [6
 
 ]
-<Figures/FedericoPlot.png, id=300, 3173.8575pt x 1984.41376pt>
-File: Figures/FedericoPlot.png Graphic file (type png)
-<use Figures/FedericoPlot.png>
-Package luatex.def Info: Figures/FedericoPlot.png  used on input line 117.
-(luatex.def)             Requested size: 290.95314pt x 181.89001pt.
+<Figures/Screenshot from 2023-08-30 18-36-02.png, id=300, 1938.24126pt x 1334.9875pt>
+File: Figures/Screenshot from 2023-08-30 18-36-02.png Graphic file (type png)
+<use Figures/Screenshot from 2023-08-30 18-36-02.png>
+Package luatex.def Info: Figures/Screenshot from 2023-08-30 18-36-02.png  used on input line 123.
+(luatex.def)             Requested size: 171.14767pt x 117.86221pt.
+<Figures/Screenshot from 2023-08-30 18-36-17.png, id=301, 1938.24126pt x 1316.92pt>
+File: Figures/Screenshot from 2023-08-30 18-36-17.png Graphic file (type png)
+<use Figures/Screenshot from 2023-08-30 18-36-17.png>
+Package luatex.def Info: Figures/Screenshot from 2023-08-30 18-36-17.png  used on input line 123.
+(luatex.def)             Requested size: 171.14767pt x 116.26709pt.
 File: ../.images/Lhcb-logo-new.svg.png Graphic file (type png)
 <use ../.images/Lhcb-logo-new.svg.png>
-Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 117.
+Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 123.
 (luatex.def)             Requested size: 33.18051pt x 19.91684pt.
  [7
 
-<./Figures/FedericoPlot.png>]
+<./Figures/Screenshot from 2023-08-30 18-36-02.png><./Figures/Screenshot from 2023-08-30 18-36-17.png>]
 File: ../.images/Lhcb-logo-new.svg.png Graphic file (type png)
 <use ../.images/Lhcb-logo-new.svg.png>
-Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 140.
+Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 146.
 (luatex.def)             Requested size: 33.18051pt x 19.91684pt.
  [8
 
 ] (./main.toc)
 File: ../.images/Lhcb-logo-new.svg.png Graphic file (type png)
 <use ../.images/Lhcb-logo-new.svg.png>
-Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 142.
+Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 148.
 (luatex.def)             Requested size: 33.18051pt x 19.91684pt.
  [9
 
 ]
-<../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf, id=404, 569.12625pt x 385.44pt>
+<../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf, id=406, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf  used on input line 161.
-(luatex.def)             Requested size: 143.76341pt x 97.36546pt.
-<../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf, id=405, 569.12625pt x 385.44pt>
+Package luatex.def Info: ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf  used on input line 167.
+(luatex.def)             Requested size: 136.91605pt x 92.7251pt.
+<../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf, id=407, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf  used on input line 161.
-(luatex.def)             Requested size: 143.76341pt x 97.36546pt.
+Package luatex.def Info: ../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf  used on input line 167.
+(luatex.def)             Requested size: 136.91605pt x 92.7251pt.
 
-Overfull \vbox (5.58629pt too high) detected at line 161
+Overfull \vbox (0.94592pt too high) detected at line 167
  []
 
 File: ../.images/Lhcb-logo-new.svg.png Graphic file (type png)
 <use ../.images/Lhcb-logo-new.svg.png>
-Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 161.
+Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 167.
 (luatex.def)             Requested size: 33.18051pt x 19.91684pt.
 [10
 
 <../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf><../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf>]
 File: ../.images/Lhcb-logo-new.svg.png Graphic file (type png)
 <use ../.images/Lhcb-logo-new.svg.png>
-Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 188.
+Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 194.
 (luatex.def)             Requested size: 33.18051pt x 19.91684pt.
  [11
 
 ]
-<../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf, id=561, 569.12625pt x 385.44pt>
+<../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf, id=562, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf  used on input line 205.
+Package luatex.def Info: ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf  used on input line 211.
 (luatex.def)             Requested size: 143.76341pt x 97.36546pt.
-<../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf, id=562, 569.12625pt x 385.44pt>
+<../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf, id=563, 569.12625pt x 385.44pt>
 File: ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf Graphic file (type pdf)
 <use ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf>
-Package luatex.def Info: ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf  used on input line 205.
+Package luatex.def Info: ../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf  used on input line 211.
 (luatex.def)             Requested size: 143.76341pt x 97.36546pt.
 File: ../.images/Lhcb-logo-new.svg.png Graphic file (type png)
 <use ../.images/Lhcb-logo-new.svg.png>
-Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 205.
+Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 211.
 (luatex.def)             Requested size: 33.18051pt x 19.91684pt.
  [12
 
 <../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Positive.pdf><../work/RapidSimAnalysis/PGunAnalysis/Plots/KK_Dst_PXPZ_Negative.pdf>]
 File: ../.images/Lhcb-logo-new.svg.png Graphic file (type png)
 <use ../.images/Lhcb-logo-new.svg.png>
-Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 227.
+Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 234.
 (luatex.def)             Requested size: 33.18051pt x 19.91684pt.
  [13
 
 ] (./main.toc)
 File: ../.images/Lhcb-logo-new.svg.png Graphic file (type png)
 <use ../.images/Lhcb-logo-new.svg.png>
-Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 229.
+Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 236.
 (luatex.def)             Requested size: 33.18051pt x 19.91684pt.
  [14
 
 ]
 File: ../.images/Lhcb-logo-new.svg.png Graphic file (type png)
 <use ../.images/Lhcb-logo-new.svg.png>
-Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 244.
+Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 256.
 (luatex.def)             Requested size: 33.18051pt x 19.91684pt.
  [15
 
 ]
 File: ../.images/Lhcb-logo-new.svg.png Graphic file (type png)
 <use ../.images/Lhcb-logo-new.svg.png>
-Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 253.
+Package luatex.def Info: ../.images/Lhcb-logo-new.svg.png  used on input line 265.
 (luatex.def)             Requested size: 33.18051pt x 19.91684pt.
  [16
 
@@ -1584,19 +1589,19 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 46150 strings out of 477805
+ 46162 strings out of 477805
  125016,1977958 words of node,token memory allocated
- 1459 words of node memory still in use:
-   16 hlist, 6 vlist, 2 rule, 3 disc, 2 local_par, 27 glue, 7 kern, 9 penalty, 39 glyph, 62 attribute, 78 glue_spec, 33 attribute_list, 4 write, 4 pdf_colorstack nodes
-   avail lists: 1:7,2:1432,3:514,4:314,5:368,6:70,7:3428,8:88,9:725,10:15,11:202
- 64721 multiletter control sequences out of 65536+600000
+ 1471 words of node memory still in use:
+   16 hlist, 6 vlist, 2 rule, 3 disc, 2 local_par, 27 glue, 7 kern, 9 penalty, 39 glyph, 66 attribute, 78 glue_spec, 35 attribute_list, 4 write, 4 pdf_colorstack nodes
+   avail lists: 1:7,2:1432,3:514,4:314,5:372,6:70,7:3431,8:88,9:725,10:15,11:202
+ 64727 multiletter control sequences out of 65536+600000
  57 fonts using 4190551 bytes
  128i,15n,115p,806b,2474s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/opentype/public/lm/lmroman6-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman7-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on main.pdf (16 pages, 1615365 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/opentype/public/lm/lmroman6-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman7-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf/fonts/type1/public/lm/lmss10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss12.pfb></usr/share/texmf/fonts/type1/public/lm/lmss17.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/texmf/fonts/type1/public/lm/lmssbx10.pfb>
+Output written on main.pdf (16 pages, 1356641 bytes).
 
-PDF statistics: 905 PDF objects out of 1000 (max. 8388607)
- 712 compressed objects within 8 object streams
+PDF statistics: 903 PDF objects out of 1000 (max. 8388607)
+ 709 compressed objects within 8 object streams
  39 named destinations out of 1000 (max. 131072)
  164 words of extra memory for PDF output out of 10000 (max. 100000000)
 

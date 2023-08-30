@@ -817,9 +817,12 @@ INPUT ../.images/Lhcb-logo-new.svg.png
 INPUT ../.images/Lhcb-logo-new.svg.png
 INPUT ../.images/Lhcb-logo-new.svg.png
 INPUT ../.images/Lhcb-logo-new.svg.png
-INPUT ./Figures/FedericoPlot.png
-INPUT ./Figures/FedericoPlot.png
-INPUT ./Figures/FedericoPlot.png
+INPUT ./Figures/Screenshot from 2023-08-30 18-36-02.png
+INPUT ./Figures/Screenshot from 2023-08-30 18-36-02.png
+INPUT ./Figures/Screenshot from 2023-08-30 18-36-02.png
+INPUT ./Figures/Screenshot from 2023-08-30 18-36-17.png
+INPUT ./Figures/Screenshot from 2023-08-30 18-36-17.png
+INPUT ./Figures/Screenshot from 2023-08-30 18-36-17.png
 INPUT ../.images/Lhcb-logo-new.svg.png
 INPUT ../.images/Lhcb-logo-new.svg.png
 INPUT ../.images/Lhcb-logo-new.svg.png
@@ -873,7 +876,6 @@ INPUT ./main.out
 INPUT ./main.run.xml
 OUTPUT main.run.xml
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb

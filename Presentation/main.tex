@@ -63,8 +63,8 @@ Supervisors: Dr.\@ Federico Betti and Prof.\@ Angelo Carbone}
     \end{eqnarray*}
       \textbf{At LHCb we observe:}
       \begin{itemize}
-            \item CP asymmetry \rightarrow Differences in matter and anti-matter decays
-            \item Production asymmetry $A_{CP}$ \rightarrow Differences in $D^{\star\pm}$ production
+            \item CP asymmetry $A_{CP}$ \rightarrow Differences in matter and anti-matter decays
+            \item Production asymmetry $A_{P}$ \rightarrow Differences in $D^{\star\pm}$ production
             \item Detection asymmetry $A_{D}$ \rightarrow Differences in $\pi_s^{\pm}$ detection
       \end{itemize}
       \bigbreak
@@ -74,15 +74,18 @@ Supervisors: Dr.\@ Federico Betti and Prof.\@ Angelo Carbone}
 \begin{frame}
       \frametitle{\insertsubsectionhead}
       \rightarrow At an experiment our physical observable is the total asymmetry
-      \begin{eqnarray*}
-            &A_\text{total} = \frac{A_{CP} + A_{D}}{1 + A_{CP}A_D}\approx A_{CP} + A_{D} + \mathcal{O}(10^{-6}),\nonumber\\
-            &A_{D} = \frac{\int \dd \vec{p} N(\vec{p})A(\vec{p})}{\int \dd \vec{p} N(\vec{p})}\to \text{ Integrated detection asymmetry}
-      \end{eqnarray*}
+      \begin{equation*}
+            A_\text{total} = \frac{A_{CP} + A_{D}}{1 + A_{CP}A_D}\approx A_{CP} + A_{D} + \mathcal{O}(10^{-6})
+      \end{equation*}
+      where the asymmetries are $\mathcal{O}(10^{-3})$
+      \begin{equation*}
+            A_{D} = \frac{\int \dd \vec{p} N(\vec{p})A(\vec{p})}{\int \dd \vec{p} N(\vec{p})}\to \text{ Integrated detection asymmetry}
+      \end{equation*}
       \begin{itemize}
             \item $N(\vec{p})$ \rightarrow Momentum dependent number of $\pi_s$
             \item $A(\vec{p})$ \rightarrow Momentum dependent detection asymmetry
       \end{itemize}
-      \rightarrow We can measure the total asymmetry through
+      \rightarrow The total asymmetry is
       \begin{equation*}
             A_\text{total} = \frac{N_+ - N_-}{N_+ + N_-}
       \end{equation*}
@@ -98,7 +101,7 @@ Supervisors: Dr.\@ Federico Betti and Prof.\@ Angelo Carbone}
 
       \textbf{How can we obtain $\Delta A_{CP}$?}
       \begin{itemize}
-            \item We can equalize $D^0$ kinematic distributions for $D^0\to K^-K^+$ and $D^0\to \pi^-\pi^+$ decay modes
+            \item We need to equalize $D^0$ kinematic distributions for $D^0\to K^-K^+$ and $D^0\to \pi^-\pi^+$ decay modes
             \item The following weighting function allows us to do that
       \end{itemize}
       \begin{equation*}
@@ -107,13 +110,16 @@ Supervisors: Dr.\@ Federico Betti and Prof.\@ Angelo Carbone}
       
 
       \bigbreak
-      \to This weighting function works if $A_D(\vec{p}) < 0.2$, thus we apply fiducial cuts to regions associated with larger detection asymmetries ($\sim 30\%$ of data sample)
+      \to This weighting function works if $A_D(\vec{p}) < 0.2$, thus we apply fiducial cuts to regions associated with larger detection asymmetries ($\sim 30\%$ of data sample) for analysis performed on real data
 \end{frame}
 
 \begin{frame}
       \frametitle{\insertsubsectionhead}
-      \centering
-      \includegraphics[width = 0.85\textwidth]{Figures/FedericoPlot.png}
+      \begin{figure}
+            \centering
+            \subfloat{\includegraphics[width = 0.5\textwidth]{Figures/Screenshot from 2023-08-30 18-36-02.png}}
+            \subfloat{\includegraphics[width = 0.5\textwidth]{Figures/Screenshot from 2023-08-30 18-36-17.png}}
+      \end{figure}
 \end{frame}
 
 \begin{frame}
@@ -124,7 +130,7 @@ Supervisors: Dr.\@ Federico Betti and Prof.\@ Angelo Carbone}
       \end{equation*}
       \rightarrow $\Gamma_{D^0/\bar{D}^0}^{\pi\pi/ KK}(\vec{p}_{D^0/\bar{D}^0})$ for untagged $D^0$ candidates
 
-      \rightarrow Even if high $A_D(\vec{p})$ regions present $\Delta A_D = 0$
+      \rightarrow Even if high $A_D(\vec{p})$ regions are present $\Delta A_D = 0$
       \bigbreak
       \rightarrow Now we can use the sample that was previously removed by fiducial cuts\Rightarrow \textbf{More statistics!}
       \begin{equation*}
@@ -147,14 +153,14 @@ Supervisors: Dr.\@ Federico Betti and Prof.\@ Angelo Carbone}
       \rightarrow We generate data using RapidSim and introduce:
       \begin{itemize}
             \item Different CP asymmetries for $D^0\to K^-K^+$ and $D^0\to\pi^-\pi^+$ decay modes $\left(A_{CP}^{KK} = 0.1,\; A_{CP}^{\pi\pi} = 0.2,\; \rightarrow \Delta A_\text{total} = -0.1\right)$
-            \item The same $A_D(\vec{p}) = 100\%$ in specified regions$^*$ \\ \rightarrow The integrated detection asymmetries are different for the two samples because the kinematic distributions differ
+            \item The same $A_D(\vec{p}) = 100\%$ in specific regions$^*$ \\ \rightarrow The integrated detection asymmetries are different for the two samples because the kinematic distributions differ
       \end{itemize}
       % \rightarrow We exclude negative $\pi_s$ \Rightarrow Large detection asymmetry
       \rightarrow We have around 4.8 ($K^-K^+$ mode) and 4.2 ($\pi^-\pi^+$ mode) million events
       \begin{figure}
             \centering
-            \subfloat{\includegraphics[width = 0.42\textwidth]{../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf}}
-            \subfloat{\includegraphics[width = 0.42\textwidth]{../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf}}
+            \subfloat{\includegraphics[width = 0.4\textwidth]{../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Positive.pdf}}
+            \subfloat{\includegraphics[width = 0.4\textwidth]{../work/RapidSimAnalysis/MomentumDependence/Plots/KK_Dst_PXPZ_Negative.pdf}}
       \end{figure}
       \scriptsize
       $^*$ This is an extreme case which is different from what we observe with real data
@@ -165,7 +171,7 @@ Supervisors: Dr.\@ Federico Betti and Prof.\@ Angelo Carbone}
       \rightarrow We calculate the weighting function before and after the introduction of the detection asymmetry
       \begin{itemize}
             \item Before: Emulates $D^0$ not associated with $\pi_s$ \Rightarrow New weighting technique
-            \item After: Emulates $D^0$ associated with $\pi_s$ \Rightarrow We introduce bias
+            \item After: Emulates $D^0$ associated with $\pi_s$ \Rightarrow Standard technique
       \end{itemize}
       \begin{center}
             \scriptsize
@@ -222,7 +228,8 @@ Supervisors: Dr.\@ Federico Betti and Prof.\@ Angelo Carbone}
       \begin{itemize}
             \item The effect of $A_D$ is small
             % \item The asymmetries cancel out after averaging both magnet polarities
-            \item The weighting technique needs to be investigated further
+            \item With these statistics we do not see any improvement
+            \item The measurements seems unbiased even without any weighting applied
       \end{itemize}
 \end{frame}
 
@@ -239,7 +246,12 @@ Supervisors: Dr.\@ Federico Betti and Prof.\@ Angelo Carbone}
       \begin{itemize}
             \item The effect of $\Delta A_D$ is small
             % \item The averaging of both magnet polarities removes the effect
-            \item With this statistics, we do not seen any significant improvement
+            \item With this statistics, we do not see any significant improvement
+      \end{itemize}
+      \bigbreak
+      \textbf{Next steps:}
+      \begin{itemize}
+            \item Look at Run-3 data
       \end{itemize}
 \end{frame}
 
